@@ -15,8 +15,23 @@ export class RosGrammarContribution implements LanguageGrammarDefinitionContribu
                 ROS_LANGUAGE_FILE_EXTENSION,
             ],
             mimetypes: [
-                'text/rosdsl'
+                'text/ros'
             ]
         });
+
+        // monaco.languages.setLanguageConfiguration(ROS_LANGUAGE_SERVER_ID, this.configuration);
+
+        const statesGrammar = require('../../data/ros.tmLanguage.json');
+        registry.registerTextmateGrammarScope('source.ros', {
+            async getGrammarDefinition() {
+                return {
+                    format: 'json',
+                    content: statesGrammar,
+                };
+            }
+        });
+        registry.mapLanguageIdToTextmateGrammar(ROS_LANGUAGE_SERVER_ID, 'source.ros');
     }
+
+
 }

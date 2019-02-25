@@ -51,6 +51,17 @@ bean = StandaloneSetup {
     }
 ```
 
+### Theia extension
+
+#### How to add syntax highlighting
+
+TextMate coloring:
+How to add textmate coloring to a theia extension: https://www.theia-ide.org/doc/textmate  
+TextMate manual: https://macromates.com/manual/en/language_grammars
+
+
+
+
 
 
 
