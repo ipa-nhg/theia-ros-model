@@ -1,0 +1,2 @@
+include 'de.fraunhofer.ipa.ros.rosdsl'
+include 'de.fraunhofer.ipa.ros.rosdsl.ide'

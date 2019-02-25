@@ -1,0 +1,9 @@
+.classpath
+src-gen
+xtext-gen
+emf-gen
+xtend-gen
+bin
+.gradle
+generated
+build
