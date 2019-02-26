@@ -19,7 +19,7 @@ export class RosGrammarContribution implements LanguageGrammarDefinitionContribu
             ]
         });
 
-        // monaco.languages.setLanguageConfiguration(ROS_LANGUAGE_SERVER_ID, this.configuration);
+        monaco.languages.setLanguageConfiguration(ROS_LANGUAGE_SERVER_ID, this.configuration);
 
         const statesGrammar = require('../../data/ros.tmLanguage.json');
         registry.registerTextmateGrammarScope('source.ros', {
@@ -30,8 +30,32 @@ export class RosGrammarContribution implements LanguageGrammarDefinitionContribu
                 };
             }
         });
+        
         registry.mapLanguageIdToTextmateGrammar(ROS_LANGUAGE_SERVER_ID, 'source.ros');
     }
+
+    protected configuration: monaco.languages.LanguageConfiguration = {
+        'comments': {
+            'lineComment': '//',
+            'blockComment': ['/*', '*/']
+        },
+        'brackets': [
+            ['{', '}'],
+        ],
+        'autoClosingPairs': [
+            { 'open': '{', 'close': '}' },
+            { 'open': '"', 'close': '"', 'notIn': ['string'] },
+            { 'open': '/**', 'close': ' */', 'notIn': ['string'] }
+        ],
+        'surroundingPairs': [
+            { 'open': '{', 'close': '}' },
+            { 'open': '[', 'close': ']' },
+            { 'open': '(', 'close': ')' },
+            { 'open': "'", 'close': "'" },
+            { 'open': '"', 'close': '"' },
+            { 'open': '`', 'close': '`' }
+        ]
+    };
 
 
 }

@@ -112,6 +112,12 @@ How to add textmate coloring to a theia extension: https://www.theia-ide.org/doc
 TextMate manual: https://macromates.com/manual/en/language_grammars
 
 
+### Editor configuration
+in `ros-dsl/src/browser/ros-dsl-grammar-contribution.ts`  
+Monaco Editor Configuration:
+https://microsoft.github.io/monaco-editor/api/interfaces/monaco.languages.languageconfiguration.html#folding
+
+
 
 
 
