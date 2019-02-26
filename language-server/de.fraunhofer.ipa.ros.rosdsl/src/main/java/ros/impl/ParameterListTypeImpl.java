@@ -36,7 +36,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterListTypeImpl extends ParameterTypeImpl implements ParameterListType {
+public class ParameterListTypeImpl extends ParameterTypeImpl implements ParameterListType
+{
 	/**
 	 * The cached value of the '{@link #getSequence() <em>Sequence</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -62,7 +63,8 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterListTypeImpl() {
+	protected ParameterListTypeImpl()
+	{
 		super();
 	}
 
@@ -72,7 +74,8 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_LIST_TYPE;
 	}
 
@@ -81,9 +84,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ParameterType> getSequence() {
-		if (sequence == null) {
+	public EList<ParameterType> getSequence()
+	{
+		if (sequence == null)
+		{
 			sequence = new EObjectContainmentEList<ParameterType>(ParameterType.class, this, RosPackage.PARAMETER_LIST_TYPE__SEQUENCE);
 		}
 		return sequence;
@@ -94,8 +98,8 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterSequence getDefault() {
+	public ParameterSequence getDefault()
+	{
 		return default_;
 	}
 
@@ -104,10 +108,12 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefault(ParameterSequence newDefault, NotificationChain msgs) {
+	public NotificationChain basicSetDefault(ParameterSequence newDefault, NotificationChain msgs)
+	{
 		ParameterSequence oldDefault = default_;
 		default_ = newDefault;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_LIST_TYPE__DEFAULT, oldDefault, newDefault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -119,9 +125,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDefault(ParameterSequence newDefault) {
-		if (newDefault != default_) {
+	public void setDefault(ParameterSequence newDefault)
+	{
+		if (newDefault != default_)
+		{
 			NotificationChain msgs = null;
 			if (default_ != null)
 				msgs = ((InternalEObject)default_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_LIST_TYPE__DEFAULT, null, msgs);
@@ -140,8 +147,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_LIST_TYPE__SEQUENCE:
 				return ((InternalEList<?>)getSequence()).basicRemove(otherEnd, msgs);
 			case RosPackage.PARAMETER_LIST_TYPE__DEFAULT:
@@ -156,8 +165,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_LIST_TYPE__SEQUENCE:
 				return getSequence();
 			case RosPackage.PARAMETER_LIST_TYPE__DEFAULT:
@@ -173,8 +184,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_LIST_TYPE__SEQUENCE:
 				getSequence().clear();
 				getSequence().addAll((Collection<? extends ParameterType>)newValue);
@@ -192,8 +205,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_LIST_TYPE__SEQUENCE:
 				getSequence().clear();
 				return;
@@ -210,8 +225,10 @@ public class ParameterListTypeImpl extends ParameterTypeImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_LIST_TYPE__SEQUENCE:
 				return sequence != null && !sequence.isEmpty();
 			case RosPackage.PARAMETER_LIST_TYPE__DEFAULT:

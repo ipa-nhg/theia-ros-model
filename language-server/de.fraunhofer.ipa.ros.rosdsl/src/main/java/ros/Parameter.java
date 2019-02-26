@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface Parameter extends NamespacedElement {
+public interface Parameter extends NamespacedElement
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

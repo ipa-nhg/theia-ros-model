@@ -24,7 +24,8 @@ import org.eclipse.emf.ecore.EReference;
  * @model kind="package"
  * @generated
  */
-public interface RosPackage extends EPackage {
+public interface RosPackage extends EPackage
+{
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -3426,7 +3427,8 @@ public interface RosPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	interface Literals {
+	interface Literals
+	{
 		/**
 		 * The meta object literal for the '{@link ros.impl.NodeImpl <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->

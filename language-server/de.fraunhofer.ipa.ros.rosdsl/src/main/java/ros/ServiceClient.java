@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ServiceClient extends NamespacedElement {
+public interface ServiceClient extends NamespacedElement
+{
 	/**
 	 * Returns the value of the '<em><b>Service</b></em>' reference.
 	 * <!-- begin-user-doc -->

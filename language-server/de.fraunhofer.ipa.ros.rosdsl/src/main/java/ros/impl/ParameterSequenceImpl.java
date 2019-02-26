@@ -31,7 +31,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterSequenceImpl extends ParameterValueImpl implements ParameterSequence {
+public class ParameterSequenceImpl extends ParameterValueImpl implements ParameterSequence
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterSequenceImpl() {
+	protected ParameterSequenceImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_SEQUENCE;
 	}
 
@@ -66,9 +69,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ParameterValue> getValue() {
-		if (value == null) {
+	public EList<ParameterValue> getValue()
+	{
+		if (value == null)
+		{
 			value = new EObjectContainmentEList<ParameterValue>(ParameterValue.class, this, RosPackage.PARAMETER_SEQUENCE__VALUE);
 		}
 		return value;
@@ -80,8 +84,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_SEQUENCE__VALUE:
 				return ((InternalEList<?>)getValue()).basicRemove(otherEnd, msgs);
 		}
@@ -94,8 +100,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_SEQUENCE__VALUE:
 				return getValue();
 		}
@@ -109,8 +117,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_SEQUENCE__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends ParameterValue>)newValue);
@@ -125,8 +135,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_SEQUENCE__VALUE:
 				getValue().clear();
 				return;
@@ -140,8 +152,10 @@ public class ParameterSequenceImpl extends ParameterValueImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_SEQUENCE__VALUE:
 				return value != null && !value.isEmpty();
 		}

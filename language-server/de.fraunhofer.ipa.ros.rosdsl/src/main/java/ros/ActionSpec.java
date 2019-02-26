@@ -21,7 +21,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ActionSpec extends SpecBase {
+public interface ActionSpec extends SpecBase
+{
 	/**
 	 * Returns the value of the '<em><b>Goal</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

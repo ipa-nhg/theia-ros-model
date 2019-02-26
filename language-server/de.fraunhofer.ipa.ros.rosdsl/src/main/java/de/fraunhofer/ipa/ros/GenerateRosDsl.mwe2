@@ -3,6 +3,7 @@ module de.fraunhofer.ipa.ros.GenerateRosDsl
 import org.eclipse.xtext.xtext.generator.*
 import org.eclipse.xtext.xtext.generator.model.project.*
 import org.eclipse.emf.mwe.utils.*
+import org.eclipse.emf.mwe2.ecore.*
 
 var rootPath = ".."
 
@@ -12,6 +13,15 @@ Workflow {
         platformUri = "${rootPath}"
         scanClassPath = true
         registerGenModelFile = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
+    }
+    
+    component = DirectoryCleaner {
+		directory ="src/main/java/ros"
+	}
+    
+    component = EcoreGenerator {
+        genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
+        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/src/main/java"
     }
     
 	component = XtextGenerator {

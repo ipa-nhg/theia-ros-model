@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ParameterAnyType extends ParameterType {
+public interface ParameterAnyType extends ParameterType
+{
 	/**
 	 * Returns the value of the '<em><b>Default</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

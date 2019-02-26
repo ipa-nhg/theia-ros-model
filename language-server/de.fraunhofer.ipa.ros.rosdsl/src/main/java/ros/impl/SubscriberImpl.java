@@ -26,7 +26,8 @@ import ros.TopicSpec;
  *
  * @generated
  */
-public class SubscriberImpl extends NamespacedElementImpl implements Subscriber {
+public class SubscriberImpl extends NamespacedElementImpl implements Subscriber
+{
 	/**
 	 * The cached value of the '{@link #getMessage() <em>Message</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +43,8 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SubscriberImpl() {
+	protected SubscriberImpl()
+	{
 		super();
 	}
 
@@ -52,7 +54,8 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.SUBSCRIBER;
 	}
 
@@ -61,12 +64,14 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public TopicSpec getMessage() {
-		if (message != null && message.eIsProxy()) {
+	public TopicSpec getMessage()
+	{
+		if (message != null && message.eIsProxy())
+		{
 			InternalEObject oldMessage = (InternalEObject)message;
 			message = (TopicSpec)eResolveProxy(oldMessage);
-			if (message != oldMessage) {
+			if (message != oldMessage)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RosPackage.SUBSCRIBER__MESSAGE, oldMessage, message));
 			}
@@ -79,7 +84,8 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TopicSpec basicGetMessage() {
+	public TopicSpec basicGetMessage()
+	{
 		return message;
 	}
 
@@ -88,8 +94,8 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setMessage(TopicSpec newMessage) {
+	public void setMessage(TopicSpec newMessage)
+	{
 		TopicSpec oldMessage = message;
 		message = newMessage;
 		if (eNotificationRequired())
@@ -102,8 +108,10 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SUBSCRIBER__MESSAGE:
 				if (resolve) return getMessage();
 				return basicGetMessage();
@@ -117,8 +125,10 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SUBSCRIBER__MESSAGE:
 				setMessage((TopicSpec)newValue);
 				return;
@@ -132,8 +142,10 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SUBSCRIBER__MESSAGE:
 				setMessage((TopicSpec)null);
 				return;
@@ -147,8 +159,10 @@ public class SubscriberImpl extends NamespacedElementImpl implements Subscriber 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SUBSCRIBER__MESSAGE:
 				return message != null;
 		}

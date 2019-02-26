@@ -31,7 +31,8 @@ import ros.SpecBase;
  *
  * @generated
  */
-public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implements SpecBase {
+public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implements SpecBase
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,7 +68,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected SpecBaseImpl() {
+	protected SpecBaseImpl()
+	{
 		super();
 	}
 
@@ -77,7 +79,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.SPEC_BASE;
 	}
 
@@ -86,8 +89,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -96,8 +99,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -109,8 +112,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ros.Package getPackage() {
+	public ros.Package getPackage()
+	{
 		if (eContainerFeatureID() != RosPackage.SPEC_BASE__PACKAGE) return null;
 		return (ros.Package)eInternalContainer();
 	}
@@ -120,7 +123,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPackage(ros.Package newPackage, NotificationChain msgs) {
+	public NotificationChain basicSetPackage(ros.Package newPackage, NotificationChain msgs)
+	{
 		msgs = eBasicSetContainer((InternalEObject)newPackage, RosPackage.SPEC_BASE__PACKAGE, msgs);
 		return msgs;
 	}
@@ -130,9 +134,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setPackage(ros.Package newPackage) {
-		if (newPackage != eInternalContainer() || (eContainerFeatureID() != RosPackage.SPEC_BASE__PACKAGE && newPackage != null)) {
+	public void setPackage(ros.Package newPackage)
+	{
+		if (newPackage != eInternalContainer() || (eContainerFeatureID() != RosPackage.SPEC_BASE__PACKAGE && newPackage != null))
+		{
 			if (EcoreUtil.isAncestor(this, newPackage))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -152,8 +157,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getFullname() {
+	public String getFullname()
+	{
 		// TODO: implement this method to return the 'Fullname' attribute
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -164,8 +169,8 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean isSetFullname() {
+	public boolean isSetFullname()
+	{
 		// TODO: implement this method to return whether the 'Fullname' attribute is set
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -177,8 +182,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__PACKAGE:
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
@@ -193,8 +200,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__PACKAGE:
 				return basicSetPackage(null, msgs);
 		}
@@ -207,8 +216,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs)
+	{
+		switch (eContainerFeatureID())
+		{
 			case RosPackage.SPEC_BASE__PACKAGE:
 				return eInternalContainer().eInverseRemove(this, RosPackage.PACKAGE__SPEC, ros.Package.class, msgs);
 		}
@@ -221,8 +232,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__NAME:
 				return getName();
 			case RosPackage.SPEC_BASE__PACKAGE:
@@ -239,8 +252,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__NAME:
 				setName((String)newValue);
 				return;
@@ -257,8 +272,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -275,8 +292,10 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SPEC_BASE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case RosPackage.SPEC_BASE__PACKAGE:
@@ -293,10 +312,11 @@ public abstract class SpecBaseImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

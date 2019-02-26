@@ -21,7 +21,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ParameterListType extends ParameterType {
+public interface ParameterListType extends ParameterType
+{
 	/**
 	 * Returns the value of the '<em><b>Sequence</b></em>' containment reference list.
 	 * The list contents are of type {@link ros.ParameterType}.

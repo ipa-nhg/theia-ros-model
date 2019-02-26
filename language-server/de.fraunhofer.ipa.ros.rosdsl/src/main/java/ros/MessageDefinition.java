@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface MessageDefinition extends EObject {
+public interface MessageDefinition extends EObject
+{
 } // MessageDefinition

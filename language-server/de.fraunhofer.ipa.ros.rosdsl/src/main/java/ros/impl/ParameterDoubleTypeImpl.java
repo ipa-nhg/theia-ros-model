@@ -27,7 +27,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements ParameterDoubleType {
+public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements ParameterDoubleType
+{
 	/**
 	 * The cached value of the '{@link #getDefault() <em>Default</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterDoubleTypeImpl() {
+	protected ParameterDoubleTypeImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_DOUBLE_TYPE;
 	}
 
@@ -62,8 +65,8 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterDouble getDefault() {
+	public ParameterDouble getDefault()
+	{
 		return default_;
 	}
 
@@ -72,10 +75,12 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefault(ParameterDouble newDefault, NotificationChain msgs) {
+	public NotificationChain basicSetDefault(ParameterDouble newDefault, NotificationChain msgs)
+	{
 		ParameterDouble oldDefault = default_;
 		default_ = newDefault;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT, oldDefault, newDefault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -87,9 +92,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDefault(ParameterDouble newDefault) {
-		if (newDefault != default_) {
+	public void setDefault(ParameterDouble newDefault)
+	{
+		if (newDefault != default_)
+		{
 			NotificationChain msgs = null;
 			if (default_ != null)
 				msgs = ((InternalEObject)default_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT, null, msgs);
@@ -108,8 +114,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT:
 				return basicSetDefault(null, msgs);
 		}
@@ -122,8 +130,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT:
 				return getDefault();
 		}
@@ -136,8 +146,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT:
 				setDefault((ParameterDouble)newValue);
 				return;
@@ -151,8 +163,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT:
 				setDefault((ParameterDouble)null);
 				return;
@@ -166,8 +180,10 @@ public class ParameterDoubleTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_DOUBLE_TYPE__DEFAULT:
 				return default_ != null;
 		}

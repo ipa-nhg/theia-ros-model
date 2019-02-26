@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface Publisher extends NamespacedElement {
+public interface Publisher extends NamespacedElement
+{
 	/**
 	 * Returns the value of the '<em><b>Message</b></em>' reference.
 	 * <!-- begin-user-doc -->

@@ -20,7 +20,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ParameterArrayType extends ParameterType {
+public interface ParameterArrayType extends ParameterType
+{
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

@@ -14,13 +14,15 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class PrivateNamespaceImpl extends RelativeNamespaceImpl implements PrivateNamespace {
+public class PrivateNamespaceImpl extends RelativeNamespaceImpl implements PrivateNamespace
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PrivateNamespaceImpl() {
+	protected PrivateNamespaceImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class PrivateNamespaceImpl extends RelativeNamespaceImpl implements Priva
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PRIVATE_NAMESPACE;
 	}
 

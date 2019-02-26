@@ -48,7 +48,8 @@ import ros.Subscriber;
  *
  * @generated
  */
-public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
+public class NodeImpl extends MinimalEObjectImpl.Container implements Node
+{
 	/**
 	 * The cached value of the '{@link #getServiceserver() <em>Serviceserver</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -144,7 +145,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NodeImpl() {
+	protected NodeImpl()
+	{
 		super();
 	}
 
@@ -154,7 +156,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.NODE;
 	}
 
@@ -163,9 +166,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ServiceServer> getServiceserver() {
-		if (serviceserver == null) {
+	public EList<ServiceServer> getServiceserver()
+	{
+		if (serviceserver == null)
+		{
 			serviceserver = new EObjectContainmentEList<ServiceServer>(ServiceServer.class, this, RosPackage.NODE__SERVICESERVER);
 		}
 		return serviceserver;
@@ -176,9 +180,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<Publisher> getPublisher() {
-		if (publisher == null) {
+	public EList<Publisher> getPublisher()
+	{
+		if (publisher == null)
+		{
 			publisher = new EObjectContainmentEList<Publisher>(Publisher.class, this, RosPackage.NODE__PUBLISHER);
 		}
 		return publisher;
@@ -189,9 +194,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<Subscriber> getSubscriber() {
-		if (subscriber == null) {
+	public EList<Subscriber> getSubscriber()
+	{
+		if (subscriber == null)
+		{
 			subscriber = new EObjectContainmentEList<Subscriber>(Subscriber.class, this, RosPackage.NODE__SUBSCRIBER);
 		}
 		return subscriber;
@@ -202,9 +208,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ServiceClient> getServiceclient() {
-		if (serviceclient == null) {
+	public EList<ServiceClient> getServiceclient()
+	{
+		if (serviceclient == null)
+		{
 			serviceclient = new EObjectContainmentEList<ServiceClient>(ServiceClient.class, this, RosPackage.NODE__SERVICECLIENT);
 		}
 		return serviceclient;
@@ -215,9 +222,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ActionServer> getActionserver() {
-		if (actionserver == null) {
+	public EList<ActionServer> getActionserver()
+	{
+		if (actionserver == null)
+		{
 			actionserver = new EObjectContainmentEList<ActionServer>(ActionServer.class, this, RosPackage.NODE__ACTIONSERVER);
 		}
 		return actionserver;
@@ -228,9 +236,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ActionClient> getActionclient() {
-		if (actionclient == null) {
+	public EList<ActionClient> getActionclient()
+	{
+		if (actionclient == null)
+		{
 			actionclient = new EObjectContainmentEList<ActionClient>(ActionClient.class, this, RosPackage.NODE__ACTIONCLIENT);
 		}
 		return actionclient;
@@ -241,8 +250,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -251,8 +260,8 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -264,9 +273,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<Parameter> getParameter() {
-		if (parameter == null) {
+	public EList<Parameter> getParameter()
+	{
+		if (parameter == null)
+		{
 			parameter = new EObjectContainmentEList<Parameter>(Parameter.class, this, RosPackage.NODE__PARAMETER);
 		}
 		return parameter;
@@ -278,8 +288,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NODE__SERVICESERVER:
 				return ((InternalEList<?>)getServiceserver()).basicRemove(otherEnd, msgs);
 			case RosPackage.NODE__PUBLISHER:
@@ -304,8 +316,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NODE__SERVICESERVER:
 				return getServiceserver();
 			case RosPackage.NODE__PUBLISHER:
@@ -333,8 +347,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NODE__SERVICESERVER:
 				getServiceserver().clear();
 				getServiceserver().addAll((Collection<? extends ServiceServer>)newValue);
@@ -376,8 +392,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NODE__SERVICESERVER:
 				getServiceserver().clear();
 				return;
@@ -412,8 +430,10 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NODE__SERVICESERVER:
 				return serviceserver != null && !serviceserver.isEmpty();
 			case RosPackage.NODE__PUBLISHER:
@@ -440,10 +460,11 @@ public class NodeImpl extends MinimalEObjectImpl.Container implements Node {
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

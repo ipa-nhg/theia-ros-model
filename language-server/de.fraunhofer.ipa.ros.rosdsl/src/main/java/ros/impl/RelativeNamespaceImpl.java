@@ -14,13 +14,15 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class RelativeNamespaceImpl extends NamespaceImpl implements RelativeNamespace {
+public class RelativeNamespaceImpl extends NamespaceImpl implements RelativeNamespace
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RelativeNamespaceImpl() {
+	protected RelativeNamespaceImpl()
+	{
 		super();
 	}
 
@@ -30,7 +32,8 @@ public class RelativeNamespaceImpl extends NamespaceImpl implements RelativeName
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.RELATIVE_NAMESPACE;
 	}
 

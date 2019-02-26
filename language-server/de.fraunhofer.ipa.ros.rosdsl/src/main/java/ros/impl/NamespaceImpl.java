@@ -28,7 +28,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public abstract class NamespaceImpl extends MinimalEObjectImpl.Container implements Namespace {
+public abstract class NamespaceImpl extends MinimalEObjectImpl.Container implements Namespace
+{
 	/**
 	 * The cached value of the '{@link #getParts() <em>Parts</em>}' attribute list.
 	 * <!-- begin-user-doc -->
@@ -44,7 +45,8 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamespaceImpl() {
+	protected NamespaceImpl()
+	{
 		super();
 	}
 
@@ -54,7 +56,8 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.NAMESPACE;
 	}
 
@@ -63,9 +66,10 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<String> getParts() {
-		if (parts == null) {
+	public EList<String> getParts()
+	{
+		if (parts == null)
+		{
 			parts = new EDataTypeEList<String>(String.class, this, RosPackage.NAMESPACE__PARTS);
 		}
 		return parts;
@@ -77,8 +81,10 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACE__PARTS:
 				return getParts();
 		}
@@ -92,8 +98,10 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACE__PARTS:
 				getParts().clear();
 				getParts().addAll((Collection<? extends String>)newValue);
@@ -108,8 +116,10 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACE__PARTS:
 				getParts().clear();
 				return;
@@ -123,8 +133,10 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACE__PARTS:
 				return parts != null && !parts.isEmpty();
 		}
@@ -137,10 +149,11 @@ public abstract class NamespaceImpl extends MinimalEObjectImpl.Container impleme
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (parts: ");
 		result.append(parts);
 		result.append(')');

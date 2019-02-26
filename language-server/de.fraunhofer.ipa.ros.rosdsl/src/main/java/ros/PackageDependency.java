@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface PackageDependency extends Dependency {
+public interface PackageDependency extends Dependency
+{
 	/**
 	 * Returns the value of the '<em><b>Package</b></em>' reference.
 	 * <!-- begin-user-doc -->

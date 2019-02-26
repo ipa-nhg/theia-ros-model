@@ -29,7 +29,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Node extends EObject {
+public interface Node extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Serviceserver</b></em>' containment reference list.
 	 * The list contents are of type {@link ros.ServiceServer}.

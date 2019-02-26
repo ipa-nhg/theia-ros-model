@@ -24,7 +24,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterBooleanImpl extends ParameterValueImpl implements ParameterBoolean {
+public class ParameterBooleanImpl extends ParameterValueImpl implements ParameterBoolean
+{
 	/**
 	 * The default value of the '{@link #isValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterBooleanImpl() {
+	protected ParameterBooleanImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_BOOLEAN;
 	}
 
@@ -69,8 +72,8 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public boolean isValue() {
+	public boolean isValue()
+	{
 		return value;
 	}
 
@@ -79,8 +82,8 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setValue(boolean newValue) {
+	public void setValue(boolean newValue)
+	{
 		boolean oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
@@ -93,8 +96,10 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN__VALUE:
 				return isValue();
 		}
@@ -107,8 +112,10 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN__VALUE:
 				setValue((Boolean)newValue);
 				return;
@@ -122,8 +129,10 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -137,8 +146,10 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
@@ -151,10 +162,11 @@ public class ParameterBooleanImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

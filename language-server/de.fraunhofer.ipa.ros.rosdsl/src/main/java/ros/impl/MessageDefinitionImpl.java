@@ -16,13 +16,15 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class MessageDefinitionImpl extends MinimalEObjectImpl.Container implements MessageDefinition {
+public class MessageDefinitionImpl extends MinimalEObjectImpl.Container implements MessageDefinition
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MessageDefinitionImpl() {
+	protected MessageDefinitionImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public class MessageDefinitionImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.MESSAGE_DEFINITION;
 	}
 

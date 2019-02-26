@@ -27,7 +27,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterImpl extends NamespacedElementImpl implements Parameter {
+public class ParameterImpl extends NamespacedElementImpl implements Parameter
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterImpl() {
+	protected ParameterImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER;
 	}
 
@@ -62,8 +65,8 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterType getType() {
+	public ParameterType getType()
+	{
 		return type;
 	}
 
@@ -72,10 +75,12 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs)
+	{
 		ParameterType oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -87,9 +92,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setType(ParameterType newType) {
-		if (newType != type) {
+	public void setType(ParameterType newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER__TYPE, null, msgs);
@@ -108,8 +114,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER__TYPE:
 				return basicSetType(null, msgs);
 		}
@@ -122,8 +130,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER__TYPE:
 				return getType();
 		}
@@ -136,8 +146,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER__TYPE:
 				setType((ParameterType)newValue);
 				return;
@@ -151,8 +163,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER__TYPE:
 				setType((ParameterType)null);
 				return;
@@ -166,8 +180,10 @@ public class ParameterImpl extends NamespacedElementImpl implements Parameter {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER__TYPE:
 				return type != null;
 		}

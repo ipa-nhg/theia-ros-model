@@ -26,7 +26,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ActionServerImpl extends NamespacedElementImpl implements ActionServer {
+public class ActionServerImpl extends NamespacedElementImpl implements ActionServer
+{
 	/**
 	 * The cached value of the '{@link #getAction() <em>Action</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +43,8 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ActionServerImpl() {
+	protected ActionServerImpl()
+	{
 		super();
 	}
 
@@ -52,7 +54,8 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.ACTION_SERVER;
 	}
 
@@ -61,12 +64,14 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ActionSpec getAction() {
-		if (action != null && action.eIsProxy()) {
+	public ActionSpec getAction()
+	{
+		if (action != null && action.eIsProxy())
+		{
 			InternalEObject oldAction = (InternalEObject)action;
 			action = (ActionSpec)eResolveProxy(oldAction);
-			if (action != oldAction) {
+			if (action != oldAction)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RosPackage.ACTION_SERVER__ACTION, oldAction, action));
 			}
@@ -79,7 +84,8 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ActionSpec basicGetAction() {
+	public ActionSpec basicGetAction()
+	{
 		return action;
 	}
 
@@ -88,8 +94,8 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setAction(ActionSpec newAction) {
+	public void setAction(ActionSpec newAction)
+	{
 		ActionSpec oldAction = action;
 		action = newAction;
 		if (eNotificationRequired())
@@ -102,8 +108,10 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.ACTION_SERVER__ACTION:
 				if (resolve) return getAction();
 				return basicGetAction();
@@ -117,8 +125,10 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.ACTION_SERVER__ACTION:
 				setAction((ActionSpec)newValue);
 				return;
@@ -132,8 +142,10 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.ACTION_SERVER__ACTION:
 				setAction((ActionSpec)null);
 				return;
@@ -147,8 +159,10 @@ public class ActionServerImpl extends NamespacedElementImpl implements ActionSer
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.ACTION_SERVER__ACTION:
 				return action != null;
 		}

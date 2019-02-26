@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface PackageSet extends EObject {
+public interface PackageSet extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Package</b></em>' containment reference list.
 	 * The list contents are of type {@link ros.Package}.

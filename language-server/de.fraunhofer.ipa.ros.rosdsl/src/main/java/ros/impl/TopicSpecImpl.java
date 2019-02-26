@@ -27,7 +27,8 @@ import ros.TopicSpec;
  *
  * @generated
  */
-public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
+public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec
+{
 	/**
 	 * The cached value of the '{@link #getMessage() <em>Message</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected TopicSpecImpl() {
+	protected TopicSpecImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.TOPIC_SPEC;
 	}
 
@@ -62,8 +65,8 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public MessageDefinition getMessage() {
+	public MessageDefinition getMessage()
+	{
 		return message;
 	}
 
@@ -72,10 +75,12 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMessage(MessageDefinition newMessage, NotificationChain msgs) {
+	public NotificationChain basicSetMessage(MessageDefinition newMessage, NotificationChain msgs)
+	{
 		MessageDefinition oldMessage = message;
 		message = newMessage;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.TOPIC_SPEC__MESSAGE, oldMessage, newMessage);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -87,9 +92,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setMessage(MessageDefinition newMessage) {
-		if (newMessage != message) {
+	public void setMessage(MessageDefinition newMessage)
+	{
+		if (newMessage != message)
+		{
 			NotificationChain msgs = null;
 			if (message != null)
 				msgs = ((InternalEObject)message).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.TOPIC_SPEC__MESSAGE, null, msgs);
@@ -108,8 +114,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.TOPIC_SPEC__MESSAGE:
 				return basicSetMessage(null, msgs);
 		}
@@ -122,8 +130,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.TOPIC_SPEC__MESSAGE:
 				return getMessage();
 		}
@@ -136,8 +146,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.TOPIC_SPEC__MESSAGE:
 				setMessage((MessageDefinition)newValue);
 				return;
@@ -151,8 +163,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.TOPIC_SPEC__MESSAGE:
 				setMessage((MessageDefinition)null);
 				return;
@@ -166,8 +180,10 @@ public class TopicSpecImpl extends SpecBaseImpl implements TopicSpec {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.TOPIC_SPEC__MESSAGE:
 				return message != null;
 		}

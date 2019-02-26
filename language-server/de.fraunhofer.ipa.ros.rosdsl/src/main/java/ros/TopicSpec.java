@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface TopicSpec extends SpecBase {
+public interface TopicSpec extends SpecBase
+{
 	/**
 	 * Returns the value of the '<em><b>Message</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

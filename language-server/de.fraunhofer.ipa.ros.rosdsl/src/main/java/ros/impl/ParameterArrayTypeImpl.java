@@ -29,7 +29,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterArrayTypeImpl extends ParameterTypeImpl implements ParameterArrayType {
+public class ParameterArrayTypeImpl extends ParameterTypeImpl implements ParameterArrayType
+{
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -55,7 +56,8 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterArrayTypeImpl() {
+	protected ParameterArrayTypeImpl()
+	{
 		super();
 	}
 
@@ -65,7 +67,8 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_ARRAY_TYPE;
 	}
 
@@ -74,8 +77,8 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterType getType() {
+	public ParameterType getType()
+	{
 		return type;
 	}
 
@@ -84,10 +87,12 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs)
+	{
 		ParameterType oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_ARRAY_TYPE__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -99,9 +104,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setType(ParameterType newType) {
-		if (newType != type) {
+	public void setType(ParameterType newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_ARRAY_TYPE__TYPE, null, msgs);
@@ -119,8 +125,8 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterSequence getDefault() {
+	public ParameterSequence getDefault()
+	{
 		return default_;
 	}
 
@@ -129,10 +135,12 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefault(ParameterSequence newDefault, NotificationChain msgs) {
+	public NotificationChain basicSetDefault(ParameterSequence newDefault, NotificationChain msgs)
+	{
 		ParameterSequence oldDefault = default_;
 		default_ = newDefault;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_ARRAY_TYPE__DEFAULT, oldDefault, newDefault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -144,9 +152,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDefault(ParameterSequence newDefault) {
-		if (newDefault != default_) {
+	public void setDefault(ParameterSequence newDefault)
+	{
+		if (newDefault != default_)
+		{
 			NotificationChain msgs = null;
 			if (default_ != null)
 				msgs = ((InternalEObject)default_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_ARRAY_TYPE__DEFAULT, null, msgs);
@@ -165,8 +174,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_ARRAY_TYPE__TYPE:
 				return basicSetType(null, msgs);
 			case RosPackage.PARAMETER_ARRAY_TYPE__DEFAULT:
@@ -181,8 +192,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_ARRAY_TYPE__TYPE:
 				return getType();
 			case RosPackage.PARAMETER_ARRAY_TYPE__DEFAULT:
@@ -197,8 +210,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_ARRAY_TYPE__TYPE:
 				setType((ParameterType)newValue);
 				return;
@@ -215,8 +230,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_ARRAY_TYPE__TYPE:
 				setType((ParameterType)null);
 				return;
@@ -233,8 +250,10 @@ public class ParameterArrayTypeImpl extends ParameterTypeImpl implements Paramet
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_ARRAY_TYPE__TYPE:
 				return type != null;
 			case RosPackage.PARAMETER_ARRAY_TYPE__DEFAULT:

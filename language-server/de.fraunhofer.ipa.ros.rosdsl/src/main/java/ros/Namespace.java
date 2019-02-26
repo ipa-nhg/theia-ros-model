@@ -22,7 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Namespace extends EObject {
+public interface Namespace extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Parts</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.

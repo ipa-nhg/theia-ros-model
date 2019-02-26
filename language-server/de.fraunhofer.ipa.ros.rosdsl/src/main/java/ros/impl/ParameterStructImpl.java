@@ -31,7 +31,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterStructImpl extends ParameterValueImpl implements ParameterStruct {
+public class ParameterStructImpl extends ParameterValueImpl implements ParameterStruct
+{
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterStructImpl() {
+	protected ParameterStructImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_STRUCT;
 	}
 
@@ -66,9 +69,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ParameterStructMember> getValue() {
-		if (value == null) {
+	public EList<ParameterStructMember> getValue()
+	{
+		if (value == null)
+		{
 			value = new EObjectContainmentEList<ParameterStructMember>(ParameterStructMember.class, this, RosPackage.PARAMETER_STRUCT__VALUE);
 		}
 		return value;
@@ -80,8 +84,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT__VALUE:
 				return ((InternalEList<?>)getValue()).basicRemove(otherEnd, msgs);
 		}
@@ -94,8 +100,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT__VALUE:
 				return getValue();
 		}
@@ -109,8 +117,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT__VALUE:
 				getValue().clear();
 				getValue().addAll((Collection<? extends ParameterStructMember>)newValue);
@@ -125,8 +135,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT__VALUE:
 				getValue().clear();
 				return;
@@ -140,8 +152,10 @@ public class ParameterStructImpl extends ParameterValueImpl implements Parameter
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT__VALUE:
 				return value != null && !value.isEmpty();
 		}

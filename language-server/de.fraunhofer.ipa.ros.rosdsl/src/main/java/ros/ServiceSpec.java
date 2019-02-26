@@ -20,7 +20,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ServiceSpec extends SpecBase {
+public interface ServiceSpec extends SpecBase
+{
 	/**
 	 * Returns the value of the '<em><b>Request</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

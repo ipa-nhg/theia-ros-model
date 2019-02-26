@@ -31,7 +31,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container implements ParameterStructTypeMember {
+public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container implements ParameterStructTypeMember
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +78,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterStructTypeMemberImpl() {
+	protected ParameterStructTypeMemberImpl()
+	{
 		super();
 	}
 
@@ -87,7 +89,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_STRUCT_TYPE_MEMBER;
 	}
 
@@ -96,8 +99,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -106,8 +109,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -119,8 +122,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterType getType() {
+	public ParameterType getType()
+	{
 		return type;
 	}
 
@@ -129,10 +132,12 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs) {
+	public NotificationChain basicSetType(ParameterType newType, NotificationChain msgs)
+	{
 		ParameterType oldType = type;
 		type = newType;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__TYPE, oldType, newType);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -144,9 +149,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setType(ParameterType newType) {
-		if (newType != type) {
+	public void setType(ParameterType newType)
+	{
+		if (newType != type)
+		{
 			NotificationChain msgs = null;
 			if (type != null)
 				msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__TYPE, null, msgs);
@@ -164,8 +170,8 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStruct getDefault() {
+	public ParameterStruct getDefault()
+	{
 		return default_;
 	}
 
@@ -174,10 +180,12 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefault(ParameterStruct newDefault, NotificationChain msgs) {
+	public NotificationChain basicSetDefault(ParameterStruct newDefault, NotificationChain msgs)
+	{
 		ParameterStruct oldDefault = default_;
 		default_ = newDefault;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__DEFAULT, oldDefault, newDefault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -189,9 +197,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDefault(ParameterStruct newDefault) {
-		if (newDefault != default_) {
+	public void setDefault(ParameterStruct newDefault)
+	{
+		if (newDefault != default_)
+		{
 			NotificationChain msgs = null;
 			if (default_ != null)
 				msgs = ((InternalEObject)default_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__DEFAULT, null, msgs);
@@ -210,8 +219,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__TYPE:
 				return basicSetType(null, msgs);
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__DEFAULT:
@@ -226,8 +237,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__NAME:
 				return getName();
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__TYPE:
@@ -244,8 +257,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__NAME:
 				setName((String)newValue);
 				return;
@@ -265,8 +280,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -286,8 +303,10 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER__TYPE:
@@ -304,10 +323,11 @@ public class ParameterStructTypeMemberImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

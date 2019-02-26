@@ -12,7 +12,8 @@ import org.eclipse.emf.ecore.EFactory;
  * @see ros.RosPackage
  * @generated
  */
-public interface RosFactory extends EFactory {
+public interface RosFactory extends EFactory
+{
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->

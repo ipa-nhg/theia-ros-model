@@ -25,7 +25,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class PackageDependencyImpl extends DependencyImpl implements PackageDependency {
+public class PackageDependencyImpl extends DependencyImpl implements PackageDependency
+{
 	/**
 	 * The cached value of the '{@link #getPackage() <em>Package</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -41,7 +42,8 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageDependencyImpl() {
+	protected PackageDependencyImpl()
+	{
 		super();
 	}
 
@@ -51,7 +53,8 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PACKAGE_DEPENDENCY;
 	}
 
@@ -60,12 +63,14 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ros.Package getPackage() {
-		if (package_ != null && package_.eIsProxy()) {
+	public ros.Package getPackage()
+	{
+		if (package_ != null && package_.eIsProxy())
+		{
 			InternalEObject oldPackage = (InternalEObject)package_;
 			package_ = (ros.Package)eResolveProxy(oldPackage);
-			if (package_ != oldPackage) {
+			if (package_ != oldPackage)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RosPackage.PACKAGE_DEPENDENCY__PACKAGE, oldPackage, package_));
 			}
@@ -78,7 +83,8 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ros.Package basicGetPackage() {
+	public ros.Package basicGetPackage()
+	{
 		return package_;
 	}
 
@@ -87,8 +93,8 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setPackage(ros.Package newPackage) {
+	public void setPackage(ros.Package newPackage)
+	{
 		ros.Package oldPackage = package_;
 		package_ = newPackage;
 		if (eNotificationRequired())
@@ -101,8 +107,10 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_DEPENDENCY__PACKAGE:
 				if (resolve) return getPackage();
 				return basicGetPackage();
@@ -116,8 +124,10 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_DEPENDENCY__PACKAGE:
 				setPackage((ros.Package)newValue);
 				return;
@@ -131,8 +141,10 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_DEPENDENCY__PACKAGE:
 				setPackage((ros.Package)null);
 				return;
@@ -146,8 +158,10 @@ public class PackageDependencyImpl extends DependencyImpl implements PackageDepe
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_DEPENDENCY__PACKAGE:
 				return package_ != null;
 		}

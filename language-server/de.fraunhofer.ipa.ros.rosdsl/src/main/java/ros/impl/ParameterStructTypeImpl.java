@@ -31,7 +31,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterStructTypeImpl extends ParameterTypeImpl implements ParameterStructType {
+public class ParameterStructTypeImpl extends ParameterTypeImpl implements ParameterStructType
+{
 	/**
 	 * The cached value of the '{@link #getParameterstructypetmember() <em>Parameterstructypetmember</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterStructTypeImpl() {
+	protected ParameterStructTypeImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_STRUCT_TYPE;
 	}
 
@@ -66,9 +69,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ParameterStructTypeMember> getParameterstructypetmember() {
-		if (parameterstructypetmember == null) {
+	public EList<ParameterStructTypeMember> getParameterstructypetmember()
+	{
+		if (parameterstructypetmember == null)
+		{
 			parameterstructypetmember = new EObjectContainmentEList<ParameterStructTypeMember>(ParameterStructTypeMember.class, this, RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER);
 		}
 		return parameterstructypetmember;
@@ -80,8 +84,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER:
 				return ((InternalEList<?>)getParameterstructypetmember()).basicRemove(otherEnd, msgs);
 		}
@@ -94,8 +100,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER:
 				return getParameterstructypetmember();
 		}
@@ -109,8 +117,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER:
 				getParameterstructypetmember().clear();
 				getParameterstructypetmember().addAll((Collection<? extends ParameterStructTypeMember>)newValue);
@@ -125,8 +135,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER:
 				getParameterstructypetmember().clear();
 				return;
@@ -140,8 +152,10 @@ public class ParameterStructTypeImpl extends ParameterTypeImpl implements Parame
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_STRUCT_TYPE__PARAMETERSTRUCTYPETMEMBER:
 				return parameterstructypetmember != null && !parameterstructypetmember.isEmpty();
 		}

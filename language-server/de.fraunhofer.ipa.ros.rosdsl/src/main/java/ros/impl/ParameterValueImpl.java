@@ -16,13 +16,15 @@ import ros.RosPackage;
  *
  * @generated
  */
-public abstract class ParameterValueImpl extends MinimalEObjectImpl.Container implements ParameterValue {
+public abstract class ParameterValueImpl extends MinimalEObjectImpl.Container implements ParameterValue
+{
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterValueImpl() {
+	protected ParameterValueImpl()
+	{
 		super();
 	}
 
@@ -32,7 +34,8 @@ public abstract class ParameterValueImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_VALUE;
 	}
 

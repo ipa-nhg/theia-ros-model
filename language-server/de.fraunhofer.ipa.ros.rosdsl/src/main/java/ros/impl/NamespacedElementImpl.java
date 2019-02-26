@@ -29,7 +29,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class NamespacedElementImpl extends MinimalEObjectImpl.Container implements NamespacedElement {
+public class NamespacedElementImpl extends MinimalEObjectImpl.Container implements NamespacedElement
+{
 	/**
 	 * The cached value of the '{@link #getNamespace() <em>Namespace</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,7 +66,8 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected NamespacedElementImpl() {
+	protected NamespacedElementImpl()
+	{
 		super();
 	}
 
@@ -75,7 +77,8 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.NAMESPACED_ELEMENT;
 	}
 
@@ -84,8 +87,8 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Namespace getNamespace() {
+	public Namespace getNamespace()
+	{
 		return namespace;
 	}
 
@@ -94,10 +97,12 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetNamespace(Namespace newNamespace, NotificationChain msgs) {
+	public NotificationChain basicSetNamespace(Namespace newNamespace, NotificationChain msgs)
+	{
 		Namespace oldNamespace = namespace;
 		namespace = newNamespace;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.NAMESPACED_ELEMENT__NAMESPACE, oldNamespace, newNamespace);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -109,9 +114,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setNamespace(Namespace newNamespace) {
-		if (newNamespace != namespace) {
+	public void setNamespace(Namespace newNamespace)
+	{
+		if (newNamespace != namespace)
+		{
 			NotificationChain msgs = null;
 			if (namespace != null)
 				msgs = ((InternalEObject)namespace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.NAMESPACED_ELEMENT__NAMESPACE, null, msgs);
@@ -129,8 +135,8 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -139,8 +145,8 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -153,8 +159,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACED_ELEMENT__NAMESPACE:
 				return basicSetNamespace(null, msgs);
 		}
@@ -167,8 +175,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACED_ELEMENT__NAMESPACE:
 				return getNamespace();
 			case RosPackage.NAMESPACED_ELEMENT__NAME:
@@ -183,8 +193,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACED_ELEMENT__NAMESPACE:
 				setNamespace((Namespace)newValue);
 				return;
@@ -201,8 +213,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACED_ELEMENT__NAMESPACE:
 				setNamespace((Namespace)null);
 				return;
@@ -219,8 +233,10 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.NAMESPACED_ELEMENT__NAMESPACE:
 				return namespace != null;
 			case RosPackage.NAMESPACED_ELEMENT__NAME:
@@ -235,10 +251,11 @@ public class NamespacedElementImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

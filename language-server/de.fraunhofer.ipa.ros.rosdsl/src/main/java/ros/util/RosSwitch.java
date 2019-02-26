@@ -69,7 +69,8 @@ import ros.TopicSpec;
  * @see ros.RosPackage
  * @generated
  */
-public class RosSwitch<T> extends Switch<T> {
+public class RosSwitch<T> extends Switch<T>
+{
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
@@ -84,8 +85,10 @@ public class RosSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RosSwitch() {
-		if (modelPackage == null) {
+	public RosSwitch()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = RosPackage.eINSTANCE;
 		}
 	}
@@ -99,7 +102,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected boolean isSwitchFor(EPackage ePackage) {
+	protected boolean isSwitchFor(EPackage ePackage)
+	{
 		return ePackage == modelPackage;
 	}
 
@@ -111,155 +115,180 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	protected T doSwitch(int classifierID, EObject theEObject) {
-		switch (classifierID) {
-			case RosPackage.NODE: {
+	protected T doSwitch(int classifierID, EObject theEObject)
+	{
+		switch (classifierID)
+		{
+			case RosPackage.NODE:
+			{
 				Node node = (Node)theEObject;
 				T result = caseNode(node);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PACKAGE: {
+			case RosPackage.PACKAGE:
+			{
 				ros.Package package_ = (ros.Package)theEObject;
 				T result = casePackage(package_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.DEPENDENCY: {
+			case RosPackage.DEPENDENCY:
+			{
 				Dependency dependency = (Dependency)theEObject;
 				T result = caseDependency(dependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.SERVICE_SPEC: {
+			case RosPackage.SERVICE_SPEC:
+			{
 				ServiceSpec serviceSpec = (ServiceSpec)theEObject;
 				T result = caseServiceSpec(serviceSpec);
 				if (result == null) result = caseSpecBase(serviceSpec);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.SERVICE_SERVER: {
+			case RosPackage.SERVICE_SERVER:
+			{
 				ServiceServer serviceServer = (ServiceServer)theEObject;
 				T result = caseServiceServer(serviceServer);
 				if (result == null) result = caseNamespacedElement(serviceServer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.TOPIC_SPEC: {
+			case RosPackage.TOPIC_SPEC:
+			{
 				TopicSpec topicSpec = (TopicSpec)theEObject;
 				T result = caseTopicSpec(topicSpec);
 				if (result == null) result = caseSpecBase(topicSpec);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PACKAGE_DEPENDENCY: {
+			case RosPackage.PACKAGE_DEPENDENCY:
+			{
 				PackageDependency packageDependency = (PackageDependency)theEObject;
 				T result = casePackageDependency(packageDependency);
 				if (result == null) result = caseDependency(packageDependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.EXTERNAL_DEPENDENCY: {
+			case RosPackage.EXTERNAL_DEPENDENCY:
+			{
 				ExternalDependency externalDependency = (ExternalDependency)theEObject;
 				T result = caseExternalDependency(externalDependency);
 				if (result == null) result = caseDependency(externalDependency);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.CATKIN_PACKAGE: {
+			case RosPackage.CATKIN_PACKAGE:
+			{
 				CatkinPackage catkinPackage = (CatkinPackage)theEObject;
 				T result = caseCatkinPackage(catkinPackage);
 				if (result == null) result = casePackage(catkinPackage);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PUBLISHER: {
+			case RosPackage.PUBLISHER:
+			{
 				Publisher publisher = (Publisher)theEObject;
 				T result = casePublisher(publisher);
 				if (result == null) result = caseNamespacedElement(publisher);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.ARTIFACT: {
+			case RosPackage.ARTIFACT:
+			{
 				Artifact artifact = (Artifact)theEObject;
 				T result = caseArtifact(artifact);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.SPEC_BASE: {
+			case RosPackage.SPEC_BASE:
+			{
 				SpecBase specBase = (SpecBase)theEObject;
 				T result = caseSpecBase(specBase);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.SUBSCRIBER: {
+			case RosPackage.SUBSCRIBER:
+			{
 				Subscriber subscriber = (Subscriber)theEObject;
 				T result = caseSubscriber(subscriber);
 				if (result == null) result = caseNamespacedElement(subscriber);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.SERVICE_CLIENT: {
+			case RosPackage.SERVICE_CLIENT:
+			{
 				ServiceClient serviceClient = (ServiceClient)theEObject;
 				T result = caseServiceClient(serviceClient);
 				if (result == null) result = caseNamespacedElement(serviceClient);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PACKAGE_SET: {
+			case RosPackage.PACKAGE_SET:
+			{
 				PackageSet packageSet = (PackageSet)theEObject;
 				T result = casePackageSet(packageSet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.ACTION_SPEC: {
+			case RosPackage.ACTION_SPEC:
+			{
 				ActionSpec actionSpec = (ActionSpec)theEObject;
 				T result = caseActionSpec(actionSpec);
 				if (result == null) result = caseSpecBase(actionSpec);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.ACTION_SERVER: {
+			case RosPackage.ACTION_SERVER:
+			{
 				ActionServer actionServer = (ActionServer)theEObject;
 				T result = caseActionServer(actionServer);
 				if (result == null) result = caseNamespacedElement(actionServer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.ACTION_CLIENT: {
+			case RosPackage.ACTION_CLIENT:
+			{
 				ActionClient actionClient = (ActionClient)theEObject;
 				T result = caseActionClient(actionClient);
 				if (result == null) result = caseNamespacedElement(actionClient);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.MESSAGE_DEFINITION: {
+			case RosPackage.MESSAGE_DEFINITION:
+			{
 				MessageDefinition messageDefinition = (MessageDefinition)theEObject;
 				T result = caseMessageDefinition(messageDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.NAMESPACE: {
+			case RosPackage.NAMESPACE:
+			{
 				Namespace namespace = (Namespace)theEObject;
 				T result = caseNamespace(namespace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.GLOBAL_NAMESPACE: {
+			case RosPackage.GLOBAL_NAMESPACE:
+			{
 				GlobalNamespace globalNamespace = (GlobalNamespace)theEObject;
 				T result = caseGlobalNamespace(globalNamespace);
 				if (result == null) result = caseNamespace(globalNamespace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.RELATIVE_NAMESPACE: {
+			case RosPackage.RELATIVE_NAMESPACE:
+			{
 				RelativeNamespace relativeNamespace = (RelativeNamespace)theEObject;
 				T result = caseRelativeNamespace(relativeNamespace);
 				if (result == null) result = caseNamespace(relativeNamespace);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PRIVATE_NAMESPACE: {
+			case RosPackage.PRIVATE_NAMESPACE:
+			{
 				PrivateNamespace privateNamespace = (PrivateNamespace)theEObject;
 				T result = casePrivateNamespace(privateNamespace);
 				if (result == null) result = caseRelativeNamespace(privateNamespace);
@@ -267,170 +296,195 @@ public class RosSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.NAMESPACED_ELEMENT: {
+			case RosPackage.NAMESPACED_ELEMENT:
+			{
 				NamespacedElement namespacedElement = (NamespacedElement)theEObject;
 				T result = caseNamespacedElement(namespacedElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_TYPE: {
+			case RosPackage.PARAMETER_TYPE:
+			{
 				ParameterType parameterType = (ParameterType)theEObject;
 				T result = caseParameterType(parameterType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_LIST_TYPE: {
+			case RosPackage.PARAMETER_LIST_TYPE:
+			{
 				ParameterListType parameterListType = (ParameterListType)theEObject;
 				T result = caseParameterListType(parameterListType);
 				if (result == null) result = caseParameterType(parameterListType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRUCT_TYPE: {
+			case RosPackage.PARAMETER_STRUCT_TYPE:
+			{
 				ParameterStructType parameterStructType = (ParameterStructType)theEObject;
 				T result = caseParameterStructType(parameterStructType);
 				if (result == null) result = caseParameterType(parameterStructType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_INTEGER_TYPE: {
+			case RosPackage.PARAMETER_INTEGER_TYPE:
+			{
 				ParameterIntegerType parameterIntegerType = (ParameterIntegerType)theEObject;
 				T result = caseParameterIntegerType(parameterIntegerType);
 				if (result == null) result = caseParameterType(parameterIntegerType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRING_TYPE: {
+			case RosPackage.PARAMETER_STRING_TYPE:
+			{
 				ParameterStringType parameterStringType = (ParameterStringType)theEObject;
 				T result = caseParameterStringType(parameterStringType);
 				if (result == null) result = caseParameterType(parameterStringType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_DOUBLE_TYPE: {
+			case RosPackage.PARAMETER_DOUBLE_TYPE:
+			{
 				ParameterDoubleType parameterDoubleType = (ParameterDoubleType)theEObject;
 				T result = caseParameterDoubleType(parameterDoubleType);
 				if (result == null) result = caseParameterType(parameterDoubleType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER: {
+			case RosPackage.PARAMETER:
+			{
 				Parameter parameter = (Parameter)theEObject;
 				T result = caseParameter(parameter);
 				if (result == null) result = caseNamespacedElement(parameter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_DATE_TYPE: {
+			case RosPackage.PARAMETER_DATE_TYPE:
+			{
 				ParameterDateType parameterDateType = (ParameterDateType)theEObject;
 				T result = caseParameterDateType(parameterDateType);
 				if (result == null) result = caseParameterType(parameterDateType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_BOOLEAN_TYPE: {
+			case RosPackage.PARAMETER_BOOLEAN_TYPE:
+			{
 				ParameterBooleanType parameterBooleanType = (ParameterBooleanType)theEObject;
 				T result = caseParameterBooleanType(parameterBooleanType);
 				if (result == null) result = caseParameterType(parameterBooleanType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_BASE64_TYPE: {
+			case RosPackage.PARAMETER_BASE64_TYPE:
+			{
 				ParameterBase64Type parameterBase64Type = (ParameterBase64Type)theEObject;
 				T result = caseParameterBase64Type(parameterBase64Type);
 				if (result == null) result = caseParameterType(parameterBase64Type);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_ANY_TYPE: {
+			case RosPackage.PARAMETER_ANY_TYPE:
+			{
 				ParameterAnyType parameterAnyType = (ParameterAnyType)theEObject;
 				T result = caseParameterAnyType(parameterAnyType);
 				if (result == null) result = caseParameterType(parameterAnyType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER: {
+			case RosPackage.PARAMETER_STRUCT_TYPE_MEMBER:
+			{
 				ParameterStructTypeMember parameterStructTypeMember = (ParameterStructTypeMember)theEObject;
 				T result = caseParameterStructTypeMember(parameterStructTypeMember);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_ARRAY_TYPE: {
+			case RosPackage.PARAMETER_ARRAY_TYPE:
+			{
 				ParameterArrayType parameterArrayType = (ParameterArrayType)theEObject;
 				T result = caseParameterArrayType(parameterArrayType);
 				if (result == null) result = caseParameterType(parameterArrayType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_VALUE: {
+			case RosPackage.PARAMETER_VALUE:
+			{
 				ParameterValue parameterValue = (ParameterValue)theEObject;
 				T result = caseParameterValue(parameterValue);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_ANY: {
+			case RosPackage.PARAMETER_ANY:
+			{
 				ParameterAny parameterAny = (ParameterAny)theEObject;
 				T result = caseParameterAny(parameterAny);
 				if (result == null) result = caseParameterValue(parameterAny);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRING: {
+			case RosPackage.PARAMETER_STRING:
+			{
 				ParameterString parameterString = (ParameterString)theEObject;
 				T result = caseParameterString(parameterString);
 				if (result == null) result = caseParameterValue(parameterString);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_BASE64: {
+			case RosPackage.PARAMETER_BASE64:
+			{
 				ParameterBase64 parameterBase64 = (ParameterBase64)theEObject;
 				T result = caseParameterBase64(parameterBase64);
 				if (result == null) result = caseParameterValue(parameterBase64);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_INTEGER: {
+			case RosPackage.PARAMETER_INTEGER:
+			{
 				ParameterInteger parameterInteger = (ParameterInteger)theEObject;
 				T result = caseParameterInteger(parameterInteger);
 				if (result == null) result = caseParameterValue(parameterInteger);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_DOUBLE: {
+			case RosPackage.PARAMETER_DOUBLE:
+			{
 				ParameterDouble parameterDouble = (ParameterDouble)theEObject;
 				T result = caseParameterDouble(parameterDouble);
 				if (result == null) result = caseParameterValue(parameterDouble);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_BOOLEAN: {
+			case RosPackage.PARAMETER_BOOLEAN:
+			{
 				ParameterBoolean parameterBoolean = (ParameterBoolean)theEObject;
 				T result = caseParameterBoolean(parameterBoolean);
 				if (result == null) result = caseParameterValue(parameterBoolean);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_SEQUENCE: {
+			case RosPackage.PARAMETER_SEQUENCE:
+			{
 				ParameterSequence parameterSequence = (ParameterSequence)theEObject;
 				T result = caseParameterSequence(parameterSequence);
 				if (result == null) result = caseParameterValue(parameterSequence);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRUCT: {
+			case RosPackage.PARAMETER_STRUCT:
+			{
 				ParameterStruct parameterStruct = (ParameterStruct)theEObject;
 				T result = caseParameterStruct(parameterStruct);
 				if (result == null) result = caseParameterValue(parameterStruct);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_STRUCT_MEMBER: {
+			case RosPackage.PARAMETER_STRUCT_MEMBER:
+			{
 				ParameterStructMember parameterStructMember = (ParameterStructMember)theEObject;
 				T result = caseParameterStructMember(parameterStructMember);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case RosPackage.PARAMETER_DATE: {
+			case RosPackage.PARAMETER_DATE:
+			{
 				ParameterDate parameterDate = (ParameterDate)theEObject;
 				T result = caseParameterDate(parameterDate);
 				if (result == null) result = caseParameterValue(parameterDate);
@@ -452,7 +506,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNode(Node object) {
+	public T caseNode(Node object)
+	{
 		return null;
 	}
 
@@ -467,7 +522,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackage(ros.Package object) {
+	public T casePackage(ros.Package object)
+	{
 		return null;
 	}
 
@@ -482,7 +538,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDependency(Dependency object) {
+	public T caseDependency(Dependency object)
+	{
 		return null;
 	}
 
@@ -497,7 +554,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceSpec(ServiceSpec object) {
+	public T caseServiceSpec(ServiceSpec object)
+	{
 		return null;
 	}
 
@@ -512,7 +570,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceServer(ServiceServer object) {
+	public T caseServiceServer(ServiceServer object)
+	{
 		return null;
 	}
 
@@ -527,7 +586,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseTopicSpec(TopicSpec object) {
+	public T caseTopicSpec(TopicSpec object)
+	{
 		return null;
 	}
 
@@ -542,7 +602,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageDependency(PackageDependency object) {
+	public T casePackageDependency(PackageDependency object)
+	{
 		return null;
 	}
 
@@ -557,7 +618,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseExternalDependency(ExternalDependency object) {
+	public T caseExternalDependency(ExternalDependency object)
+	{
 		return null;
 	}
 
@@ -572,7 +634,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCatkinPackage(CatkinPackage object) {
+	public T caseCatkinPackage(CatkinPackage object)
+	{
 		return null;
 	}
 
@@ -587,7 +650,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePublisher(Publisher object) {
+	public T casePublisher(Publisher object)
+	{
 		return null;
 	}
 
@@ -602,7 +666,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArtifact(Artifact object) {
+	public T caseArtifact(Artifact object)
+	{
 		return null;
 	}
 
@@ -617,7 +682,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSpecBase(SpecBase object) {
+	public T caseSpecBase(SpecBase object)
+	{
 		return null;
 	}
 
@@ -632,7 +698,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseSubscriber(Subscriber object) {
+	public T caseSubscriber(Subscriber object)
+	{
 		return null;
 	}
 
@@ -647,7 +714,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseServiceClient(ServiceClient object) {
+	public T caseServiceClient(ServiceClient object)
+	{
 		return null;
 	}
 
@@ -662,7 +730,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePackageSet(PackageSet object) {
+	public T casePackageSet(PackageSet object)
+	{
 		return null;
 	}
 
@@ -677,7 +746,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActionSpec(ActionSpec object) {
+	public T caseActionSpec(ActionSpec object)
+	{
 		return null;
 	}
 
@@ -692,7 +762,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActionServer(ActionServer object) {
+	public T caseActionServer(ActionServer object)
+	{
 		return null;
 	}
 
@@ -707,7 +778,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseActionClient(ActionClient object) {
+	public T caseActionClient(ActionClient object)
+	{
 		return null;
 	}
 
@@ -722,7 +794,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMessageDefinition(MessageDefinition object) {
+	public T caseMessageDefinition(MessageDefinition object)
+	{
 		return null;
 	}
 
@@ -737,7 +810,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamespace(Namespace object) {
+	public T caseNamespace(Namespace object)
+	{
 		return null;
 	}
 
@@ -752,7 +826,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseGlobalNamespace(GlobalNamespace object) {
+	public T caseGlobalNamespace(GlobalNamespace object)
+	{
 		return null;
 	}
 
@@ -767,7 +842,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRelativeNamespace(RelativeNamespace object) {
+	public T caseRelativeNamespace(RelativeNamespace object)
+	{
 		return null;
 	}
 
@@ -782,7 +858,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casePrivateNamespace(PrivateNamespace object) {
+	public T casePrivateNamespace(PrivateNamespace object)
+	{
 		return null;
 	}
 
@@ -797,7 +874,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamespacedElement(NamespacedElement object) {
+	public T caseNamespacedElement(NamespacedElement object)
+	{
 		return null;
 	}
 
@@ -812,7 +890,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterType(ParameterType object) {
+	public T caseParameterType(ParameterType object)
+	{
 		return null;
 	}
 
@@ -827,7 +906,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterListType(ParameterListType object) {
+	public T caseParameterListType(ParameterListType object)
+	{
 		return null;
 	}
 
@@ -842,7 +922,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterStructType(ParameterStructType object) {
+	public T caseParameterStructType(ParameterStructType object)
+	{
 		return null;
 	}
 
@@ -857,7 +938,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterIntegerType(ParameterIntegerType object) {
+	public T caseParameterIntegerType(ParameterIntegerType object)
+	{
 		return null;
 	}
 
@@ -872,7 +954,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterStringType(ParameterStringType object) {
+	public T caseParameterStringType(ParameterStringType object)
+	{
 		return null;
 	}
 
@@ -887,7 +970,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterDoubleType(ParameterDoubleType object) {
+	public T caseParameterDoubleType(ParameterDoubleType object)
+	{
 		return null;
 	}
 
@@ -902,7 +986,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameter(Parameter object) {
+	public T caseParameter(Parameter object)
+	{
 		return null;
 	}
 
@@ -917,7 +1002,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterDateType(ParameterDateType object) {
+	public T caseParameterDateType(ParameterDateType object)
+	{
 		return null;
 	}
 
@@ -932,7 +1018,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBooleanType(ParameterBooleanType object) {
+	public T caseParameterBooleanType(ParameterBooleanType object)
+	{
 		return null;
 	}
 
@@ -947,7 +1034,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBase64Type(ParameterBase64Type object) {
+	public T caseParameterBase64Type(ParameterBase64Type object)
+	{
 		return null;
 	}
 
@@ -962,7 +1050,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterAnyType(ParameterAnyType object) {
+	public T caseParameterAnyType(ParameterAnyType object)
+	{
 		return null;
 	}
 
@@ -977,7 +1066,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterStructTypeMember(ParameterStructTypeMember object) {
+	public T caseParameterStructTypeMember(ParameterStructTypeMember object)
+	{
 		return null;
 	}
 
@@ -992,7 +1082,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterArrayType(ParameterArrayType object) {
+	public T caseParameterArrayType(ParameterArrayType object)
+	{
 		return null;
 	}
 
@@ -1007,7 +1098,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterValue(ParameterValue object) {
+	public T caseParameterValue(ParameterValue object)
+	{
 		return null;
 	}
 
@@ -1022,7 +1114,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterAny(ParameterAny object) {
+	public T caseParameterAny(ParameterAny object)
+	{
 		return null;
 	}
 
@@ -1037,7 +1130,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterString(ParameterString object) {
+	public T caseParameterString(ParameterString object)
+	{
 		return null;
 	}
 
@@ -1052,7 +1146,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBase64(ParameterBase64 object) {
+	public T caseParameterBase64(ParameterBase64 object)
+	{
 		return null;
 	}
 
@@ -1067,7 +1162,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterInteger(ParameterInteger object) {
+	public T caseParameterInteger(ParameterInteger object)
+	{
 		return null;
 	}
 
@@ -1082,7 +1178,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterDouble(ParameterDouble object) {
+	public T caseParameterDouble(ParameterDouble object)
+	{
 		return null;
 	}
 
@@ -1097,7 +1194,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterBoolean(ParameterBoolean object) {
+	public T caseParameterBoolean(ParameterBoolean object)
+	{
 		return null;
 	}
 
@@ -1112,7 +1210,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterSequence(ParameterSequence object) {
+	public T caseParameterSequence(ParameterSequence object)
+	{
 		return null;
 	}
 
@@ -1127,7 +1226,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterStruct(ParameterStruct object) {
+	public T caseParameterStruct(ParameterStruct object)
+	{
 		return null;
 	}
 
@@ -1142,7 +1242,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterStructMember(ParameterStructMember object) {
+	public T caseParameterStructMember(ParameterStructMember object)
+	{
 		return null;
 	}
 
@@ -1157,7 +1258,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseParameterDate(ParameterDate object) {
+	public T caseParameterDate(ParameterDate object)
+	{
 		return null;
 	}
 
@@ -1173,7 +1275,8 @@ public class RosSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	@Override
-	public T defaultCase(EObject object) {
+	public T defaultCase(EObject object)
+	{
 		return null;
 	}
 

@@ -24,7 +24,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterIntegerImpl extends ParameterValueImpl implements ParameterInteger {
+public class ParameterIntegerImpl extends ParameterValueImpl implements ParameterInteger
+{
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterIntegerImpl() {
+	protected ParameterIntegerImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_INTEGER;
 	}
 
@@ -69,8 +72,8 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public int getValue() {
+	public int getValue()
+	{
 		return value;
 	}
 
@@ -79,8 +82,8 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setValue(int newValue) {
+	public void setValue(int newValue)
+	{
 		int oldValue = value;
 		value = newValue;
 		if (eNotificationRequired())
@@ -93,8 +96,10 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_INTEGER__VALUE:
 				return getValue();
 		}
@@ -107,8 +112,10 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_INTEGER__VALUE:
 				setValue((Integer)newValue);
 				return;
@@ -122,8 +129,10 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_INTEGER__VALUE:
 				setValue(VALUE_EDEFAULT);
 				return;
@@ -137,8 +146,10 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_INTEGER__VALUE:
 				return value != VALUE_EDEFAULT;
 		}
@@ -151,10 +162,11 @@ public class ParameterIntegerImpl extends ParameterValueImpl implements Paramete
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (value: ");
 		result.append(value);
 		result.append(')');

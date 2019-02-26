@@ -32,7 +32,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class PackageSetImpl extends MinimalEObjectImpl.Container implements PackageSet {
+public class PackageSetImpl extends MinimalEObjectImpl.Container implements PackageSet
+{
 	/**
 	 * The cached value of the '{@link #getPackage() <em>Package</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -48,7 +49,8 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected PackageSetImpl() {
+	protected PackageSetImpl()
+	{
 		super();
 	}
 
@@ -58,7 +60,8 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PACKAGE_SET;
 	}
 
@@ -67,9 +70,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<ros.Package> getPackage() {
-		if (package_ == null) {
+	public EList<ros.Package> getPackage()
+	{
+		if (package_ == null)
+		{
 			package_ = new EObjectContainmentEList<ros.Package>(ros.Package.class, this, RosPackage.PACKAGE_SET__PACKAGE);
 		}
 		return package_;
@@ -81,8 +85,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_SET__PACKAGE:
 				return ((InternalEList<?>)getPackage()).basicRemove(otherEnd, msgs);
 		}
@@ -95,8 +101,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_SET__PACKAGE:
 				return getPackage();
 		}
@@ -110,8 +118,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_SET__PACKAGE:
 				getPackage().clear();
 				getPackage().addAll((Collection<? extends ros.Package>)newValue);
@@ -126,8 +136,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_SET__PACKAGE:
 				getPackage().clear();
 				return;
@@ -141,8 +153,10 @@ public class PackageSetImpl extends MinimalEObjectImpl.Container implements Pack
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PACKAGE_SET__PACKAGE:
 				return package_ != null && !package_.isEmpty();
 		}

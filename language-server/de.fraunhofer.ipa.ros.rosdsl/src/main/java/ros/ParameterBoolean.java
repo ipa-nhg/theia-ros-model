@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ParameterBoolean extends ParameterValue {
+public interface ParameterBoolean extends ParameterValue
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

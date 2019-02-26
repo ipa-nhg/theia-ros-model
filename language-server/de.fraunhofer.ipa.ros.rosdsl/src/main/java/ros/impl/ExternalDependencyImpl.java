@@ -24,7 +24,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ExternalDependencyImpl extends DependencyImpl implements ExternalDependency {
+public class ExternalDependencyImpl extends DependencyImpl implements ExternalDependency
+{
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +51,8 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExternalDependencyImpl() {
+	protected ExternalDependencyImpl()
+	{
 		super();
 	}
 
@@ -60,7 +62,8 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.EXTERNAL_DEPENDENCY;
 	}
 
@@ -69,8 +72,8 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public String getName() {
+	public String getName()
+	{
 		return name;
 	}
 
@@ -79,8 +82,8 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setName(String newName) {
+	public void setName(String newName)
+	{
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
@@ -93,8 +96,10 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.EXTERNAL_DEPENDENCY__NAME:
 				return getName();
 		}
@@ -107,8 +112,10 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.EXTERNAL_DEPENDENCY__NAME:
 				setName((String)newValue);
 				return;
@@ -122,8 +129,10 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.EXTERNAL_DEPENDENCY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -137,8 +146,10 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.EXTERNAL_DEPENDENCY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
@@ -151,10 +162,11 @@ public class ExternalDependencyImpl extends DependencyImpl implements ExternalDe
 	 * @generated
 	 */
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		if (eIsProxy()) return super.toString();
 
-		StringBuilder result = new StringBuilder(super.toString());
+		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
 		result.append(')');

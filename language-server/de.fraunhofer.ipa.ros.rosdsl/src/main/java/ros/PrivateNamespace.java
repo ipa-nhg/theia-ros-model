@@ -13,5 +13,6 @@ package ros;
  * @model
  * @generated
  */
-public interface PrivateNamespace extends RelativeNamespace {
+public interface PrivateNamespace extends RelativeNamespace
+{
 } // PrivateNamespace

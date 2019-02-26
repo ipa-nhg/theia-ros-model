@@ -20,7 +20,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * @model
  * @generated
  */
-public interface ParameterDate extends ParameterValue {
+public interface ParameterDate extends ParameterValue
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

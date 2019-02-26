@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ParameterString extends ParameterValue {
+public interface ParameterString extends ParameterValue
+{
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->

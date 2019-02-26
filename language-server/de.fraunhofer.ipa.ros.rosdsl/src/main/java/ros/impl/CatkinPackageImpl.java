@@ -31,7 +31,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
+public class CatkinPackageImpl extends PackageImpl implements CatkinPackage
+{
 	/**
 	 * The cached value of the '{@link #getDependency() <em>Dependency</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -47,7 +48,8 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CatkinPackageImpl() {
+	protected CatkinPackageImpl()
+	{
 		super();
 	}
 
@@ -57,7 +59,8 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.CATKIN_PACKAGE;
 	}
 
@@ -66,9 +69,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public EList<Dependency> getDependency() {
-		if (dependency == null) {
+	public EList<Dependency> getDependency()
+	{
+		if (dependency == null)
+		{
 			dependency = new EObjectContainmentEList<Dependency>(Dependency.class, this, RosPackage.CATKIN_PACKAGE__DEPENDENCY);
 		}
 		return dependency;
@@ -80,8 +84,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.CATKIN_PACKAGE__DEPENDENCY:
 				return ((InternalEList<?>)getDependency()).basicRemove(otherEnd, msgs);
 		}
@@ -94,8 +100,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.CATKIN_PACKAGE__DEPENDENCY:
 				return getDependency();
 		}
@@ -109,8 +117,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.CATKIN_PACKAGE__DEPENDENCY:
 				getDependency().clear();
 				getDependency().addAll((Collection<? extends Dependency>)newValue);
@@ -125,8 +135,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.CATKIN_PACKAGE__DEPENDENCY:
 				getDependency().clear();
 				return;
@@ -140,8 +152,10 @@ public class CatkinPackageImpl extends PackageImpl implements CatkinPackage {
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.CATKIN_PACKAGE__DEPENDENCY:
 				return dependency != null && !dependency.isEmpty();
 		}

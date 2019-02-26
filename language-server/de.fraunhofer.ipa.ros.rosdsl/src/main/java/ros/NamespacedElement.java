@@ -21,7 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface NamespacedElement extends EObject {
+public interface NamespacedElement extends EObject
+{
 	/**
 	 * Returns the value of the '<em><b>Namespace</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

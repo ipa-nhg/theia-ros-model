@@ -66,7 +66,8 @@ import ros.TopicSpec;
  * @see ros.RosPackage
  * @generated
  */
-public class RosAdapterFactory extends AdapterFactoryImpl {
+public class RosAdapterFactory extends AdapterFactoryImpl
+{
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
@@ -81,8 +82,10 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RosAdapterFactory() {
-		if (modelPackage == null) {
+	public RosAdapterFactory()
+	{
+		if (modelPackage == null)
+		{
 			modelPackage = RosPackage.eINSTANCE;
 		}
 	}
@@ -96,11 +99,14 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public boolean isFactoryForType(Object object) {
-		if (object == modelPackage) {
+	public boolean isFactoryForType(Object object)
+	{
+		if (object == modelPackage)
+		{
 			return true;
 		}
-		if (object instanceof EObject) {
+		if (object instanceof EObject)
+		{
 			return ((EObject)object).eClass().getEPackage() == modelPackage;
 		}
 		return false;
@@ -113,201 +119,251 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	protected RosSwitch<Adapter> modelSwitch =
-		new RosSwitch<Adapter>() {
+		new RosSwitch<Adapter>()
+		{
 			@Override
-			public Adapter caseNode(Node object) {
+			public Adapter caseNode(Node object)
+			{
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter casePackage(ros.Package object) {
+			public Adapter casePackage(ros.Package object)
+			{
 				return createPackageAdapter();
 			}
 			@Override
-			public Adapter caseDependency(Dependency object) {
+			public Adapter caseDependency(Dependency object)
+			{
 				return createDependencyAdapter();
 			}
 			@Override
-			public Adapter caseServiceSpec(ServiceSpec object) {
+			public Adapter caseServiceSpec(ServiceSpec object)
+			{
 				return createServiceSpecAdapter();
 			}
 			@Override
-			public Adapter caseServiceServer(ServiceServer object) {
+			public Adapter caseServiceServer(ServiceServer object)
+			{
 				return createServiceServerAdapter();
 			}
 			@Override
-			public Adapter caseTopicSpec(TopicSpec object) {
+			public Adapter caseTopicSpec(TopicSpec object)
+			{
 				return createTopicSpecAdapter();
 			}
 			@Override
-			public Adapter casePackageDependency(PackageDependency object) {
+			public Adapter casePackageDependency(PackageDependency object)
+			{
 				return createPackageDependencyAdapter();
 			}
 			@Override
-			public Adapter caseExternalDependency(ExternalDependency object) {
+			public Adapter caseExternalDependency(ExternalDependency object)
+			{
 				return createExternalDependencyAdapter();
 			}
 			@Override
-			public Adapter caseCatkinPackage(CatkinPackage object) {
+			public Adapter caseCatkinPackage(CatkinPackage object)
+			{
 				return createCatkinPackageAdapter();
 			}
 			@Override
-			public Adapter casePublisher(Publisher object) {
+			public Adapter casePublisher(Publisher object)
+			{
 				return createPublisherAdapter();
 			}
 			@Override
-			public Adapter caseArtifact(Artifact object) {
+			public Adapter caseArtifact(Artifact object)
+			{
 				return createArtifactAdapter();
 			}
 			@Override
-			public Adapter caseSpecBase(SpecBase object) {
+			public Adapter caseSpecBase(SpecBase object)
+			{
 				return createSpecBaseAdapter();
 			}
 			@Override
-			public Adapter caseSubscriber(Subscriber object) {
+			public Adapter caseSubscriber(Subscriber object)
+			{
 				return createSubscriberAdapter();
 			}
 			@Override
-			public Adapter caseServiceClient(ServiceClient object) {
+			public Adapter caseServiceClient(ServiceClient object)
+			{
 				return createServiceClientAdapter();
 			}
 			@Override
-			public Adapter casePackageSet(PackageSet object) {
+			public Adapter casePackageSet(PackageSet object)
+			{
 				return createPackageSetAdapter();
 			}
 			@Override
-			public Adapter caseActionSpec(ActionSpec object) {
+			public Adapter caseActionSpec(ActionSpec object)
+			{
 				return createActionSpecAdapter();
 			}
 			@Override
-			public Adapter caseActionServer(ActionServer object) {
+			public Adapter caseActionServer(ActionServer object)
+			{
 				return createActionServerAdapter();
 			}
 			@Override
-			public Adapter caseActionClient(ActionClient object) {
+			public Adapter caseActionClient(ActionClient object)
+			{
 				return createActionClientAdapter();
 			}
 			@Override
-			public Adapter caseMessageDefinition(MessageDefinition object) {
+			public Adapter caseMessageDefinition(MessageDefinition object)
+			{
 				return createMessageDefinitionAdapter();
 			}
 			@Override
-			public Adapter caseNamespace(Namespace object) {
+			public Adapter caseNamespace(Namespace object)
+			{
 				return createNamespaceAdapter();
 			}
 			@Override
-			public Adapter caseGlobalNamespace(GlobalNamespace object) {
+			public Adapter caseGlobalNamespace(GlobalNamespace object)
+			{
 				return createGlobalNamespaceAdapter();
 			}
 			@Override
-			public Adapter caseRelativeNamespace(RelativeNamespace object) {
+			public Adapter caseRelativeNamespace(RelativeNamespace object)
+			{
 				return createRelativeNamespaceAdapter();
 			}
 			@Override
-			public Adapter casePrivateNamespace(PrivateNamespace object) {
+			public Adapter casePrivateNamespace(PrivateNamespace object)
+			{
 				return createPrivateNamespaceAdapter();
 			}
 			@Override
-			public Adapter caseNamespacedElement(NamespacedElement object) {
+			public Adapter caseNamespacedElement(NamespacedElement object)
+			{
 				return createNamespacedElementAdapter();
 			}
 			@Override
-			public Adapter caseParameterType(ParameterType object) {
+			public Adapter caseParameterType(ParameterType object)
+			{
 				return createParameterTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterListType(ParameterListType object) {
+			public Adapter caseParameterListType(ParameterListType object)
+			{
 				return createParameterListTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterStructType(ParameterStructType object) {
+			public Adapter caseParameterStructType(ParameterStructType object)
+			{
 				return createParameterStructTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterIntegerType(ParameterIntegerType object) {
+			public Adapter caseParameterIntegerType(ParameterIntegerType object)
+			{
 				return createParameterIntegerTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterStringType(ParameterStringType object) {
+			public Adapter caseParameterStringType(ParameterStringType object)
+			{
 				return createParameterStringTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterDoubleType(ParameterDoubleType object) {
+			public Adapter caseParameterDoubleType(ParameterDoubleType object)
+			{
 				return createParameterDoubleTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameter(Parameter object) {
+			public Adapter caseParameter(Parameter object)
+			{
 				return createParameterAdapter();
 			}
 			@Override
-			public Adapter caseParameterDateType(ParameterDateType object) {
+			public Adapter caseParameterDateType(ParameterDateType object)
+			{
 				return createParameterDateTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterBooleanType(ParameterBooleanType object) {
+			public Adapter caseParameterBooleanType(ParameterBooleanType object)
+			{
 				return createParameterBooleanTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterBase64Type(ParameterBase64Type object) {
+			public Adapter caseParameterBase64Type(ParameterBase64Type object)
+			{
 				return createParameterBase64TypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterAnyType(ParameterAnyType object) {
+			public Adapter caseParameterAnyType(ParameterAnyType object)
+			{
 				return createParameterAnyTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterStructTypeMember(ParameterStructTypeMember object) {
+			public Adapter caseParameterStructTypeMember(ParameterStructTypeMember object)
+			{
 				return createParameterStructTypeMemberAdapter();
 			}
 			@Override
-			public Adapter caseParameterArrayType(ParameterArrayType object) {
+			public Adapter caseParameterArrayType(ParameterArrayType object)
+			{
 				return createParameterArrayTypeAdapter();
 			}
 			@Override
-			public Adapter caseParameterValue(ParameterValue object) {
+			public Adapter caseParameterValue(ParameterValue object)
+			{
 				return createParameterValueAdapter();
 			}
 			@Override
-			public Adapter caseParameterAny(ParameterAny object) {
+			public Adapter caseParameterAny(ParameterAny object)
+			{
 				return createParameterAnyAdapter();
 			}
 			@Override
-			public Adapter caseParameterString(ParameterString object) {
+			public Adapter caseParameterString(ParameterString object)
+			{
 				return createParameterStringAdapter();
 			}
 			@Override
-			public Adapter caseParameterBase64(ParameterBase64 object) {
+			public Adapter caseParameterBase64(ParameterBase64 object)
+			{
 				return createParameterBase64Adapter();
 			}
 			@Override
-			public Adapter caseParameterInteger(ParameterInteger object) {
+			public Adapter caseParameterInteger(ParameterInteger object)
+			{
 				return createParameterIntegerAdapter();
 			}
 			@Override
-			public Adapter caseParameterDouble(ParameterDouble object) {
+			public Adapter caseParameterDouble(ParameterDouble object)
+			{
 				return createParameterDoubleAdapter();
 			}
 			@Override
-			public Adapter caseParameterBoolean(ParameterBoolean object) {
+			public Adapter caseParameterBoolean(ParameterBoolean object)
+			{
 				return createParameterBooleanAdapter();
 			}
 			@Override
-			public Adapter caseParameterSequence(ParameterSequence object) {
+			public Adapter caseParameterSequence(ParameterSequence object)
+			{
 				return createParameterSequenceAdapter();
 			}
 			@Override
-			public Adapter caseParameterStruct(ParameterStruct object) {
+			public Adapter caseParameterStruct(ParameterStruct object)
+			{
 				return createParameterStructAdapter();
 			}
 			@Override
-			public Adapter caseParameterStructMember(ParameterStructMember object) {
+			public Adapter caseParameterStructMember(ParameterStructMember object)
+			{
 				return createParameterStructMemberAdapter();
 			}
 			@Override
-			public Adapter caseParameterDate(ParameterDate object) {
+			public Adapter caseParameterDate(ParameterDate object)
+			{
 				return createParameterDateAdapter();
 			}
 			@Override
-			public Adapter defaultCase(EObject object) {
+			public Adapter defaultCase(EObject object)
+			{
 				return createEObjectAdapter();
 			}
 		};
@@ -321,7 +377,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	@Override
-	public Adapter createAdapter(Notifier target) {
+	public Adapter createAdapter(Notifier target)
+	{
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
@@ -336,7 +393,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Node
 	 * @generated
 	 */
-	public Adapter createNodeAdapter() {
+	public Adapter createNodeAdapter()
+	{
 		return null;
 	}
 
@@ -350,7 +408,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Package
 	 * @generated
 	 */
-	public Adapter createPackageAdapter() {
+	public Adapter createPackageAdapter()
+	{
 		return null;
 	}
 
@@ -364,7 +423,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Dependency
 	 * @generated
 	 */
-	public Adapter createDependencyAdapter() {
+	public Adapter createDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -378,7 +438,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ServiceSpec
 	 * @generated
 	 */
-	public Adapter createServiceSpecAdapter() {
+	public Adapter createServiceSpecAdapter()
+	{
 		return null;
 	}
 
@@ -392,7 +453,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ServiceServer
 	 * @generated
 	 */
-	public Adapter createServiceServerAdapter() {
+	public Adapter createServiceServerAdapter()
+	{
 		return null;
 	}
 
@@ -406,7 +468,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.TopicSpec
 	 * @generated
 	 */
-	public Adapter createTopicSpecAdapter() {
+	public Adapter createTopicSpecAdapter()
+	{
 		return null;
 	}
 
@@ -420,7 +483,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.PackageDependency
 	 * @generated
 	 */
-	public Adapter createPackageDependencyAdapter() {
+	public Adapter createPackageDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -434,7 +498,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ExternalDependency
 	 * @generated
 	 */
-	public Adapter createExternalDependencyAdapter() {
+	public Adapter createExternalDependencyAdapter()
+	{
 		return null;
 	}
 
@@ -448,7 +513,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.CatkinPackage
 	 * @generated
 	 */
-	public Adapter createCatkinPackageAdapter() {
+	public Adapter createCatkinPackageAdapter()
+	{
 		return null;
 	}
 
@@ -462,7 +528,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Publisher
 	 * @generated
 	 */
-	public Adapter createPublisherAdapter() {
+	public Adapter createPublisherAdapter()
+	{
 		return null;
 	}
 
@@ -476,7 +543,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Artifact
 	 * @generated
 	 */
-	public Adapter createArtifactAdapter() {
+	public Adapter createArtifactAdapter()
+	{
 		return null;
 	}
 
@@ -490,7 +558,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.SpecBase
 	 * @generated
 	 */
-	public Adapter createSpecBaseAdapter() {
+	public Adapter createSpecBaseAdapter()
+	{
 		return null;
 	}
 
@@ -504,7 +573,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Subscriber
 	 * @generated
 	 */
-	public Adapter createSubscriberAdapter() {
+	public Adapter createSubscriberAdapter()
+	{
 		return null;
 	}
 
@@ -518,7 +588,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ServiceClient
 	 * @generated
 	 */
-	public Adapter createServiceClientAdapter() {
+	public Adapter createServiceClientAdapter()
+	{
 		return null;
 	}
 
@@ -532,7 +603,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.PackageSet
 	 * @generated
 	 */
-	public Adapter createPackageSetAdapter() {
+	public Adapter createPackageSetAdapter()
+	{
 		return null;
 	}
 
@@ -546,7 +618,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ActionSpec
 	 * @generated
 	 */
-	public Adapter createActionSpecAdapter() {
+	public Adapter createActionSpecAdapter()
+	{
 		return null;
 	}
 
@@ -560,7 +633,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ActionServer
 	 * @generated
 	 */
-	public Adapter createActionServerAdapter() {
+	public Adapter createActionServerAdapter()
+	{
 		return null;
 	}
 
@@ -574,7 +648,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ActionClient
 	 * @generated
 	 */
-	public Adapter createActionClientAdapter() {
+	public Adapter createActionClientAdapter()
+	{
 		return null;
 	}
 
@@ -588,7 +663,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.MessageDefinition
 	 * @generated
 	 */
-	public Adapter createMessageDefinitionAdapter() {
+	public Adapter createMessageDefinitionAdapter()
+	{
 		return null;
 	}
 
@@ -602,7 +678,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Namespace
 	 * @generated
 	 */
-	public Adapter createNamespaceAdapter() {
+	public Adapter createNamespaceAdapter()
+	{
 		return null;
 	}
 
@@ -616,7 +693,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.GlobalNamespace
 	 * @generated
 	 */
-	public Adapter createGlobalNamespaceAdapter() {
+	public Adapter createGlobalNamespaceAdapter()
+	{
 		return null;
 	}
 
@@ -630,7 +708,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.RelativeNamespace
 	 * @generated
 	 */
-	public Adapter createRelativeNamespaceAdapter() {
+	public Adapter createRelativeNamespaceAdapter()
+	{
 		return null;
 	}
 
@@ -644,7 +723,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.PrivateNamespace
 	 * @generated
 	 */
-	public Adapter createPrivateNamespaceAdapter() {
+	public Adapter createPrivateNamespaceAdapter()
+	{
 		return null;
 	}
 
@@ -658,7 +738,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.NamespacedElement
 	 * @generated
 	 */
-	public Adapter createNamespacedElementAdapter() {
+	public Adapter createNamespacedElementAdapter()
+	{
 		return null;
 	}
 
@@ -672,7 +753,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterType
 	 * @generated
 	 */
-	public Adapter createParameterTypeAdapter() {
+	public Adapter createParameterTypeAdapter()
+	{
 		return null;
 	}
 
@@ -686,7 +768,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterListType
 	 * @generated
 	 */
-	public Adapter createParameterListTypeAdapter() {
+	public Adapter createParameterListTypeAdapter()
+	{
 		return null;
 	}
 
@@ -700,7 +783,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterStructType
 	 * @generated
 	 */
-	public Adapter createParameterStructTypeAdapter() {
+	public Adapter createParameterStructTypeAdapter()
+	{
 		return null;
 	}
 
@@ -714,7 +798,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterIntegerType
 	 * @generated
 	 */
-	public Adapter createParameterIntegerTypeAdapter() {
+	public Adapter createParameterIntegerTypeAdapter()
+	{
 		return null;
 	}
 
@@ -728,7 +813,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterStringType
 	 * @generated
 	 */
-	public Adapter createParameterStringTypeAdapter() {
+	public Adapter createParameterStringTypeAdapter()
+	{
 		return null;
 	}
 
@@ -742,7 +828,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterDoubleType
 	 * @generated
 	 */
-	public Adapter createParameterDoubleTypeAdapter() {
+	public Adapter createParameterDoubleTypeAdapter()
+	{
 		return null;
 	}
 
@@ -756,7 +843,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.Parameter
 	 * @generated
 	 */
-	public Adapter createParameterAdapter() {
+	public Adapter createParameterAdapter()
+	{
 		return null;
 	}
 
@@ -770,7 +858,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterDateType
 	 * @generated
 	 */
-	public Adapter createParameterDateTypeAdapter() {
+	public Adapter createParameterDateTypeAdapter()
+	{
 		return null;
 	}
 
@@ -784,7 +873,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterBooleanType
 	 * @generated
 	 */
-	public Adapter createParameterBooleanTypeAdapter() {
+	public Adapter createParameterBooleanTypeAdapter()
+	{
 		return null;
 	}
 
@@ -798,7 +888,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterBase64Type
 	 * @generated
 	 */
-	public Adapter createParameterBase64TypeAdapter() {
+	public Adapter createParameterBase64TypeAdapter()
+	{
 		return null;
 	}
 
@@ -812,7 +903,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterAnyType
 	 * @generated
 	 */
-	public Adapter createParameterAnyTypeAdapter() {
+	public Adapter createParameterAnyTypeAdapter()
+	{
 		return null;
 	}
 
@@ -826,7 +918,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterStructTypeMember
 	 * @generated
 	 */
-	public Adapter createParameterStructTypeMemberAdapter() {
+	public Adapter createParameterStructTypeMemberAdapter()
+	{
 		return null;
 	}
 
@@ -840,7 +933,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterArrayType
 	 * @generated
 	 */
-	public Adapter createParameterArrayTypeAdapter() {
+	public Adapter createParameterArrayTypeAdapter()
+	{
 		return null;
 	}
 
@@ -854,7 +948,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterValue
 	 * @generated
 	 */
-	public Adapter createParameterValueAdapter() {
+	public Adapter createParameterValueAdapter()
+	{
 		return null;
 	}
 
@@ -868,7 +963,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterAny
 	 * @generated
 	 */
-	public Adapter createParameterAnyAdapter() {
+	public Adapter createParameterAnyAdapter()
+	{
 		return null;
 	}
 
@@ -882,7 +978,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterString
 	 * @generated
 	 */
-	public Adapter createParameterStringAdapter() {
+	public Adapter createParameterStringAdapter()
+	{
 		return null;
 	}
 
@@ -896,7 +993,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterBase64
 	 * @generated
 	 */
-	public Adapter createParameterBase64Adapter() {
+	public Adapter createParameterBase64Adapter()
+	{
 		return null;
 	}
 
@@ -910,7 +1008,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterInteger
 	 * @generated
 	 */
-	public Adapter createParameterIntegerAdapter() {
+	public Adapter createParameterIntegerAdapter()
+	{
 		return null;
 	}
 
@@ -924,7 +1023,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterDouble
 	 * @generated
 	 */
-	public Adapter createParameterDoubleAdapter() {
+	public Adapter createParameterDoubleAdapter()
+	{
 		return null;
 	}
 
@@ -938,7 +1038,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterBoolean
 	 * @generated
 	 */
-	public Adapter createParameterBooleanAdapter() {
+	public Adapter createParameterBooleanAdapter()
+	{
 		return null;
 	}
 
@@ -952,7 +1053,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterSequence
 	 * @generated
 	 */
-	public Adapter createParameterSequenceAdapter() {
+	public Adapter createParameterSequenceAdapter()
+	{
 		return null;
 	}
 
@@ -966,7 +1068,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterStruct
 	 * @generated
 	 */
-	public Adapter createParameterStructAdapter() {
+	public Adapter createParameterStructAdapter()
+	{
 		return null;
 	}
 
@@ -980,7 +1083,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterStructMember
 	 * @generated
 	 */
-	public Adapter createParameterStructMemberAdapter() {
+	public Adapter createParameterStructMemberAdapter()
+	{
 		return null;
 	}
 
@@ -994,7 +1098,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @see ros.ParameterDate
 	 * @generated
 	 */
-	public Adapter createParameterDateAdapter() {
+	public Adapter createParameterDateAdapter()
+	{
 		return null;
 	}
 
@@ -1006,7 +1111,8 @@ public class RosAdapterFactory extends AdapterFactoryImpl {
 	 * @return the new adapter.
 	 * @generated
 	 */
-	public Adapter createEObjectAdapter() {
+	public Adapter createEObjectAdapter()
+	{
 		return null;
 	}
 

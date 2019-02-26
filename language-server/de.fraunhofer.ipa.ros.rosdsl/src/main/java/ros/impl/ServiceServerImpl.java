@@ -26,7 +26,8 @@ import ros.ServiceSpec;
  *
  * @generated
  */
-public class ServiceServerImpl extends NamespacedElementImpl implements ServiceServer {
+public class ServiceServerImpl extends NamespacedElementImpl implements ServiceServer
+{
 	/**
 	 * The cached value of the '{@link #getService() <em>Service</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -42,7 +43,8 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ServiceServerImpl() {
+	protected ServiceServerImpl()
+	{
 		super();
 	}
 
@@ -52,7 +54,8 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.SERVICE_SERVER;
 	}
 
@@ -61,12 +64,14 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ServiceSpec getService() {
-		if (service != null && service.eIsProxy()) {
+	public ServiceSpec getService()
+	{
+		if (service != null && service.eIsProxy())
+		{
 			InternalEObject oldService = (InternalEObject)service;
 			service = (ServiceSpec)eResolveProxy(oldService);
-			if (service != oldService) {
+			if (service != oldService)
+			{
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, RosPackage.SERVICE_SERVER__SERVICE, oldService, service));
 			}
@@ -79,7 +84,8 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ServiceSpec basicGetService() {
+	public ServiceSpec basicGetService()
+	{
 		return service;
 	}
 
@@ -88,8 +94,8 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setService(ServiceSpec newService) {
+	public void setService(ServiceSpec newService)
+	{
 		ServiceSpec oldService = service;
 		service = newService;
 		if (eNotificationRequired())
@@ -102,8 +108,10 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SERVICE_SERVER__SERVICE:
 				if (resolve) return getService();
 				return basicGetService();
@@ -117,8 +125,10 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SERVICE_SERVER__SERVICE:
 				setService((ServiceSpec)newValue);
 				return;
@@ -132,8 +142,10 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SERVICE_SERVER__SERVICE:
 				setService((ServiceSpec)null);
 				return;
@@ -147,8 +159,10 @@ public class ServiceServerImpl extends NamespacedElementImpl implements ServiceS
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.SERVICE_SERVER__SERVICE:
 				return service != null;
 		}

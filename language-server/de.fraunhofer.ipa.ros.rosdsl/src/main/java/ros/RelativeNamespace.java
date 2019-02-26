@@ -13,5 +13,6 @@ package ros;
  * @model
  * @generated
  */
-public interface RelativeNamespace extends Namespace {
+public interface RelativeNamespace extends Namespace
+{
 } // RelativeNamespace

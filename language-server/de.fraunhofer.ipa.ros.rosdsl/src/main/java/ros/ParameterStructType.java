@@ -20,7 +20,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ParameterStructType extends ParameterType {
+public interface ParameterStructType extends ParameterType
+{
 	/**
 	 * Returns the value of the '<em><b>Parameterstructypetmember</b></em>' containment reference list.
 	 * The list contents are of type {@link ros.ParameterStructTypeMember}.

@@ -13,5 +13,6 @@ package ros;
  * @model
  * @generated
  */
-public interface GlobalNamespace extends Namespace {
+public interface GlobalNamespace extends Namespace
+{
 } // GlobalNamespace

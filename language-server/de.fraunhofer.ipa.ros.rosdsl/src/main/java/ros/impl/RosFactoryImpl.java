@@ -62,21 +62,26 @@ import ros.TopicSpec;
  * <!-- end-user-doc -->
  * @generated
  */
-public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
+public class RosFactoryImpl extends EFactoryImpl implements RosFactory
+{
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static RosFactory init() {
-		try {
+	public static RosFactory init()
+	{
+		try
+		{
 			RosFactory theRosFactory = (RosFactory)EPackage.Registry.INSTANCE.getEFactory(RosPackage.eNS_URI);
-			if (theRosFactory != null) {
+			if (theRosFactory != null)
+			{
 				return theRosFactory;
 			}
 		}
-		catch (Exception exception) {
+		catch (Exception exception)
+		{
 			EcorePlugin.INSTANCE.log(exception);
 		}
 		return new RosFactoryImpl();
@@ -88,7 +93,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RosFactoryImpl() {
+	public RosFactoryImpl()
+	{
 		super();
 	}
 
@@ -98,8 +104,10 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * @generated
 	 */
 	@Override
-	public EObject create(EClass eClass) {
-		switch (eClass.getClassifierID()) {
+	public EObject create(EClass eClass)
+	{
+		switch (eClass.getClassifierID())
+		{
 			case RosPackage.NODE: return createNode();
 			case RosPackage.PACKAGE: return createPackage();
 			case RosPackage.SERVICE_SPEC: return createServiceSpec();
@@ -154,8 +162,10 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * @generated
 	 */
 	@Override
-	public Object createFromString(EDataType eDataType, String initialValue) {
-		switch (eDataType.getClassifierID()) {
+	public Object createFromString(EDataType eDataType, String initialValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
 			case RosPackage.GRAPH_NAME:
 				return createGraphNameFromString(eDataType, initialValue);
 			default:
@@ -169,8 +179,10 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * @generated
 	 */
 	@Override
-	public String convertToString(EDataType eDataType, Object instanceValue) {
-		switch (eDataType.getClassifierID()) {
+	public String convertToString(EDataType eDataType, Object instanceValue)
+	{
+		switch (eDataType.getClassifierID())
+		{
 			case RosPackage.GRAPH_NAME:
 				return convertGraphNameToString(eDataType, instanceValue);
 			default:
@@ -183,8 +195,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Node createNode() {
+	public Node createNode()
+	{
 		NodeImpl node = new NodeImpl();
 		return node;
 	}
@@ -194,8 +206,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ros.Package createPackage() {
+	public ros.Package createPackage()
+	{
 		PackageImpl package_ = new PackageImpl();
 		return package_;
 	}
@@ -205,8 +217,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ServiceSpec createServiceSpec() {
+	public ServiceSpec createServiceSpec()
+	{
 		ServiceSpecImpl serviceSpec = new ServiceSpecImpl();
 		return serviceSpec;
 	}
@@ -216,8 +228,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ServiceServer createServiceServer() {
+	public ServiceServer createServiceServer()
+	{
 		ServiceServerImpl serviceServer = new ServiceServerImpl();
 		return serviceServer;
 	}
@@ -227,8 +239,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public TopicSpec createTopicSpec() {
+	public TopicSpec createTopicSpec()
+	{
 		TopicSpecImpl topicSpec = new TopicSpecImpl();
 		return topicSpec;
 	}
@@ -238,8 +250,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public PackageDependency createPackageDependency() {
+	public PackageDependency createPackageDependency()
+	{
 		PackageDependencyImpl packageDependency = new PackageDependencyImpl();
 		return packageDependency;
 	}
@@ -249,8 +261,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ExternalDependency createExternalDependency() {
+	public ExternalDependency createExternalDependency()
+	{
 		ExternalDependencyImpl externalDependency = new ExternalDependencyImpl();
 		return externalDependency;
 	}
@@ -260,8 +272,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public CatkinPackage createCatkinPackage() {
+	public CatkinPackage createCatkinPackage()
+	{
 		CatkinPackageImpl catkinPackage = new CatkinPackageImpl();
 		return catkinPackage;
 	}
@@ -271,8 +283,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Publisher createPublisher() {
+	public Publisher createPublisher()
+	{
 		PublisherImpl publisher = new PublisherImpl();
 		return publisher;
 	}
@@ -282,8 +294,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Artifact createArtifact() {
+	public Artifact createArtifact()
+	{
 		ArtifactImpl artifact = new ArtifactImpl();
 		return artifact;
 	}
@@ -293,8 +305,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Subscriber createSubscriber() {
+	public Subscriber createSubscriber()
+	{
 		SubscriberImpl subscriber = new SubscriberImpl();
 		return subscriber;
 	}
@@ -304,8 +316,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ServiceClient createServiceClient() {
+	public ServiceClient createServiceClient()
+	{
 		ServiceClientImpl serviceClient = new ServiceClientImpl();
 		return serviceClient;
 	}
@@ -315,8 +327,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public PackageSet createPackageSet() {
+	public PackageSet createPackageSet()
+	{
 		PackageSetImpl packageSet = new PackageSetImpl();
 		return packageSet;
 	}
@@ -326,8 +338,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ActionSpec createActionSpec() {
+	public ActionSpec createActionSpec()
+	{
 		ActionSpecImpl actionSpec = new ActionSpecImpl();
 		return actionSpec;
 	}
@@ -337,8 +349,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ActionServer createActionServer() {
+	public ActionServer createActionServer()
+	{
 		ActionServerImpl actionServer = new ActionServerImpl();
 		return actionServer;
 	}
@@ -348,8 +360,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ActionClient createActionClient() {
+	public ActionClient createActionClient()
+	{
 		ActionClientImpl actionClient = new ActionClientImpl();
 		return actionClient;
 	}
@@ -359,8 +371,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public MessageDefinition createMessageDefinition() {
+	public MessageDefinition createMessageDefinition()
+	{
 		MessageDefinitionImpl messageDefinition = new MessageDefinitionImpl();
 		return messageDefinition;
 	}
@@ -370,8 +382,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public GlobalNamespace createGlobalNamespace() {
+	public GlobalNamespace createGlobalNamespace()
+	{
 		GlobalNamespaceImpl globalNamespace = new GlobalNamespaceImpl();
 		return globalNamespace;
 	}
@@ -381,8 +393,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public RelativeNamespace createRelativeNamespace() {
+	public RelativeNamespace createRelativeNamespace()
+	{
 		RelativeNamespaceImpl relativeNamespace = new RelativeNamespaceImpl();
 		return relativeNamespace;
 	}
@@ -392,8 +404,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public PrivateNamespace createPrivateNamespace() {
+	public PrivateNamespace createPrivateNamespace()
+	{
 		PrivateNamespaceImpl privateNamespace = new PrivateNamespaceImpl();
 		return privateNamespace;
 	}
@@ -403,8 +415,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NamespacedElement createNamespacedElement() {
+	public NamespacedElement createNamespacedElement()
+	{
 		NamespacedElementImpl namespacedElement = new NamespacedElementImpl();
 		return namespacedElement;
 	}
@@ -414,8 +426,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterListType createParameterListType() {
+	public ParameterListType createParameterListType()
+	{
 		ParameterListTypeImpl parameterListType = new ParameterListTypeImpl();
 		return parameterListType;
 	}
@@ -425,8 +437,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStructType createParameterStructType() {
+	public ParameterStructType createParameterStructType()
+	{
 		ParameterStructTypeImpl parameterStructType = new ParameterStructTypeImpl();
 		return parameterStructType;
 	}
@@ -436,8 +448,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterIntegerType createParameterIntegerType() {
+	public ParameterIntegerType createParameterIntegerType()
+	{
 		ParameterIntegerTypeImpl parameterIntegerType = new ParameterIntegerTypeImpl();
 		return parameterIntegerType;
 	}
@@ -447,8 +459,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStringType createParameterStringType() {
+	public ParameterStringType createParameterStringType()
+	{
 		ParameterStringTypeImpl parameterStringType = new ParameterStringTypeImpl();
 		return parameterStringType;
 	}
@@ -458,8 +470,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterDoubleType createParameterDoubleType() {
+	public ParameterDoubleType createParameterDoubleType()
+	{
 		ParameterDoubleTypeImpl parameterDoubleType = new ParameterDoubleTypeImpl();
 		return parameterDoubleType;
 	}
@@ -469,8 +481,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public Parameter createParameter() {
+	public Parameter createParameter()
+	{
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
 	}
@@ -480,8 +492,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterDateType createParameterDateType() {
+	public ParameterDateType createParameterDateType()
+	{
 		ParameterDateTypeImpl parameterDateType = new ParameterDateTypeImpl();
 		return parameterDateType;
 	}
@@ -491,8 +503,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterBooleanType createParameterBooleanType() {
+	public ParameterBooleanType createParameterBooleanType()
+	{
 		ParameterBooleanTypeImpl parameterBooleanType = new ParameterBooleanTypeImpl();
 		return parameterBooleanType;
 	}
@@ -502,8 +514,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterBase64Type createParameterBase64Type() {
+	public ParameterBase64Type createParameterBase64Type()
+	{
 		ParameterBase64TypeImpl parameterBase64Type = new ParameterBase64TypeImpl();
 		return parameterBase64Type;
 	}
@@ -513,8 +525,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterAnyType createParameterAnyType() {
+	public ParameterAnyType createParameterAnyType()
+	{
 		ParameterAnyTypeImpl parameterAnyType = new ParameterAnyTypeImpl();
 		return parameterAnyType;
 	}
@@ -524,8 +536,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStructTypeMember createParameterStructTypeMember() {
+	public ParameterStructTypeMember createParameterStructTypeMember()
+	{
 		ParameterStructTypeMemberImpl parameterStructTypeMember = new ParameterStructTypeMemberImpl();
 		return parameterStructTypeMember;
 	}
@@ -535,8 +547,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterArrayType createParameterArrayType() {
+	public ParameterArrayType createParameterArrayType()
+	{
 		ParameterArrayTypeImpl parameterArrayType = new ParameterArrayTypeImpl();
 		return parameterArrayType;
 	}
@@ -546,8 +558,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterAny createParameterAny() {
+	public ParameterAny createParameterAny()
+	{
 		ParameterAnyImpl parameterAny = new ParameterAnyImpl();
 		return parameterAny;
 	}
@@ -557,8 +569,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterString createParameterString() {
+	public ParameterString createParameterString()
+	{
 		ParameterStringImpl parameterString = new ParameterStringImpl();
 		return parameterString;
 	}
@@ -568,8 +580,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterBase64 createParameterBase64() {
+	public ParameterBase64 createParameterBase64()
+	{
 		ParameterBase64Impl parameterBase64 = new ParameterBase64Impl();
 		return parameterBase64;
 	}
@@ -579,8 +591,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterInteger createParameterInteger() {
+	public ParameterInteger createParameterInteger()
+	{
 		ParameterIntegerImpl parameterInteger = new ParameterIntegerImpl();
 		return parameterInteger;
 	}
@@ -590,8 +602,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterDouble createParameterDouble() {
+	public ParameterDouble createParameterDouble()
+	{
 		ParameterDoubleImpl parameterDouble = new ParameterDoubleImpl();
 		return parameterDouble;
 	}
@@ -601,8 +613,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterBoolean createParameterBoolean() {
+	public ParameterBoolean createParameterBoolean()
+	{
 		ParameterBooleanImpl parameterBoolean = new ParameterBooleanImpl();
 		return parameterBoolean;
 	}
@@ -612,8 +624,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterSequence createParameterSequence() {
+	public ParameterSequence createParameterSequence()
+	{
 		ParameterSequenceImpl parameterSequence = new ParameterSequenceImpl();
 		return parameterSequence;
 	}
@@ -623,8 +635,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStruct createParameterStruct() {
+	public ParameterStruct createParameterStruct()
+	{
 		ParameterStructImpl parameterStruct = new ParameterStructImpl();
 		return parameterStruct;
 	}
@@ -634,8 +646,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterStructMember createParameterStructMember() {
+	public ParameterStructMember createParameterStructMember()
+	{
 		ParameterStructMemberImpl parameterStructMember = new ParameterStructMemberImpl();
 		return parameterStructMember;
 	}
@@ -645,8 +657,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterDate createParameterDate() {
+	public ParameterDate createParameterDate()
+	{
 		ParameterDateImpl parameterDate = new ParameterDateImpl();
 		return parameterDate;
 	}
@@ -656,7 +668,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String createGraphNameFromString(EDataType eDataType, String initialValue) {
+	public String createGraphNameFromString(EDataType eDataType, String initialValue)
+	{
 		return (String)super.createFromString(eDataType, initialValue);
 	}
 
@@ -665,7 +678,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertGraphNameToString(EDataType eDataType, Object instanceValue) {
+	public String convertGraphNameToString(EDataType eDataType, Object instanceValue)
+	{
 		return super.convertToString(eDataType, instanceValue);
 	}
 
@@ -674,8 +688,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public RosPackage getRosPackage() {
+	public RosPackage getRosPackage()
+	{
 		return (RosPackage)getEPackage();
 	}
 
@@ -686,7 +700,8 @@ public class RosFactoryImpl extends EFactoryImpl implements RosFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static RosPackage getPackage() {
+	public static RosPackage getPackage()
+	{
 		return RosPackage.eINSTANCE;
 	}
 

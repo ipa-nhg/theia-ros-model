@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ExternalDependency extends Dependency {
+public interface ExternalDependency extends Dependency
+{
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

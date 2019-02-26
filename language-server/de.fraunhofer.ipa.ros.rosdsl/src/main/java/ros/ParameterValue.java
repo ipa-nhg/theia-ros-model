@@ -14,5 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface ParameterValue extends EObject {
+public interface ParameterValue extends EObject
+{
 } // ParameterValue

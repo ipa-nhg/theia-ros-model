@@ -27,7 +27,8 @@ import ros.RosPackage;
  *
  * @generated
  */
-public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements ParameterBooleanType {
+public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements ParameterBooleanType
+{
 	/**
 	 * The cached value of the '{@link #getDefault() <em>Default</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,7 +44,8 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParameterBooleanTypeImpl() {
+	protected ParameterBooleanTypeImpl()
+	{
 		super();
 	}
 
@@ -53,7 +55,8 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	protected EClass eStaticClass() {
+	protected EClass eStaticClass()
+	{
 		return RosPackage.Literals.PARAMETER_BOOLEAN_TYPE;
 	}
 
@@ -62,8 +65,8 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public ParameterBoolean getDefault() {
+	public ParameterBoolean getDefault()
+	{
 		return default_;
 	}
 
@@ -72,10 +75,12 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDefault(ParameterBoolean newDefault, NotificationChain msgs) {
+	public NotificationChain basicSetDefault(ParameterBoolean newDefault, NotificationChain msgs)
+	{
 		ParameterBoolean oldDefault = default_;
 		default_ = newDefault;
-		if (eNotificationRequired()) {
+		if (eNotificationRequired())
+		{
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT, oldDefault, newDefault);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
@@ -87,9 +92,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDefault(ParameterBoolean newDefault) {
-		if (newDefault != default_) {
+	public void setDefault(ParameterBoolean newDefault)
+	{
+		if (newDefault != default_)
+		{
 			NotificationChain msgs = null;
 			if (default_ != null)
 				msgs = ((InternalEObject)default_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT, null, msgs);
@@ -108,8 +114,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT:
 				return basicSetDefault(null, msgs);
 		}
@@ -122,8 +130,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
+	public Object eGet(int featureID, boolean resolve, boolean coreType)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT:
 				return getDefault();
 		}
@@ -136,8 +146,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
+	public void eSet(int featureID, Object newValue)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT:
 				setDefault((ParameterBoolean)newValue);
 				return;
@@ -151,8 +163,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
+	public void eUnset(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT:
 				setDefault((ParameterBoolean)null);
 				return;
@@ -166,8 +180,10 @@ public class ParameterBooleanTypeImpl extends ParameterTypeImpl implements Param
 	 * @generated
 	 */
 	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
+	public boolean eIsSet(int featureID)
+	{
+		switch (featureID)
+		{
 			case RosPackage.PARAMETER_BOOLEAN_TYPE__DEFAULT:
 				return default_ != null;
 		}

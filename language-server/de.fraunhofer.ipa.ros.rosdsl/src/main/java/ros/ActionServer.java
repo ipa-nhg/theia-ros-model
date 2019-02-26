@@ -19,7 +19,8 @@ package ros;
  * @model
  * @generated
  */
-public interface ActionServer extends NamespacedElement {
+public interface ActionServer extends NamespacedElement
+{
 	/**
 	 * Returns the value of the '<em><b>Action</b></em>' reference.
 	 * <!-- begin-user-doc -->
