@@ -5,6 +5,7 @@ import * as net from 'net';
 import { resolve, join } from 'path';
 import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
 import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
+import { ProcessErrorEvent } from '@theia/process/lib/node/process';
 
 const EXECUTABLE_NAME = isWindows ? 'de.fraunhofer.ipa.ros.rosdsl.ide.bat' : 'de.fraunhofer.ipa.ros.rosdsl.ide';
 const EXECUTABLE_PATH = resolve(join(__dirname, '..', '..', 'build', 'de.fraunhofer.ipa.ros.rosdsl.ide-1.0.0-SNAPSHOT', 'bin', EXECUTABLE_NAME));
@@ -42,7 +43,7 @@ export class RosLanguageServerContribution extends BaseLanguageServerContributio
         }
     }
 
-    protected onDidFailSpawnProcess(error: Error): void {
+    protected onDidFailSpawnProcess(error: ProcessErrorEvent): void {
         super.onDidFailSpawnProcess(error);
         console.error("Error starting DSL language server.", error)
     }

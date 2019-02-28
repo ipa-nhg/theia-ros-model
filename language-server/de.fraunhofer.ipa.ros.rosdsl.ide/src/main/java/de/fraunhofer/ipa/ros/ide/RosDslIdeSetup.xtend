@@ -7,6 +7,7 @@ import com.google.inject.Guice
 import de.fraunhofer.ipa.ros.RosDslRuntimeModule
 import de.fraunhofer.ipa.ros.RosDslStandaloneSetup
 import org.eclipse.xtext.util.Modules2
+import de.fraunhofer.ipa.ros.ide.diagram.RosDiagramModule
 
 /**
  * Initialization support for running Xtext languages as language servers.
@@ -14,7 +15,7 @@ import org.eclipse.xtext.util.Modules2
 class RosDslIdeSetup extends RosDslStandaloneSetup {
 
 	override createInjector() {
-		Guice.createInjector(Modules2.mixin(new RosDslRuntimeModule, new RosDslIdeModule))
+		Guice.createInjector(Modules2.mixin(new RosDslRuntimeModule, new RosDslIdeModule, new RosDiagramModule))
 	}
 	
 }

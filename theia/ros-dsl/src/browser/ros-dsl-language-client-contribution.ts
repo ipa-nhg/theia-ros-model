@@ -1,8 +1,8 @@
 import { LanguageClientFactory, Languages, Workspace } from '@theia/languages/lib/browser';
 import { inject, injectable, multiInject } from 'inversify';
 import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME, ROS_LANGUAGE_FILE_EXTENSION } from '../common';
-
-import { DiagramLanguageClientContribution, DiagramManagerProvider } from 'sprotty-theia';
+import { DiagramLanguageClientContribution } from 'sprotty-theia/lib/theia/languageserver';
+import { DiagramManagerProvider } from 'sprotty-theia/lib';
 
 @injectable()
 export class RosLanguageClientContribution extends DiagramLanguageClientContribution {
@@ -14,9 +14,8 @@ export class RosLanguageClientContribution extends DiagramLanguageClientContribu
         @inject(Workspace) protected readonly workspace: Workspace,
         @inject(Languages) protected readonly languages: Languages,
         @inject(LanguageClientFactory) protected readonly languageClientFactory: LanguageClientFactory,
-        @multiInject(DiagramManagerProvider) protected diagramManagerProviders: DiagramManagerProvider[]
-    ) {
-        super(workspace, languages, languageClientFactory, diagramManagerProviders);
+        @multiInject(DiagramManagerProvider) protected diagramManagerProviders: DiagramManagerProvider[]) {
+        super(workspace, languages, languageClientFactory, diagramManagerProviders)
     }
 
     protected get globPatterns(): string[] {

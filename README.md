@@ -1,4 +1,7 @@
 # theia-ros-model
+
+Based on https://github.com/TypeFox/theia-xtext-sprotty-example
+
 Build the language server 
 
 ```sh
