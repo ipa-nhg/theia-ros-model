@@ -16,12 +16,12 @@ Workflow {
     }
     
     component = DirectoryCleaner {
-		directory ="src/main/java/ros"
+		directory ="src/main/emf-gen"
 	}
     
     component = EcoreGenerator {
         genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
-        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/src/main/java"
+        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/emf-gen"
     }
     
 	component = XtextGenerator {
@@ -49,7 +49,6 @@ Workflow {
 			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.ecore"
 			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
 						
-			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
 			formatter = {
 				generateStub = true

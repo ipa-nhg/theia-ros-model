@@ -4,8 +4,9 @@
 package de.fraunhofer.ipa.ros.validation
 
 import org.eclipse.xtext.validation.Check
-import ros.Artifact
-import ros.Node
+import de.fraunhofer.ipa.ros.model.ros.Node
+import de.fraunhofer.ipa.ros.model.ros.Artifact
+import de.fraunhofer.ipa.ros.model.ros.Package
 
 /**
  * This class contains custom validation rules. 
@@ -38,5 +39,4 @@ class RosDslValidator extends AbstractRosDslValidator {
 				error("The name of a package has to follow the ROS naming conventions: Capital letters are not allowed", null, INVALID_NAME);
 			}
 		}}
-	
 }

@@ -4,7 +4,7 @@
 package de.fraunhofer.ipa.ros
 
 import com.google.inject.Injector;
-import ros.RosPackage
+import de.fraunhofer.ipa.ros.model.ros.RosPackage
 import org.eclipse.emf.ecore.EPackage;
 
 /**

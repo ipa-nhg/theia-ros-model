@@ -4,10 +4,11 @@
 package de.fraunhofer.ipa.ros.formatting2
 
 import com.google.inject.Inject
+import de.fraunhofer.ipa.ros.model.ros.Package
+import de.fraunhofer.ipa.ros.model.ros.PackageSet
 import de.fraunhofer.ipa.ros.services.RosDslGrammarAccess
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument
-import ros.PackageSet
 
 class RosDslFormatter extends AbstractFormatter2 {
 	
@@ -20,7 +21,7 @@ class RosDslFormatter extends AbstractFormatter2 {
 		}
 	}
 
-	def dispatch void format(ros.Package _package, extension IFormattableDocument document) {
+	def dispatch void format(Package _package, extension IFormattableDocument document) {
 		// TODO: format HiddenRegions around keywords, attributes, cross references, etc. 
 		for (specBase : _package.spec) {
 			specBase.format

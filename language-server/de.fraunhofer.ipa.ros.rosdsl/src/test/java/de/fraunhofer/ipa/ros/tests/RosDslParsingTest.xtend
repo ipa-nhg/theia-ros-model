@@ -3,20 +3,18 @@
  */
 package de.fraunhofer.ipa.ros.tests
 
-import com.google.inject.Inject
+//import com.google.inject.Inject
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.extensions.InjectionExtension
-import org.eclipse.xtext.testing.util.ParseHelper
-import org.junit.jupiter.api.Assertions
-import org.junit.jupiter.api.Test
+//import org.eclipse.xtext.testing.util.ParseHelper
 import org.junit.jupiter.api.^extension.ExtendWith
-import ros.PackageSet
+//import de.fraunhofer.ipa.ros.model.ros.PackageSet
 
 @ExtendWith(InjectionExtension)
 @InjectWith(RosDslInjectorProvider)
 class RosDslParsingTest {
-	@Inject
-	ParseHelper<PackageSet> parseHelper
+//	@Inject
+//	ParseHelper<PackageSet> parseHelper
 	
 //	@Test
 //	def void loadModel() {

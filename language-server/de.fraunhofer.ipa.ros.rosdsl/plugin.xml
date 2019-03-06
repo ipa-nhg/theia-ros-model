@@ -10,7 +10,7 @@
       <!-- @generated ros -->
       <package
             uri="http://www.ipa.fraunhofer.de/ros"
-            class="ros.RosPackage"
+            class="de.fraunhofer.ipa.ros.model.ros.RosPackage"
             genModel="model/ros.genmodel"/>
    </extension>
 
