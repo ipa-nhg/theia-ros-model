@@ -59,7 +59,7 @@ component = DirectoryCleaner {
 
   - Change model directory in the ros.ecore file to the main folder:
 ```xml
-<genmodel:GenModel modelDirectory="/de.fraunhofer.ipa.ros.rosdsl/src/main/emf-gen"" ...>
+<genmodel:GenModel modelDirectory="/de.fraunhofer.ipa.ros.rosdsl/src/main/emf-gen">
 ```
 
  -  Add `emf-gen` to the gradle source sets in `language-server/gradle/source-layout.gradle` 
