@@ -39,7 +39,7 @@ Notes:
   
   - The original ros.ecore and ros.genmodel files were added to `de.fraunhofer.ipa.ros.rosdsl/model`.
 
-  - The EMF classes generation was added to the mwe2 workflow:
+  - The EMF classes generation was added to the mwe2 workflow (generated in src/main/emf-gen:
 in `language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/GenerateRosDsl.mwe2`
 
 ```java
@@ -47,21 +47,30 @@ import org.eclipse.emf.mwe.utils.*
 import org.eclipse.emf.mwe2.ecore.*
 
 ...
-
 component = DirectoryCleaner {
-		directory ="src/main/java/ros"
+		directory ="src/main/emf-gen"
 	}
     
     component = EcoreGenerator {
         genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
-        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/src/main/java"
+        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/emf-gen"
     }
 ```
 
   - Change model directory in the ros.ecore file to the main folder:
 ```xml
-<genmodel:GenModel modelDirectory="/de.fraunhofer.ipa.ros.rosdsl/src/main/java/" ...>
+<genmodel:GenModel modelDirectory="/de.fraunhofer.ipa.ros.rosdsl/src/main/emf-gen"" ...>
 ```
+
+ -  Add `emf-gen` to the gradle source sets in `language-server/gradle/source-layout.gradle` 
+
+ ```
+ main {
+		java.srcDirs = ['src/main/java', 'src/main/xtext-gen', 'src/main/emf-gen']
+		resources.srcDirs = ['src/main/resources', 'src/main/xtext-gen', 'src/main/emf-gen']
+		xtendOutputDir = 'src/main/xtend-gen'
+	}
+ ```
 
 Afterwards, run either `./gradlew build` or `Generate Xtext Artifacts` in Eclipse: this should generate the necessary Xtend and Java files.
 
