@@ -10,11 +10,11 @@
         },
         {
             "name": "storage.type.ros",
-            "match": "\\b(PackageSet|Artifact|CatkinPackage|Node|Publisher|Subscriber|ServiceClient)\\b"
+            "match": "\\b(PackageSet|Artifact|CatkinPackage|Node|Publisher|Subscriber|ServiceClient|Package|TopicSpec|ServiceSpec)\\b"
         },
         {
             "name": "keyword.control.ros",
-            "match": "\\b(package|artifact|node|publisher|subscriber|name|serviceclient|message|service)\\b"
+            "match": "\\b(package|artifact|node|publisher|subscriber|name|serviceclient|message|service|spec)\\b"
         },
         {
             "name": "string.quoted.double.ros",
