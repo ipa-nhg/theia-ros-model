@@ -4,8 +4,8 @@
 package de.fraunhofer.ipa.ros.formatting2
 
 import com.google.inject.Inject
-import de.fraunhofer.ipa.ros.model.ros.Package
-import de.fraunhofer.ipa.ros.model.ros.PackageSet
+import ros.Package
+import ros.PackageSet
 import de.fraunhofer.ipa.ros.services.RosDslGrammarAccess
 import org.eclipse.xtext.formatting2.AbstractFormatter2
 import org.eclipse.xtext.formatting2.IFormattableDocument

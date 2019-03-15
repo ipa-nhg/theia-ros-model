@@ -4,9 +4,9 @@
 package de.fraunhofer.ipa.ros.validation
 
 import org.eclipse.xtext.validation.Check
-import de.fraunhofer.ipa.ros.model.ros.Node
-import de.fraunhofer.ipa.ros.model.ros.Artifact
-import de.fraunhofer.ipa.ros.model.ros.Package
+import ros.Node
+import ros.Artifact
+import ros.Package
 
 /**
  * This class contains custom validation rules. 

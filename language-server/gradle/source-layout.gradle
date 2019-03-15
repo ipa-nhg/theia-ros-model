@@ -1,7 +1,7 @@
 sourceSets {
 	main {
-		java.srcDirs = ['src/main/java', 'src/main/xtext-gen', 'src/main/emf-gen']
-		resources.srcDirs = ['src/main/resources', 'src/main/xtext-gen', 'src/main/emf-gen']
+		java.srcDirs = ['src/main/java', 'src/main/xtext-gen']
+		resources.srcDirs = ['src/main/resources', 'src/main/xtext-gen']
 		xtendOutputDir = 'src/main/xtend-gen'
 	}
 	test {
@@ -14,6 +14,9 @@ sourceSets {
 jar {
 	from('model') {
 		into('model')
+	}
+	from('basic_msgs') {
+		into('basic_msgs')
 	}
 	from(sourceSets.main.allSource) {
 		include '**/*.xtext'

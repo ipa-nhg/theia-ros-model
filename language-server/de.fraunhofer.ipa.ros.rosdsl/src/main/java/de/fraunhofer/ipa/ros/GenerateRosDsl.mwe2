@@ -12,17 +12,17 @@ Workflow {
 	bean = StandaloneSetup {
         platformUri = "${rootPath}"
         scanClassPath = true
-        registerGenModelFile = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
+        registerGenModelFile = "platform:/resource/de.fraunhofer.ipa.ros/model/ros.genmodel"
     }
     
-    component = DirectoryCleaner {
-		directory ="src/main/emf-gen"
-	}
-    
-    component = EcoreGenerator {
-        genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
-        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/emf-gen"
-    }
+//    component = DirectoryCleaner {
+//		directory ="src/main/emf-gen"
+//	}
+//    
+//    component = EcoreGenerator {
+//        genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
+//        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/emf-gen"
+//    }
     
 	component = XtextGenerator {
 		configuration = {
@@ -46,8 +46,8 @@ Workflow {
 		language = StandardLanguage {
 			name = "de.fraunhofer.ipa.ros.RosDsl"
 			fileExtensions = "ros"
-			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.ecore"
-			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
+			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros/model/ros.ecore"
+			referencedResource = "platform:/resource/de.fraunhofer.ipa.ros/model/ros.genmodel"
 						
 
 			formatter = {
