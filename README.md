@@ -38,45 +38,6 @@ Notes:
 
 - The tutorial suggests adding the ShadowJar plugin in order to create a fat jar - with Xtext 2.16 this does not seem to be needed anymore, instead the option `build language server`: **Fat Jar** can be selected. The option **Regular** uses the Gradle **application plugin** which packages the application as zip/tar and creates OS specific start scripts. https://docs.gradle.org/current/userguide/application_plugin.html 
 
-- EMF classes:
-  
-  - The original ros.ecore and ros.genmodel files were added to `de.fraunhofer.ipa.ros.rosdsl/model`.
-
-  - The EMF classes generation was added to the mwe2 workflow (generated in src/main/emf-gen:
-in `language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/GenerateRosDsl.mwe2`
-
-```java
-import org.eclipse.emf.mwe.utils.*
-import org.eclipse.emf.mwe2.ecore.*
-
-...
-component = DirectoryCleaner {
-		directory ="src/main/emf-gen"
-	}
-    
-    component = EcoreGenerator {
-        genModel = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
-        srcPath = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/emf-gen"
-    }
-```
-
-  - Change model directory in the ros.ecore file to the main folder:
-```xml
-<genmodel:GenModel modelDirectory="/de.fraunhofer.ipa.ros.rosdsl/src/main/emf-gen">
-```
-
- -  Add `emf-gen` to the gradle source sets in `language-server/gradle/source-layout.gradle` 
-
- ```
- main {
-		java.srcDirs = ['src/main/java', 'src/main/xtext-gen', 'src/main/emf-gen']
-		resources.srcDirs = ['src/main/resources', 'src/main/xtext-gen', 'src/main/emf-gen']
-		xtendOutputDir = 'src/main/xtend-gen'
-	}
- ```
-
-Afterwards, run either `./gradlew build` or `Generate Xtext Artifacts` in Eclipse: this should generate the necessary Xtend and Java files.
-
 - When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (`language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/RosDslStandaloneSetup.xtend`):
 
 ```java
