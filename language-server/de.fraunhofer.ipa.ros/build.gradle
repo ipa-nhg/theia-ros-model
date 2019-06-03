@@ -1,6 +1,0 @@
-dependencies {
-	compile "org.eclipse.emf:org.eclipse.emf.ecore:${emfVersion}"
-	compile "org.eclipse.emf:org.eclipse.emf.common:${emfVersion}"
-}
-
-

@@ -2,12 +2,23 @@
 
 Based on https://github.com/TypeFox/theia-xtext-sprotty-example
 
-Build the language server 
+Requirements:
+
+- java8
+- Maven
+- node 10
+- yarn
+
+Build and start the language server 
 
 ```sh
-cd language-server/
-./gradlew build
+cd de.fraunhofer.ipa.ros.languageServer.parent/
+mvn clean package
+cd de.fraunhofer.ipa.ros.languageServer.ide/target/
+java -jar de.fraunhofer.ipa.ros.languageServer.ide-1.0.0-SNAPSHOT-ls.jar
 ```
+
+This starts a net socket server on the default port `5008`. 
 
 Start the browser app:
 
@@ -18,7 +29,9 @@ cd browser-app/
 yarn start
 ```
 
-The language rules apply to files with the extension `.ros`
+Open your browser on `http://localhost:3000`. 
+
+The language rules apply to files with the extension `.ros`. There is an example in the `ws` folder in the repository.
 
 ## How to's
 
@@ -28,15 +41,11 @@ Tutorial:
 
 https://www.eclipse.org/community/eclipse_newsletter/2017/may/article5.php
 
-The language server was generated with the option "Generate Xtext project from existing Ecore models" (Xtext version 2.16).
+The language server was generated with the option "Generate Xtext project from existing Ecore models"
 
-- preferred build system: **Gradle**
+- preferred build system: **Maven**
 - build language server: **Regular**
 - source layout: **Gradle/Maven**
-
-Notes:
-
-- The tutorial suggests adding the ShadowJar plugin in order to create a fat jar - with Xtext 2.16 this does not seem to be needed anymore, instead the option `build language server`: **Fat Jar** can be selected. The option **Regular** uses the Gradle **application plugin** which packages the application as zip/tar and creates OS specific start scripts. https://docs.gradle.org/current/userguide/application_plugin.html 
 
 - When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (`language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/RosDslStandaloneSetup.xtend`):
 
@@ -61,13 +70,7 @@ bean = StandaloneSetup {
     }
 ```
 
-The `.ecore` file has also been added to the same file as `referencedResource`:
-
-```java
-referencedResource = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.ecore"
-```
-
-- After the project has been built with Gradle, there  might be errors in Eclipse. To remove this, run `Project > Clean`.
+- After the project has been built with Maven there  might be errors in Eclipse. To remove this, run `Project > Clean`.
   
 ### Theia extension
 
@@ -83,7 +86,6 @@ TextMate coloring:
 How to add textmate coloring to a theia extension: https://www.theia-ide.org/doc/textmate  
 
 TextMate manual: https://macromates.com/manual/en/language_grammars
-
 
 ### Editor configuration
 in `ros-dsl/src/browser/ros-dsl-grammar-contribution.ts`  

@@ -1,4 +1,3 @@
-import { isWindows } from '@theia/core/lib/common/os';
 import { BaseLanguageServerContribution, IConnection } from '@theia/languages/lib/node';
 import { injectable } from 'inversify';
 import * as net from 'net';
@@ -7,8 +6,8 @@ import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
 import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
 import { ProcessErrorEvent } from '@theia/process/lib/node/process';
 
-const EXECUTABLE_NAME = isWindows ? 'de.fraunhofer.ipa.ros.rosdsl.ide.bat' : 'de.fraunhofer.ipa.ros.rosdsl.ide';
-const EXECUTABLE_PATH = resolve(join(__dirname, '..', '..', 'build', 'de.fraunhofer.ipa.ros.rosdsl.ide-1.0.0-SNAPSHOT', 'bin', EXECUTABLE_NAME));
+const LANGUAGE_SERVER_JAR = 'de.fraunhofer.ipa.ros.languageServer.ide-1.0.0-SNAPSHOT-ls.jar';
+const JAR_PATH = resolve(join(__dirname, '..', '..', 'build', LANGUAGE_SERVER_JAR));
 
 
 @injectable()
@@ -36,10 +35,20 @@ export class RosLanguageServerContribution extends BaseLanguageServerContributio
             });
             this.forward(clientConnection, serverConnection);
         } else {
-            console.log('Starting the server')
-            const args: string[] = [];
-            const serverConnection = this.createProcessStreamConnection(EXECUTABLE_PATH, args);
-            this.forward(clientConnection, serverConnection);
+            const command = 'java';
+            const args: string[] = [
+                '-jar',
+                JAR_PATH
+            ];
+
+            // this isn't working with Sprotty yet -> only the socket connection is used for now instead (see above)
+            this.createProcessStreamConnectionAsync(command, args)
+                .then((serverConnection: IConnection) => {
+                    this.forward(clientConnection, serverConnection);
+                })
+                .catch((error) => {
+                    super.onDidFailSpawnProcess(error)
+                });
         }
     }
 

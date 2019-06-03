@@ -5,5 +5,5 @@ lib
 *-app/*
 !*-app/package.json
 build
-.gradle
 /ros-dsl/*.zip
+.idea

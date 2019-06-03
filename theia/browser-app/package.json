@@ -28,7 +28,7 @@
   },
   "scripts": {
     "prepare": "theia build --mode development",    
-    "start": "theia start",
+    "start": "theia start --ROS_LSP=5008",
     "watch": "theia build --watch --mode development",
     "start:debug": "node --inspect ./src-gen/backend/main.js --root-dir=../../workspace --ROS_LSP=5008 --port=3000 --loglevel=debug"
   },
