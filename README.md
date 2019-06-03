@@ -44,7 +44,7 @@ https://www.eclipse.org/community/eclipse_newsletter/2017/may/article5.php
 The language server was generated with the option "Generate Xtext project from existing Ecore models"
 
 - preferred build system: **Maven**
-- build language server: **Regular**
+- build language server: **Fat Jar**
 - source layout: **Gradle/Maven**
 
 - When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (`language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/RosDslStandaloneSetup.xtend`):
