@@ -1,0 +1,3 @@
+[submodule "ros-model"]
+	path = ros-model
+	url = git@github.com:erogleva/ros-model.git

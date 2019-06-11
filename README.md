@@ -6,16 +6,16 @@ Requirements:
 
 - java8
 - Maven
-- node 10
+- node 8
 - yarn
 
 Build and start the language server 
 
 ```sh
-cd de.fraunhofer.ipa.ros.languageServer.parent/
+cd ros-model/plugins
 mvn clean package
-cd de.fraunhofer.ipa.ros.languageServer.ide/target/
-java -jar de.fraunhofer.ipa.ros.languageServer.ide-1.0.0-SNAPSHOT-ls.jar
+cd de.fraunhofer.ipa.ros.xtext.ide/target/
+java -jar de.fraunhofer.ipa.ros.xtext.ide-1.0.0-SNAPSHOT-ls.jar
 ```
 
 This starts a net socket server on the default port `5008`. 
@@ -47,27 +47,21 @@ The language server was generated with the option "Generate Xtext project from e
 - build language server: **Fat Jar**
 - source layout: **Gradle/Maven**
 
-- When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (`language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/RosDslStandaloneSetup.xtend`):
+- When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (` plugins/de.fraunhofer.ipa.ros.xtext/src/de/fraunhofer/ipa/ros/RosStandaloneSetup.xtend`):
 
 ```java
 override register(Injector injector) {
-		if (!EPackage.Registry.INSTANCE.containsKey("http://www.ipa.fraunhofer.de/ros")) {
-			EPackage.Registry.INSTANCE.put("http://www.ipa.fraunhofer.de/ros", RosPackage.eINSTANCE);
-		}		
+
+		if (!EPackage.Registry.INSTANCE.containsKey(RosPackage.eNS_URI)) {
+			EPackage.Registry.INSTANCE.put(RosPackage.eNS_URI, RosPackage.eINSTANCE);
+		}
+
+		if(!EPackage.Registry.INSTANCE.containsKey(PrimitivesPackage.eNS_URI)) {
+			EPackage.Registry.INSTANCE.put(PrimitivesPackage.eNS_URI, PrimitivesPackage.eINSTANCE);
+		}
+
 		super.register(injector)
 	}
-```
-
-Also a StandAlone Setup bean has to be added to the generation workflow (`language-server/de.fraunhofer.ipa.ros.rosdsl/src/main/java/de/fraunhofer/ipa/ros/GenerateRosDsl.mwe2`):
-
-```java
-import org.eclipse.emf.mwe.utils.*
-
-bean = StandaloneSetup {
-        platformUri = "${rootPath}"
-        scanClassPath = true
-        registerGenModelFile = "platform:/resource/de.fraunhofer.ipa.ros.rosdsl/model/ros.genmodel"
-    }
 ```
 
 - After the project has been built with Maven there  might be errors in Eclipse. To remove this, run `Project > Clean`.
