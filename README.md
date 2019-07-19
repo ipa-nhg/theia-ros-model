@@ -9,16 +9,12 @@ Requirements:
 - node 8
 - yarn
 
-Build and start the language server 
+Build the language server 
 
 ```sh
 cd ros-model/plugins
 mvn clean package
-cd de.fraunhofer.ipa.ros.xtext.ide/target/
-java -jar de.fraunhofer.ipa.ros.xtext.ide-1.0.0-SNAPSHOT-ls.jar
 ```
-
-This starts a net socket server on the default port `5008`. 
 
 Start the browser app:
 
