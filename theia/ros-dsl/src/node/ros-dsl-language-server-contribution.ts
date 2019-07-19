@@ -6,7 +6,7 @@ import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
 import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
 import { ProcessErrorEvent } from '@theia/process/lib/node/process';
 
-const LANGUAGE_SERVER_JAR = 'de.fraunhofer.ipa.ros.languageServer.ide-1.0.0-SNAPSHOT-ls.jar';
+const LANGUAGE_SERVER_JAR = 'de.fraunhofer.ipa.ros.xtext.ide-1.0.0-SNAPSHOT-ls.jar';
 const JAR_PATH = resolve(join(__dirname, '..', '..', 'build', LANGUAGE_SERVER_JAR));
 
 
@@ -41,7 +41,6 @@ export class RosLanguageServerContribution extends BaseLanguageServerContributio
                 JAR_PATH
             ];
 
-            // this isn't working with Sprotty yet -> only the socket connection is used for now instead (see above)
             this.createProcessStreamConnectionAsync(command, args)
                 .then((serverConnection: IConnection) => {
                     this.forward(clientConnection, serverConnection);
