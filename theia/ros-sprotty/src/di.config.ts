@@ -1,11 +1,45 @@
 import { Container, ContainerModule } from "inversify";
 import 'sprotty-theia/css/theia-sprotty.css';
 import 'sprotty/css/sprotty.css';
-import { boundsModule, buttonModule, configureModelElement, ConsoleLogger, defaultModule, expandModule, 
-    exportModule, fadeModule, hoverModule, HtmlRoot, HtmlRootView, LogLevel, modelSourceModule, moveModule, 
-    openModule, overrideViewerOptions, PreRenderedElement, PreRenderedView, RectangularNodeView, 
-    selectModule, SGraph, SGraphView, SLabel, SEdge, PolylineEdgeView, SLabelView, TYPES, undoRedoModule, viewportModule, updateModule,
-    RectangularNode, decorationModule, edgeEditModule, edgeLayoutModule, labelEditModule, routingModule, SModelRoot, SRoutingHandle, SRoutingHandleView } from 'sprotty';
+import {
+    boundsModule,
+    buttonModule,
+    configureModelElement,
+    ConsoleLogger,
+    defaultModule,
+    expandModule,
+    exportModule,
+    fadeModule,
+    hoverModule,
+    HtmlRoot,
+    HtmlRootView,
+    LogLevel,
+    modelSourceModule,
+    moveModule,
+    openModule,
+    overrideViewerOptions,
+    PreRenderedElement,
+    PreRenderedView,
+    RectangularNodeView,
+    selectModule,
+    SGraph,
+    SGraphView,
+    SLabel,
+    SLabelView,
+    TYPES,
+    undoRedoModule,
+    viewportModule,
+    updateModule,
+    RectangularNode,
+    decorationModule,
+    edgeEditModule,
+    edgeLayoutModule,
+    labelEditModule,
+    routingModule,
+    SModelRoot,
+    SRoutingHandle,
+    SRoutingHandleView
+} from 'sprotty';
 import "../css/diagram.css";
 import { RosModelFactory } from "./model";
 // import { RosModelFactory } from "./model";
@@ -14,13 +48,11 @@ const rosDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => 
     rebind(TYPES.ILogger).to(ConsoleLogger).inSingletonScope();
     rebind(TYPES.LogLevel).toConstantValue(LogLevel.warn);
     rebind(TYPES.IModelFactory).to(RosModelFactory);
-    // bind(SGraphFactory).toSelf().inSingletonScope();
 
     const context = { bind, unbind, isBound, rebind };
     configureModelElement(context, 'graph', SGraph, SGraphView);
     configureModelElement(context, 'node', RectangularNode, RectangularNodeView);
     configureModelElement(context, 'label', SLabel, SLabelView);
-    configureModelElement(context, 'edge', SEdge, PolylineEdgeView);
     configureModelElement(context, 'html', HtmlRoot, HtmlRootView);
     configureModelElement(context, 'pre-rendered', PreRenderedElement, PreRenderedView);
     configureModelElement(context, 'palette', SModelRoot, HtmlRootView);

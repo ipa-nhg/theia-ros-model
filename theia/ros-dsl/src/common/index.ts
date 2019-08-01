@@ -1,3 +1,7 @@
-export const ROS_LANGUAGE_FILE_EXTENSION = '.ros'
-export const ROS_LANGUAGE_SERVER_ID = 'RosDsl'
-export const ROS_LANGUAGE_SERVER_NAME = 'ROSDSL'
+export const ROS_LANGUAGE_FILE_EXTENSION = '.ros';
+export const ROS_LANGUAGE_SERVER_ID = 'RosDsl';
+export const ROS_LANGUAGE_SERVER_NAME = 'ROSDSL';
+
+export const ROSSYSTEM_LANGUAGE_FILE_EXTENSION = '.rossystem';
+export const ROSSYSTEM_LANGUAGE_SERVER_ID = 'RosSystemDsl';
+export const ROSSYSTEM_LANGUAGE_SERVER_NAME = 'ROSSYSTEMDSL';

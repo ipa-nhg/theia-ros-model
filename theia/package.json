@@ -12,6 +12,7 @@
     "ros-dsl",
     "browser-app",
     "electron-app",
-    "ros-sprotty"
+    "ros-sprotty",
+    "rossystem-dsl"
   ]
 }

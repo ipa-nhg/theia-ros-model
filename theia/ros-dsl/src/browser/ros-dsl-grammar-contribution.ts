@@ -21,12 +21,12 @@ export class RosGrammarContribution implements LanguageGrammarDefinitionContribu
 
         monaco.languages.setLanguageConfiguration(ROS_LANGUAGE_SERVER_ID, this.configuration);
 
-        const statesGrammar = require('../../data/ros.tmLanguage.json');
+        const rosGrammar = require('../../data/ros.tmLanguage.json');
         registry.registerTextmateGrammarScope('source.ros', {
             async getGrammarDefinition() {
                 return {
                     format: 'json',
-                    content: statesGrammar,
+                    content: rosGrammar,
                 };
             }
         });

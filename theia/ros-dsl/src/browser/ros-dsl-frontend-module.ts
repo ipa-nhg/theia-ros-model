@@ -19,10 +19,9 @@ import { RosDiagramManager } from './diagram/ros-diagram-manager';
 import { RosDiagramLanguageClient } from './diagram/ros-diagram-language-client';
 
 
-
 export default new ContainerModule(bind => {
     // add your contribution bindings here
-    
+
     bind(RosLanguageClientContribution).toSelf().inSingletonScope();
     bind(LanguageClientContribution).toService(RosLanguageClientContribution);
     bind(LanguageGrammarDefinitionContribution).to(RosGrammarContribution).inSingletonScope();
@@ -43,5 +42,5 @@ export default new ContainerModule(bind => {
                 resolve(diagramManager);
             });
         };
-});   
+});
 });

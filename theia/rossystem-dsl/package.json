@@ -1,0 +1,36 @@
+{
+  "name": "rossystem-dsl",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src",
+    "build",
+    "data",
+    "css"
+  ],
+  "dependencies": {
+    "@theia/core": "next",
+    "sprotty-theia": "next"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "delete:build": "rimraf -rf ./build && mkdir build",
+    "copy:rossystemlanguageserver": "cp ../../ros-model/plugins/de.fraunhofer.ipa.rossystem.xtext.ide/target/de.fraunhofer.ipa.rossystem.xtext.ide-1.1.0-SNAPSHOT-ls.jar ./build/",
+    "prepare": "yarn run clean && yarn run delete:build && yarn run copy:rossystemlanguageserver && yarn run build"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/rossystem-dsl-frontend-module",
+      "backend": "lib/node/rossystem-dsl-backend-module"
+    }
+  ]
+}

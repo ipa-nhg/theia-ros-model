@@ -12,8 +12,8 @@ Requirements:
 Build the language server 
 
 ```sh
-cd ros-model/plugins
-mvn clean package
+cd ros-model
+mvn clean package -f plugins/de.fraunhofer.ipa.ros.parent
 ```
 
 Start the browser app:

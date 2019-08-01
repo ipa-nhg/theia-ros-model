@@ -1,0 +1,3 @@
+export const ROSSYSTEM_LANGUAGE_FILE_EXTENSION = '.rossystem';
+export const ROSSYSTEM_LANGUAGE_SERVER_ID = 'RosSystemDsl';
+export const ROSSYSTEM_LANGUAGE_SERVER_NAME = 'ROSSYSTEMDSL';

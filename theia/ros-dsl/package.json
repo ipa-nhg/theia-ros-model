@@ -24,8 +24,9 @@
     "clean": "rimraf lib",
     "build": "tsc",
     "watch": "tsc -w",
-    "copy:languageserver": "rimraf -rf ./build && mkdir build && cp ../../ros-model/plugins/de.fraunhofer.ipa.ros.xtext.ide/target/de.fraunhofer.ipa.ros.xtext.ide-1.0.0-SNAPSHOT-ls.jar ./build/",
-    "prepare": "yarn run clean && yarn run copy:languageserver && yarn run build "
+    "delete:build": "rimraf -rf ./build && mkdir build",
+    "copy:roslanguageserver": "cp ../../ros-model/plugins/de.fraunhofer.ipa.ros.xtext.ide/target/de.fraunhofer.ipa.ros.xtext.ide-1.1.0-SNAPSHOT-ls.jar ./build/",
+    "prepare": "yarn run clean && yarn run delete:build && yarn run copy:roslanguageserver && yarn run build "
   },
   "theiaExtensions": [
     {

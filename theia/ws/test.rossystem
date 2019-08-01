@@ -1,0 +1,4 @@
+RosSystem { Name multisim 
+    RosComponents ( 
+        ComponentInterface { name '/turtlesim1/sim' NameSpace '/turtlesim1/' }         
+)} 

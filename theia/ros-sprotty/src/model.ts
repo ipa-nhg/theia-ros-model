@@ -1,5 +1,7 @@
-import { ManhattanEdgeRouter, SChildElement, SEdge, SGraphFactory, SLabel, SModelElementSchema, 
-SParentElement, EdgePlacement } from "sprotty";
+import {
+    ManhattanEdgeRouter, SChildElement, SEdge, SGraphFactory, SLabel, SModelElementSchema,
+    SParentElement, EdgePlacement, SShapeElement
+} from "sprotty";
 
 export class RosModelFactory extends SGraphFactory {
 
@@ -19,4 +21,8 @@ export class RosModelFactory extends SGraphFactory {
 
         return child
     }
+}
+
+export class SPublisher extends SShapeElement {
+
 }

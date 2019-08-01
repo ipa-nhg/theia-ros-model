@@ -21,13 +21,14 @@
     "@theia/file-search": "next",
     "@theia/merge-conflicts": "next",
     "@theia/search-in-workspace": "next",
-    "ros-dsl": "0.0.0"
+    "ros-dsl": "0.0.0",
+    "rossystem-dsl": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "next"
   },
   "scripts": {
-    "prepare": "theia build --mode development",    
+    "prepare": "theia build --mode development",
     "start": "theia start",
     "watch": "theia build --watch --mode development",
     "start:debug": "node --inspect ./src-gen/backend/main.js --root-dir=../../workspace --ROS_LSP=5008 --port=3000 --loglevel=debug"

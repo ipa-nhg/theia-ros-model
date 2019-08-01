@@ -7,3 +7,4 @@ lib
 build
 /ros-dsl/*.zip
 .idea
+ws/src-gen/*
