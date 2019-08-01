@@ -5,7 +5,6 @@
 import { ContainerModule } from "inversify";
 import {
     CommandContribution,
-    MenuContribution
 } from "@theia/core/lib/common";
 import { LanguageGrammarDefinitionContribution } from '@theia/monaco/lib/browser/textmate';
 import { DiagramConfiguration, DiagramManagerProvider, DiagramManager, LSDiagramCommandContribution, LSDiagramKeybindingContribution } from 'sprotty-theia';
@@ -14,7 +13,6 @@ import { LanguageClientContribution } from '@theia/languages/lib/browser';
 
 import { RosLanguageClientContribution } from './ros-dsl-client-contribution';
 import { RosGrammarContribution } from './ros-dsl-grammar-contribution';
-import { RosDslCommandContribution, RosDslMenuContribution } from './ros-dsl-contribution';
 
 import { RosDiagramConfiguration } from './diagram/ros-diagram-configuration';
 import { RosDiagramManager } from './diagram/ros-diagram-manager';
@@ -24,9 +22,6 @@ import { RosDiagramLanguageClient } from './diagram/ros-diagram-language-client'
 
 export default new ContainerModule(bind => {
     // add your contribution bindings here
-    
-    bind(CommandContribution).to(RosDslCommandContribution);
-    bind(MenuContribution).to(RosDslMenuContribution);
     
     bind(RosLanguageClientContribution).toSelf().inSingletonScope();
     bind(LanguageClientContribution).toService(RosLanguageClientContribution);
