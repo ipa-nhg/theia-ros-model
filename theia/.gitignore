@@ -8,3 +8,4 @@ build
 /ros-dsl/*.zip
 .idea
 ws/src-gen/*
+ws/components/*
