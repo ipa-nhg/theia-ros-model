@@ -9,6 +9,12 @@ Requirements:
 - node 8
 - yarn
 
+Clone the repository recursively
+
+```
+git clone --recurse-submodules git@gitlab.cc-asp.fraunhofer.de:jfh-er/theia-ros-model.git
+```
+
 Build the language server 
 
 ```sh
