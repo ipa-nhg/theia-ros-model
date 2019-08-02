@@ -27,7 +27,7 @@ yarn start
 
 Open your browser on `http://localhost:3000`. 
 
-The language rules apply to files with the extension `.ros`. There is an example in the `ws` folder in the repository.
+The language rules apply to files with the extensions `.ros` and `.rossystem`. There are examples in the `ws` folder in the repository.
 
 ## How to's
 
