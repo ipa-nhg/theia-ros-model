@@ -1,6 +1,7 @@
 import { BaseLanguageServerContribution, IConnection } from '@theia/languages/lib/node';
 import { injectable } from 'inversify';
 import * as net from 'net';
+import * as glob from 'glob';
 import { resolve, join } from 'path';
 import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
 import {
@@ -9,15 +10,14 @@ import {
 } from '../common';
 import { ProcessErrorEvent } from '@theia/process/lib/node/process';
 
-const LANGUAGE_SERVER_JAR = 'de.fraunhofer.ipa.rossystem.xtext.ide-1.1.0-SNAPSHOT-ls.jar';
-const JAR_PATH = resolve(join(__dirname, '..', '..', 'build', LANGUAGE_SERVER_JAR));
-
+const BUILD_PATH = resolve(join(__dirname, '..', '..', 'build'));
 
 @injectable()
 export class RosSystemDslLanguageServerContribution extends BaseLanguageServerContribution {
 
     readonly id = ROSSYSTEM_LANGUAGE_SERVER_ID;
     readonly name = ROSSYSTEM_LANGUAGE_SERVER_NAME;
+
 
     getPort(): number | undefined {
         let arg = process.argv.filter(arg => arg.startsWith('--ROSSYSTEM_LSP='))[0];
@@ -28,7 +28,19 @@ export class RosSystemDslLanguageServerContribution extends BaseLanguageServerCo
         }
     }
 
-    start(clientConnection: IConnection): void {
+    async getLanguageServerJarPath(): Promise<string> {
+        return new Promise<string>((resolve, reject) => {
+            glob(BUILD_PATH + '/*-ls.jar', (err, matches) => {
+                if (err || matches.length === 0) {
+                    reject(new Error('Could not find the server launcher for ' + this.name));
+                    return
+                }
+                resolve(matches[0])
+            });
+        })
+    }
+
+    async start(clientConnection: IConnection): Promise<void> {
         let socketPort = this.getPort();
         if (socketPort) {
             const socket = new net.Socket();
@@ -38,19 +50,15 @@ export class RosSystemDslLanguageServerContribution extends BaseLanguageServerCo
             });
             this.forward(clientConnection, serverConnection);
         } else {
+            const jar_path  = await this.getLanguageServerJarPath();
             const command = 'java';
             const args: string[] = [
                 '-jar',
-                JAR_PATH
+                jar_path
             ];
 
-            this.createProcessStreamConnectionAsync(command, args)
-                .then((serverConnection: IConnection) => {
-                    this.forward(clientConnection, serverConnection);
-                })
-                .catch((error) => {
-                    super.onDidFailSpawnProcess(error)
-                });
+            const serverConnection = await this.createProcessStreamConnectionAsync(command, args);
+            this.forward(clientConnection, serverConnection);
         }
     }
 

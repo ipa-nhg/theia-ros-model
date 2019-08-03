@@ -13,7 +13,8 @@
   ],
   "dependencies": {
     "@theia/core": "next",
-    "sprotty-theia": "next"
+    "sprotty-theia": "next",
+    "glob": "^7.1.4"
   },
   "devDependencies": {
     "rimraf": "latest",
@@ -24,7 +25,7 @@
     "build": "tsc",
     "watch": "tsc -w",
     "delete:build": "rimraf -rf ./build && mkdir build",
-    "copy:rossystemlanguageserver": "cp ../../ros-model/plugins/de.fraunhofer.ipa.rossystem.xtext.ide/target/de.fraunhofer.ipa.rossystem.xtext.ide-1.1.0-SNAPSHOT-ls.jar ./build/",
+    "copy:rossystemlanguageserver": "cp ../../ros-model/plugins/de.fraunhofer.ipa.rossystem.xtext.ide/target/*-ls.jar ./build/",
     "prepare": "yarn run clean && yarn run delete:build && yarn run copy:rossystemlanguageserver && yarn run build"
   },
   "theiaExtensions": [

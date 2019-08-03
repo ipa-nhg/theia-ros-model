@@ -5,9 +5,9 @@ import { resolve, join } from 'path';
 import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
 import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
 import { ProcessErrorEvent } from '@theia/process/lib/node/process';
+import * as glob from 'glob';
 
-const LANGUAGE_SERVER_JAR = 'de.fraunhofer.ipa.ros.xtext.ide-1.1.0-SNAPSHOT-ls.jar';
-const JAR_PATH = resolve(join(__dirname, '..', '..', 'build', LANGUAGE_SERVER_JAR));
+const BUILD_PATH = resolve(join(__dirname, '..', '..', 'build'));
 
 
 @injectable()
@@ -25,7 +25,19 @@ export class RosLanguageServerContribution extends BaseLanguageServerContributio
         }
     }
 
-    start(clientConnection: IConnection): void {
+    async getLanguageServerJarPath(): Promise<string> {
+        return new Promise<string>((resolve, reject) => {
+            glob(BUILD_PATH + '/*-ls.jar', (err, matches) => {
+                if (err || matches.length === 0) {
+                    reject(new Error('Could not find the server launcher for ' + this.name));
+                    return
+                }
+                resolve(matches[0])
+            });
+        })
+    }
+
+    async start(clientConnection: IConnection): Promise<void> {
         let socketPort = this.getPort();
         if (socketPort) {
             const socket = new net.Socket();
@@ -35,19 +47,15 @@ export class RosLanguageServerContribution extends BaseLanguageServerContributio
             });
             this.forward(clientConnection, serverConnection);
         } else {
+            const jar_path  = await this.getLanguageServerJarPath();
             const command = 'java';
             const args: string[] = [
                 '-jar',
-                JAR_PATH
+                jar_path
             ];
 
-            this.createProcessStreamConnectionAsync(command, args)
-                .then((serverConnection: IConnection) => {
-                    this.forward(clientConnection, serverConnection);
-                })
-                .catch((error) => {
-                    super.onDidFailSpawnProcess(error)
-                });
+            const serverConnection = await this.createProcessStreamConnectionAsync(command, args);
+            this.forward(clientConnection, serverConnection);
         }
     }
 
