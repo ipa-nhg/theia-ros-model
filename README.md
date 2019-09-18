@@ -53,7 +53,7 @@ Open your browser on `http://localhost:3000`.
 - Additional Maven/Tycho configuration is added only for the `xtext.ide` projects. Example for `de.fraunhofer.ipa.ros.xtext.ide`: https://github.com/erogleva/ros-model/blob/language-server/plugins/de.fraunhofer.ipa.ros.xtext.ide/pom.xml Its goal is to produce an uber/ fat jar which contains all project dependencies. After building the projects with maven, the language server can be found in the `target` folder of the respective project. Its name ends with `-ls.jar` (so that it can be differentiated from the regular jar). These are the only artifacts from the repository needed for Theia.
 - A Theia app is composed of the so called *extensions* (see the [Theia documentation](https://www.theia-ide.org/docs/authoring_extensions) for a more detailed explanation). Currently there are two extensions: `ros-dsl` and `rossystem-dsl` for the `ros` and `rossystem` xtext languages respectively.
 - Each extension has a `client` and `server` part (the code is located in the `browser` and `node` folders). The node app takes care of starting the language server (this can be seen in `theia/ros-dsl/src/node/ros-dsl-language-server-contribution.ts`)
-  
+- In addition, there is a project which contains the diagram configurations for the `ros-dsl` - `ros-sprotty`
 
 ### Issues
 - Diagrams:
@@ -92,6 +92,9 @@ in `ros-dsl/src/browser/ros-dsl-grammar-contribution.ts`
 Monaco Editor Configuration:
 https://microsoft.github.io/monaco-editor/api/interfaces/monaco.languages.languageconfiguration.html#folding
 
+### Sprotty documentation
+https://github.com/eclipse/sprotty/wiki (unfortunately not very detailed)  
+Further information is available here: http://typefox.io/sprotty-a-web-based-diagramming-framework
 
 ### Generate a language server from a Xtext project:
 
