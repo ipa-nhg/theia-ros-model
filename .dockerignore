@@ -1,0 +1,14 @@
+.git
+/theia/node_modules
+/theia/*/node_modules
+/ros-model/plugins/*/target
+/ros-model/plugins/*/xtend-gen
+/ros-model/plugins/*/bin
+/ros-model/plugins/*/.settings
+lib
+Dockerfile
+.vscode
+.gitignore
+build
+README.md
+
