@@ -56,11 +56,11 @@ The repository consists of two main parts:
 - `ros-model`  
   Currently it is a fork of the [ros-model repository](https://github.com/erogleva/ros-model/tree/language-server) which is cloned recursively. This version has additional configuration which is needed for the language servers. The additional Maven/Tycho configuration is added only for the `xtext.ide` projects. Example configuration for `de.fraunhofer.ipa.ros.xtext.ide`: https://github.com/erogleva/ros-model/blob/language-server/plugins/de.fraunhofer.ipa.ros.xtext.ide/pom.xml Its goal is to produce an uber/ fat jar which contains all project dependencies. After building the projects with maven, the language server can be found in the `target` folder of the respective project. Its name ends with `-ls.jar` so that it can be differentiated from the regular jar. These are the only artifacts from the repository needed for Theia.
 
-  Code changes: 
+##### Code changes: 
 
   When the language server is built with imported Ecore models (they are not inferred from the Xtext), the language URI has to be registered in the StandAlonSetup (`plugins/de.fraunhofer.ipa.ros.xtext/src/de/fraunhofer/ipa/ros/RosStandaloneSetup.xtend`):    
 
-  ```java
+```java
 override register(Injector injector) {
 
 		EPackage.Registry.INSTANCE.put(RosPackage.eNS_URI, RosPackage.eINSTANCE);
@@ -98,7 +98,7 @@ Until now there are no diagrams (with the `ros-dsl` extension only the node is s
 
 - Dependency Management (probably the biggest issue):
 
-1. Creating a fat/uber jar:
+1. Creating a fat/uber jar  
    Running a standalone language server requires that the projects are packaged as a fat/uber jar which contains all the project dependencies. However, the standard plugins used in Maven for this ([Assembly](http://maven.apache.org/plugins/maven-assembly-plugin/) and [Shade](https://maven.apache.org/plugins/maven-shade-plugin/)) do not work in Tycho environment as Tycho resolves the dependencies using the system scope and they can not be picked afterwards by the plugins. The current solution uses therefore two additional plugins: `maven-dependency-plugin` with the goal `copy-dependencies` (this copies the dependencies into a `libs` folder inside the `target` directory of the project) and `addjars-maven-plugin` which copies the dependencies of the `libs` folder onto the classpath of the project. (This is also the configuration which can be generated automatically using Eclipse.) The second plugin, however, is old and not maintained anymore and has some issues such as [that it changes the base directory of the project after it is run](https://code.google.com/archive/p/addjars-maven-plugin/issues/8) which can make the addition of new plugins running in the phases afterwards difficult.
 
 2. Adding external Maven dependencies to the projects  
@@ -107,8 +107,8 @@ Until now there are no diagrams (with the `ros-dsl` extension only the node is s
 	However, this does not seem stable: the dependencies are added as plugin singletons and they can therefore cause version conflicts when running the apps in Eclipse so they would have to be updated for each new version (? not sure if this is entirely correct but I noticed issues when I tried to launch the plugins). Furthermore, adding external dependencies to the projects also has implications for the the Eclipse feature. When the feature gets installled, Eclipse has to be able to find the necessary dependencies in the software update sites available in the installation. Therefore either the additional upatesite has to be added and enabled or the feature can be built including all dependencies (for further information on how to do this see Usage scenarios > Creating a self-contained p2 repository in https://wiki.eclipse.org/Tycho/eclipse-repository). Example for the latter is the `de.fraunhofer.ipa.ros.updatesite` project (also in the `ros-model` fork).
 
 
-- Language keywords
-Currently they are hardcoded in the file `ros-dsl/src/data/ros.tmLanguage.json`. A better solution would be to get these from the language server (see https://www.eclipse.org/forums/index.php/t/1095654/ for ideas how to do this) 
+- Language keywords  
+  Currently they are hardcoded in the file `ros-dsl/src/data/ros.tmLanguage.json`. A better solution would be to get these from the language server (see https://www.eclipse.org/forums/index.php/t/1095654/ for ideas how to do this) 
 
 ### Links
 
