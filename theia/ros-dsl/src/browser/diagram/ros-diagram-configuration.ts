@@ -1,11 +1,13 @@
 import { Container, injectable } from "inversify";
-import { WorkspaceEditCommand, CompletionLabelEditor, RenameLabelEditor,
-    DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
-    TheiaDiagramServer, TheiaKeyTool, LSTheiaDiagramServer, LSTheiaDiagramServerProvider } from "sprotty-theia";
-import { KeyTool, TYPES, configureCommand } from 'sprotty';
-import { createRosDiagramContainer } from 'ros-sprotty/lib/di.config';
+import { configureCommand, configureModelElement, KeyTool, TYPES } from 'sprotty';
+import { CodeActionPalettePopupProvider, CodeActionProvider, CompletionLabelEditor, 
+    DeleteWithWorkspaceEditCommand, DiagramConfiguration, IRootPopupModelProvider, 
+    LSTheiaDiagramServer, LSTheiaDiagramServerProvider, PaletteButton, PaletteMouseListener, 
+    RenameLabelEditor, TheiaDiagramServer, TheiaKeyTool, WorkspaceEditCommand, EditDiagramLocker } from "sprotty-theia";
+import { createStateDiagramContainer } from 'states-sprotty/lib/di.config';
+import { PaletteButtonView } from 'states-sprotty/lib/html-views';
 import { RosDiagramServer } from './ros-diagram-server';
-
+import "sprotty-theia/css/theia-sprotty.css"
 export const ROS_DIAGRAM_TYPE = 'ros-diagram';
 
 @injectable()
