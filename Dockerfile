@@ -3,7 +3,6 @@ FROM maven:3.6.0-ibmjava-8-alpine as java-mvn-base
 COPY ros-model ros-model
 WORKDIR ros-model/plugins
 RUN mvn clean package -f de.fraunhofer.ipa.ros.parent
-
 FROM node:10
 
 COPY --from=java-mvn-base /opt/ibm/java/ /opt/ibm/java/
@@ -21,9 +20,10 @@ COPY --chown=theia:theia theia theia-app
 
 RUN chown -R theia:theia /home/theia
 
+RUN apt-get update && apt-get install libx11-dev libxkbfile-dev
 USER theia
 WORKDIR /home/theia/theia-app
-RUN yarn
+RUN yarn --ignore-engines
 
 EXPOSE 3000
 

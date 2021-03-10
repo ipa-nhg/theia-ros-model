@@ -8,18 +8,18 @@
     "lib",
     "src",
     "build",
-    "data",
-    "css"
+    "data"
   ],
   "dependencies": {
-    "@theia/core": "next",
-    "glob": "^7.1.4",
-    "ros-sprotty": "0.0.0",
-    "sprotty-theia": "next"
+    "@theia/core": "1.0.0",
+    "@theia/monaco": "1.0.0",
+    "sprotty-theia": "0.8.0"
   },
   "devDependencies": {
+    "cpr": "latest",
+    "cross-zip-cli": "latest",
     "rimraf": "latest",
-    "typescript": "^2.7.2"
+    "typescript": "latest"
   },
   "scripts": {
     "clean": "rimraf lib",
