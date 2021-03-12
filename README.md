@@ -2,6 +2,24 @@
 
 Based on https://github.com/TypeFox/theia-xtext-sprotty-example
 
+## Strat with Docker
+
+```sh
+[sudo] docker build --tag=theia-ros-model .
+[sudo] docker-compose up
+```
+
+Alternatively to docker compose, the docker can be started with the command:
+
+```sh
+[sudo] docker run -p 3000:3000 -ti theia:latest
+```
+ 
+Open your browser on `http://localhost:3000`.
+
+A predefined workspace is provided to facilitate the use of the tool, click "File"->"Open Workspace" and select the folder ```home/theia/theia-app/ws```. There some examples of Ros models can be found
+
+
 ## Local setup
 
 Requirements:
@@ -14,7 +32,7 @@ Requirements:
 Clone the repository recursively
 
 ```
-git clone --recurse-submodules git@gitlab.cc-asp.fraunhofer.de:jfh-er/theia-ros-model.git
+git clone --recurse-submodules https://github.com/ipa-nhg/theia-ros-model
 ```
 
 Build the language server 
@@ -41,16 +59,6 @@ The language rules apply to files with the extensions `.ros` and `.rossystem`. T
 #### Current status:
 The language server should be started successfully and the connection between the server and the theia app should work. The editor should show if there are any warnings (e.g. the validation check for a node and package names), any errors (syntax such as wrong brackets or keywords), or if a cross-referenced element (such as the communication objects) cannot be resolved. If the communication objects are added in the workspace (as in the example `ws` workspace), they should be resolved correctly. The code generation of the launch file and the componentInterface files should work too.
 
-
-## Test with Docker
-(note: the current version of the Dockerfile is not optimized (e.g. it does not use the Docker cache) and therfore can be improved)
-
-```sh
-[sudo] docker build --tag=theia .
-[sudo] docker run -p 3000:3000 -ti theia:latest
-```
-
-Open your browser on `http://localhost:3000`.
 
 ### Structure
 The repository consists of two main parts:
