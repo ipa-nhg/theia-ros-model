@@ -14,7 +14,7 @@ Requirements:
 Clone the repository recursively
 
 ```
-git clone --recurse-submodules git@gitlab.cc-asp.fraunhofer.de:jfh-er/theia-ros-model.git
+git clone --recurse-submodules https://github.com/ipa-nhg/theia-ros-model
 ```
 
 Build the language server 
@@ -50,6 +50,12 @@ The language server should be started successfully and the connection between th
 [sudo] docker run -p 3000:3000 -ti theia:latest
 ```
 
+Open your browser on `http://localhost:3000`.
+
+```sh
+[sudo] docker build --tag=theia-ros-model .
+[sudo] docker-compose up
+```
 Open your browser on `http://localhost:3000`.
 
 ### Structure
