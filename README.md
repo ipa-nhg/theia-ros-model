@@ -28,8 +28,9 @@ Start the browser app:
 
 ```sh
 cd theia/
-yarn
-cd browser-app/
+yarn --ignore-engines
+yarn rebuild:browser
+cd browser-app
 yarn start
 ```
 

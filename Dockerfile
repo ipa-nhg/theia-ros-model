@@ -21,6 +21,7 @@ COPY --chown=theia:theia theia theia-app
 
 RUN chown -R theia:theia /home/theia
 
+RUN apt-get update && apt-get install libx11-dev libxkbfile-dev
 USER theia
 WORKDIR /home/theia/theia-app
 RUN yarn
