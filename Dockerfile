@@ -18,6 +18,7 @@ COPY --from=java-mvn-base ros-model/plugins/de.fraunhofer.ipa.ros.xtext.ide/targ
 COPY --from=java-mvn-base ros-model/plugins/de.fraunhofer.ipa.rossystem.xtext.ide/target ros-model/plugins/de.fraunhofer.ipa.rossystem.xtext.ide/target
 
 COPY --chown=theia:theia theia theia-app
+COPY --chown=theia:theia ws ws
 
 RUN chown -R theia:theia /home/theia
 
