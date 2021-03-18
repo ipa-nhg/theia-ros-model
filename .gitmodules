@@ -1,3 +1,4 @@
 [submodule "ros-model"]
 	path = ros-model
-	url = git@github.com:erogleva/ros-model.git
+	url = git@github.com:ipa-nhg/ros-model
+	branch = LanguageServer
