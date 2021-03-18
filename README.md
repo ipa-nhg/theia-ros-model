@@ -101,6 +101,17 @@ There are two options for the communication between the theia app and the langua
 - start the language server as a socket server: this option is more suitable for debugging. To start it with Eclipse, create a launch configuration with `RosSocketServer` from the package `de.fraunhofer.ipa.ros.ide.launch` as the main class. Afterwards start the theia browser app with `yarn start:debug` (for `rossystem` this is not implemented yet).
 
 ### Issues
+
+- Eclipse support for the dev version of ros-model
+
+
+1. Install the Buildship Gradle Integration using the Eclipse Marketplace. Simply type Buildship and click on search item. Now click on Install.
+2. Clone the repository https://github.com/eclipse/sprotty-server.
+3. Click on File -> Import -> Existing Gradle Project.
+4. Navigate to project the root directory "sprotty-server". 
+5. Click on a finish to load the projects.
+
+
 - Diagrams:
 Until now there are no diagrams (with the `ros-dsl` extension only the node is shown). Diagrams can be added using sprotty
 (see https://github.com/eclipse/sprotty and the example above). Sprotty has a client and a server part; the current implementation of the server part is in the package `de.fraunhofer.ipa.ros.ide.diagram`.

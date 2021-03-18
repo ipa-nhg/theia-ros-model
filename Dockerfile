@@ -25,6 +25,7 @@ RUN chown -R theia:theia /home/theia
 RUN apt-get update && apt-get install libx11-dev libxkbfile-dev
 USER theia
 WORKDIR /home/theia/theia-app
+RUN yarn cache clean
 RUN yarn
 
 EXPOSE 3000
