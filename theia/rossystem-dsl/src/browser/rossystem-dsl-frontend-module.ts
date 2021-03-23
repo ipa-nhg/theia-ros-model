@@ -4,6 +4,7 @@
 
 import { ContainerModule } from "inversify";
 import { LanguageGrammarDefinitionContribution } from '@theia/monaco/lib/browser/textmate';
+//import { FrontendApplicationContribution, OpenHandler, KeybindingContribution, WidgetFactory } from '@theia/core/lib/browser';
 import { LanguageClientContribution } from '@theia/languages/lib/browser';
 
 import { RossystemDslClientContribution } from "./rossystem-dsl-client-contribution";

@@ -1,19 +1,19 @@
 {
-    "name": "ROSDSL",
-    "scopeName": "source.ros",
+    "name": "ROSSYSTEMDSL",
+    "scopeName": "source.rossystem",
     "fileTypes": [
-        "ros"
+        "rossystem"
     ],
     "patterns": [
         {
             "include": "#comments"
         },
         {
-            "name": "storage.type.ros",
-            "match": "\\b(PackageSet|Package|Artifact|CatkinPackage|Node|Publisher|Subscriber|ServiceClient|ServiceServer|ActionClient|ActionServer|Publishers|Subscribers|ServiceClients|ServiceServers|ActionClients|ActionServers|TopicSpec|ServiceSpec|Parameter|Parameters|Specs)\\b"
+            "name": "storage.type.rossystem",
+            "match": "\\b(RosSystem|RosComponents|RosComponent|TopicConnections|ServiceConnections|ActionConnections|Parameters|TopicConnection|From|To|ServiceConnection|ActionConnection|ComponentInterface|name|NameSpace|FromRosNode|RosPublishers|RosSubscribers|RosSrvServers|RosSrvClients|RosActionServers|RosActionClients|RosParameters|RosPublisher|ns|RefPublisher|RosSubscriber|RefSubscriber|RosServiceServer|RefServer|RosServiceClient|RefClient|RosActionServer|RosActionClient|RosParameter|RefParameter|value|NameSpace|type)\\b"
         },
         {
-            "name": "string.quoted.double.ros",
+            "name": "string.quoted.double.rossystem",
             "begin": "\"",
             "end": "\""
         }

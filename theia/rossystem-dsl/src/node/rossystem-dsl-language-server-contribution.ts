@@ -12,6 +12,7 @@ import { ProcessErrorEvent } from '@theia/process/lib/node/process';
 
 const BUILD_PATH = resolve(join(__dirname, '..', '..', 'build'));
 
+
 @injectable()
 export class RosSystemDslLanguageServerContribution extends BaseLanguageServerContribution {
 

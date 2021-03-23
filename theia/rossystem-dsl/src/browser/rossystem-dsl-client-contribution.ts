@@ -1,14 +1,15 @@
-import {LanguageClientFactory, Languages, Workspace, BaseLanguageClientContribution} from '@theia/languages/lib/browser';
-import {inject, injectable} from 'inversify';
+import {LanguageClientFactory, Languages, Workspace} from '@theia/languages/lib/browser';
+import { inject, injectable, multiInject } from 'inversify';
 import {
     ROSSYSTEM_LANGUAGE_SERVER_NAME,
     ROSSYSTEM_LANGUAGE_SERVER_ID,
     ROSSYSTEM_LANGUAGE_FILE_EXTENSION
 } from '../common';
 
+import { DiagramLanguageClientContribution, DiagramManagerProvider } from 'sprotty-theia';
 
 @injectable()
-export class RossystemDslClientContribution extends BaseLanguageClientContribution {
+export class RossystemDslClientContribution extends DiagramLanguageClientContribution {
 
     readonly id = ROSSYSTEM_LANGUAGE_SERVER_ID;
     readonly name = ROSSYSTEM_LANGUAGE_SERVER_NAME;
@@ -16,9 +17,10 @@ export class RossystemDslClientContribution extends BaseLanguageClientContributi
     constructor(
         @inject(Workspace) protected readonly workspace: Workspace,
         @inject(Languages) protected readonly languages: Languages,
-        @inject(LanguageClientFactory) protected readonly languageClientFactory: LanguageClientFactory
+        @inject(LanguageClientFactory) protected readonly languageClientFactory: LanguageClientFactory,
+        @multiInject(DiagramManagerProvider) protected diagramManagerProviders: DiagramManagerProvider[]
     ) {
-        super(workspace, languages, languageClientFactory);
+        super(workspace, languages, languageClientFactory, diagramManagerProviders);
     }
 
     protected get globPatterns(): string[] {

@@ -1,6 +1,10 @@
 import { LanguageGrammarDefinitionContribution, TextmateRegistry } from '@theia/monaco/lib/browser/textmate';
 import { injectable } from 'inversify';
-import { ROS_LANGUAGE_FILE_EXTENSION, ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
+import { 
+    ROS_LANGUAGE_FILE_EXTENSION, 
+    ROS_LANGUAGE_SERVER_ID, 
+    ROS_LANGUAGE_SERVER_NAME
+} from '../common';
 
 @injectable()
 export class RosGrammarContribution implements LanguageGrammarDefinitionContribution {

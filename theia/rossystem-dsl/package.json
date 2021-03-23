@@ -13,8 +13,9 @@
   ],
   "dependencies": {
     "@theia/core": "next",
-    "sprotty-theia": "next",
-    "glob": "^7.1.4"
+    "glob": "^7.1.4",
+    "ros-sprotty": "0.0.0",
+    "sprotty-theia": "next"
   },
   "devDependencies": {
     "rimraf": "latest",

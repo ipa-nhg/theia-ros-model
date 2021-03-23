@@ -5,7 +5,8 @@ lib
 *-app/*
 !*-app/package.json
 build
-/ros-dsl/*.zip
+ros-dsl/*.zip
+rossystem-dsl/*.zip
 .idea
 ws/src-gen/*
 ws/components/*

@@ -1,11 +1,14 @@
 import { BaseLanguageServerContribution, IConnection } from '@theia/languages/lib/node';
 import { injectable } from 'inversify';
 import * as net from 'net';
+import * as glob from 'glob';
 import { resolve, join } from 'path';
 import { createSocketConnection } from 'vscode-ws-jsonrpc/lib/server';
-import { ROS_LANGUAGE_SERVER_ID, ROS_LANGUAGE_SERVER_NAME } from '../common';
+import {
+    ROS_LANGUAGE_SERVER_ID,
+    ROS_LANGUAGE_SERVER_NAME
+} from '../common';
 import { ProcessErrorEvent } from '@theia/process/lib/node/process';
-import * as glob from 'glob';
 
 const BUILD_PATH = resolve(join(__dirname, '..', '..', 'build'));
 
