@@ -26,7 +26,7 @@ RUN apt-get update && apt-get install libx11-dev libxkbfile-dev
 USER theia
 WORKDIR /home/theia/theia-app
 RUN yarn cache clean
-RUN yarn
+RUN yarn install --verbose
 
 EXPOSE 3000
 
