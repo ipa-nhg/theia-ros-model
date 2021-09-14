@@ -1,12 +1,12 @@
 FROM ubuntu:focal
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get install -y maven
+RUN apt-get update && apt-get install -y maven git
 
 RUN adduser --disabled-password --gecos '' theia
 WORKDIR /home/theia
-RUN ls
-COPY --chown=theia:theia ros-model ros-model
+RUN git clone https://github.com/ipa320/ros-model -b LanguageServer
+#COPY --chown=theia:theia ros-model ros-model
 
 WORKDIR ros-model/plugins
 RUN mvn clean package -f de.fraunhofer.ipa.ros.parent
