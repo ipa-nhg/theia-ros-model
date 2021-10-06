@@ -10,7 +10,7 @@
         },
         {
             "name": "storage.type.ros",
-            "match": "\\b(PackageSet|Package|Artifact|CatkinPackage|Node|Publisher|Subscriber|ServiceClient|ServiceServer|ActionClient|ActionServer|Publishers|Subscribers|ServiceClients|ServiceServers|ActionClients|ActionServers|TopicSpec|ServiceSpec|Parameter|Parameters|Specs)\\b"
+            "match": "\\b(PackageSet|Package|Artifact|CatkinPackage|AmentPackage|Package|FromGitRepo|Node|Publisher|Subscriber|ServiceClient|ServiceServer|ActionClient|ActionServer|Publishers|Subscribers|ServiceClients|ServiceServers|ActionClients|ActionServers|TopicSpec|ServiceSpec|Parameter|Parameters|Specs)\\b"
         },
         {
             "name": "string.quoted.double.ros",
