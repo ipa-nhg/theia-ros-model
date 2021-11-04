@@ -1,6 +1,6 @@
 import {
     ManhattanEdgeRouter, SChildElement, SEdge, SGraphFactory, SLabel, SModelElementSchema,
-    SParentElement, EdgePlacement, SShapeElement
+    SParentElement, EdgePlacement, Expandable, RectangularNode, isEditableLabel, RectangularPort, SShapeElement
 } from "sprotty";
 
 export class RosModelFactory extends SGraphFactory {
@@ -23,6 +23,72 @@ export class RosModelFactory extends SGraphFactory {
     }
 }
 
-export class SPublisher extends SShapeElement {
+export class RosNode extends RectangularNode implements Expandable {
+    expanded: boolean = false;
+
+    get editableLabel() {
+        const headerComp = this.children.find(element => element.type === 'comp:header');
+        if (headerComp) {
+            const label = headerComp.children.find(element => element.type === 'label:heading');
+            if (label && isEditableLabel(label)) {
+                return label;
+            }
+        }
+        return undefined;
+    }
+
+    get name() {
+        if (this.editableLabel) {
+            return this.editableLabel;
+        }
+        return this.id;
+    }
+}
+
+export class RosPublisher extends RectangularPort implements SShapeElement {
+    expanded: boolean = false;
+
+    get editableLabel() {
+        const headerComp = this.children.find(element => element.type === 'comp:header');
+        if (headerComp) {
+            const label = headerComp.children.find(element => element.type === 'label:heading');
+            if (label && isEditableLabel(label)) {
+                return label;
+            }
+        }
+        return undefined;
+    }
+
+    get name() {
+        if (this.editableLabel) {
+            return this.editableLabel;
+        }
+        return this.id;
+    }
+
+
+}
+
+export class RosSubscriber extends RectangularPort implements SShapeElement {
+    expanded: boolean = false;
+
+    get editableLabel() {
+        const headerComp = this.children.find(element => element.type === 'comp:header');
+        if (headerComp) {
+            const label = headerComp.children.find(element => element.type === 'label:heading');
+            if (label && isEditableLabel(label)) {
+                return label;
+            }
+        }
+        return undefined;
+    }
+
+    get name() {
+        if (this.editableLabel) {
+            return this.editableLabel;
+        }
+        return this.id;
+    }
+
 
 }

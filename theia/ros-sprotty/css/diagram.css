@@ -1,5 +1,7 @@
 .sprotty-node {
-    fill: lightblue
+    fill: hsl(195, 29%, 89%);
+    stroke: hsl(205, 76%, 10%);
+    stroke-width: 1;
 }
 
 .sprotty-node.selected {

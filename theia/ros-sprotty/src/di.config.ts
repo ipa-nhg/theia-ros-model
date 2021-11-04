@@ -2,47 +2,19 @@ import { Container, ContainerModule } from "inversify";
 import 'sprotty-theia/css/theia-sprotty.css';
 import 'sprotty/css/sprotty.css';
 import {
-    boundsModule,
-    buttonModule,
-    configureModelElement,
-    ConsoleLogger,
-    defaultModule,
-    expandModule,
-    exportModule,
-    fadeModule,
-    hoverModule,
-    HtmlRoot,
-    HtmlRootView,
-    LogLevel,
-    modelSourceModule,
-    moveModule,
-    openModule,
-    overrideViewerOptions,
-    PreRenderedElement,
-    PreRenderedView,
-    RectangularNodeView,
-    selectModule,
-    SGraph,
-    SGraphView,
-    SLabel,
-    SLabelView,
-    TYPES,
-    undoRedoModule,
-    viewportModule,
-    updateModule,
-    RectangularNode,
-    decorationModule,
-    edgeEditModule,
-    edgeLayoutModule,
-    labelEditModule,
-    routingModule,
-    SModelRoot,
-    SRoutingHandle,
-    SRoutingHandleView
+    boundsModule, buttonModule, configureModelElement, ConsoleLogger,
+    defaultModule, expandModule, exportModule, fadeModule, hoverModule,
+    HtmlRoot, HtmlRootView, LogLevel, modelSourceModule, moveModule,
+    openModule, overrideViewerOptions, PreRenderedElement, PreRenderedView,
+    selectModule, SGraph, SGraphView, SLabel, SLabelView,
+    TYPES, undoRedoModule, viewportModule, updateModule, 
+    decorationModule, edgeEditModule, edgeLayoutModule, labelEditModule,
+    routingModule, SModelRoot, SRoutingHandle, SRoutingHandleView, RectangularNode
 } from 'sprotty';
 import "../css/diagram.css";
 import { RosModelFactory } from "./model";
-// import { RosModelFactory } from "./model";
+import {PublisherView, SubscriberView, ServiceClientView, ServiceServerView, 
+    ActionServerView, ActionClientView, RosnodeView} from "./views";
 
 const rosDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => {
     rebind(TYPES.ILogger).to(ConsoleLogger).inSingletonScope();
@@ -51,7 +23,15 @@ const rosDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => 
 
     const context = { bind, unbind, isBound, rebind };
     configureModelElement(context, 'graph', SGraph, SGraphView);
-    configureModelElement(context, 'node', RectangularNode, RectangularNodeView);
+    configureModelElement(context, 'node', RectangularNode, RosnodeView);
+    //configureModelElement(context, 'port', DiamondNode, PublisherView);
+    configureModelElement(context, 'publisher_port', RectangularNode, PublisherView);
+    configureModelElement(context, 'subscriber_port', RectangularNode, SubscriberView);
+    configureModelElement(context, 'service_server_port', RectangularNode, ServiceServerView);
+    configureModelElement(context, 'service_client_port', RectangularNode, ServiceClientView);
+    configureModelElement(context, 'action_server_port', RectangularNode, ActionServerView);
+    configureModelElement(context, 'action_client_port', RectangularNode, ActionClientView);
+
     configureModelElement(context, 'label', SLabel, SLabelView);
     configureModelElement(context, 'html', HtmlRoot, HtmlRootView);
     configureModelElement(context, 'pre-rendered', PreRenderedElement, PreRenderedView);
