@@ -1,8 +1,8 @@
-# theia-ros-model
+# Theia ros model repository
 
-Based on https://github.com/TypeFox/theia-xtext-sprotty-example
+This repository contains the code to enable the use of [ros-model](https://github.com/ipa320/ros-model/) in a web interface. It is based on Theia and Sprotty (https://github.com/TypeFox/theia-xtext-sprotty-example).
 
-## Strat with Docker
+## Start with Docker
 
 ```sh
 [sudo] docker build --tag=theia-ros-model .
@@ -19,8 +19,56 @@ Open your browser on `http://localhost:3000`.
 
 A predefined workspace is provided to facilitate the use of the tool, click "File"->"Open Workspace" and select the folder ```home/theia/theia-app/ws```. There some examples of Ros models can be found
 
+## Current status:
 
-## Local setup
+The language server can be started successfully and the connection between the server and the theia app work. 
+
+The following Xtext features are also available:
+- Resolve of models and their attributes for .ros and .rossystem files
+- DSLs rules validation, by displaying errors and warnings for the following cases:
+    - the validation check for a node and package names
+    - syntax such as wrong brackets or keywords)
+    - cross-referenced element (such as the communication objects) cannot be resolved. 
+- Auto-completation of cross-referenced elements
+
+
+Apart of that a sprotty plugin allows the visualization of the .ros models
+
+## Developer guide
+
+### Update Xtext projects to be supported by Theia
+
+The only projects required to run as backend the Xtext code are my.awesome.project.dsl.xtext and my.awesome.project.dsl.xtext.ide. For my.awesome.project.dsl.xtext the StandaloneSetup has to be updated to update the register function. The my.awesome.project.dsl.xtext.ide will hold the description of the diagram in case the model should be visualized. Apart of that and because of the needed dependencies the pom.xml files will need to be adjusted.
+
+Once the changes are done, the projects have to be built and copied to the build folder of the theia extension. For our case the build is made within the Dockerfile (command RUN mvn clean package -f de.fraunhofer.ipa.ros.parent) and the package.json file copy the .jar generatd file to the folder (see [theia/ros-dsl/package.json](theia/ros-dsl/package.json)).
+
+:bangbang: For metamodels with cross dependencies (like rossystem with ros) the workflow (in mwe2 file) for the build of the DSL has to include the generator for the required model, see https://github.com/ipa320/ros-model/blob/LanguageServer/plugins/de.fraunhofer.ipa.rossystem.xtext/src/de/fraunhofer/ipa/rossystem/GenerateRosSystem.mwe2#L47-L63 otherwise the cross references will not work.
+
+See [https://github.com/ipa320/ros-model/pull/127](https://github.com/ipa320/ros-model/pull/127) to check all the required changes.
+
+### Add Sprotty support
+
+A new java package has to be added to the project my.awesome.project.dsl.xtext.ide, the recommended name for this new package is: my.awesome.project.dsl.xtext.ide.diagram. The default setup is composed by 5 classes:
+
+- DiagramGenerator: this class define relations between the elements of the diagram. You have to implement there the functions about how to form the diagram with the information provided by the Xtetx models.
+- DiagramModelElement: this class is not mandatory, there the developer can define custom elements designs (for the nodes, ports or edges). You can also opt for using the standard ones (SNode, SPort, SEdges)
+- DiagramModule: standard class to override the default implementation add use the rest of the classes from this package
+- DiagramServerFactory: In this class we define the type of the diagram, this has to be the same than the one expected by the frontend (for our case, under [theia/src/browser/diagram/ros-diagram-configuration.ts](theia/src/browser/diagram/ros-diagram-configuration.ts))
+- LayoutEngine: in this class the layout can be configured (for our current code status, changes within this file doesn't affect to the diagram, probably because the frontend re-write it)
+
+For the frontend part:
+
+- The dsl extension some ts classes need to be developed. For our case we use the auto-generated standard version [theia/ros-dsl/src/browser/diagram](theia/ros-dsl/src/browser/diagram)
+- A new theia extension for the Sprotty diagram is required [theia/ros-sprotty](theia/ros-sprotty). This extension contains:
+  - css file for the style of the elements.
+  - di.config.ts: this file containe the configuration of all the elements of the diagram. The name of each element has to corresponde with the name assigned on the backend (file my.awesome.project.dsl.xtext.ide.diagram/DiagramGenerator). Apart of that each element is configured by a model element type (default ones classes are https://github.com/eclipse/sprotty/blob/master/packages/sprotty/src/lib/model.ts) and an element view (default ones classes are https://github.com/eclipse/sprotty/blob/master/packages/sprotty/src/lib/svg-views.tsx)
+  - model.ts: the developer can implement here new custom model element types (we are not using this on our current version).
+  - views.tsx: the developer can implement here new custom element views. Not only the form of the element (rectangular, polygon, circle...) but also the layer position.
+
+------------------------
+
+
+## Local setup (not tested for long time, probably will require updates)
 
 Requirements:
 
@@ -56,8 +104,6 @@ Open your browser on `http://localhost:3000`.
 
 The language rules apply to files with the extensions `.ros` and `.rossystem`. There are examples in the `theia/ws` folder in the repository. 
 
-#### Current status:
-The language server should be started successfully and the connection between the server and the theia app should work. The editor should show if there are any warnings (e.g. the validation check for a node and package names), any errors (syntax such as wrong brackets or keywords), or if a cross-referenced element (such as the communication objects) cannot be resolved. If the communication objects are added in the workspace (as in the example `ws` workspace), they should be resolved correctly. The code generation of the launch file and the componentInterface files should work too.
 
 
 ### Structure
