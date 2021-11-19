@@ -1,0 +1,36 @@
+{
+  "name": "ExtractorExtension",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "dependencies": {
+    "@kiwicom/orbit-components": "latest",
+    "@theia/core": "next",
+    "cuid": "latest",
+    "glob": "^7.1.4",
+    "materialize-css": "^1.0.0-rc.2",
+    "react-materialize": "latest",
+    "styled-components": "latest"
+  },
+  "devDependencies": {
+    "@types/materialize-css": "^1.0.11",
+    "rimraf": "latest",
+    "typescript": "^2.7.2"
+  },
+  "scripts": {
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/ExtractorExtension-frontend-module"
+    }
+  ]
+}

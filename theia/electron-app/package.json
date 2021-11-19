@@ -22,7 +22,8 @@
     "@theia/merge-conflicts": "next",
     "@theia/search-in-workspace": "next",
     "ros-dsl": "0.0.0",
-    "rossystem-dsl": "0.0.0"
+    "rossystem-dsl": "0.0.0",
+    "ExtractorExtension": "0.0.0"
   },
   "devDependencies": {
     "@theia/cli": "next"
