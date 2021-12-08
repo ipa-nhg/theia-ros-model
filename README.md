@@ -19,6 +19,27 @@ Open your browser on `http://localhost:3000`.
 
 A predefined workspace is provided to facilitate the use of the tool, click "File"->"Open Workspace" and select the folder ```home/theia/theia-app/ws```. There some examples of Ros models can be found
 
+## Start together the theia web interface with the extractor engines
+
+```sh
+[sudo] ./setup_helper_with_extractors.sh
+[sudo] docker-compose -f docker-compose_with_extractors.yml up
+```
+
+The extraction web will be available under [http://localhost:4000/](http://localhost:4000/), the results of the analysis will be stored under the folder ```ws/results```. Openning the browser on [http://localhost:3000](http://localhost:3000) and using as workspace the default folder ```ws```. You can use the extracted models for composition and definition of systems.
+
+:bangbang: :bangbang: We experimented some issues with the shared folder between the containers, sometimes we had to give manually access to the containers to the results folders. To do that you have to follow the following commands. First we need the ID of the containers:
+```
+docker container ls
+```
+Then we have to open a terminal within the containers for "haros_melodic", "haros_noetic" and "haros_foxy":
+```
+docker exec -ti IdForHarosDistributionContainer /bin/bash
+```
+And finally we have to set the rights to the results folder:
+```
+sudo chown -R extractor:extractor /home/extractor/results
+```
 ## Current status:
 
 The language server can be started successfully and the connection between the server and the theia app work. 
