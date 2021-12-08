@@ -14,7 +14,7 @@
   "dependencies": {
     "@theia/core": "next",
     "glob": "^7.1.4",
-    "ros-sprotty": "0.0.0",
+    "rossystem-sprotty": "0.0.0",
     "sprotty-theia": "next"
   },
   "devDependencies": {

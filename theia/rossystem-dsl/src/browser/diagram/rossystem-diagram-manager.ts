@@ -2,19 +2,19 @@ import { QuickPickService, WidgetManager } from '@theia/core/lib/browser';
 import { Workspace } from '@theia/languages/lib/browser';
 import { inject, injectable } from 'inversify';
 import { DiagramManager, TheiaFileSaver, LSTheiaSprottyConnector, TheiaSprottyConnector } from 'sprotty-theia';
-import { ROS_DIAGRAM_TYPE } from './ros-diagram-configuration';
-import { RosDiagramLanguageClient } from './ros-diagram-language-client';
+import { ROSSYSTEM_DIAGRAM_TYPE } from './rossystem-diagram-configuration';
+import { RosSystemDiagramLanguageClient } from './rossystem-diagram-language-client';
 import { EditorManager } from '@theia/editor/lib/browser';
 
 @injectable()
-export class RosDiagramManager extends DiagramManager {
+export class RosSystemDiagramManager extends DiagramManager {
 
-    readonly diagramType = ROS_DIAGRAM_TYPE;
+    readonly diagramType = ROSSYSTEM_DIAGRAM_TYPE;
     readonly iconClass = 'fa fa-sitemap';
 
     _diagramConnector: TheiaSprottyConnector;
 
-    constructor(@inject(RosDiagramLanguageClient) diagramLanguageClient: RosDiagramLanguageClient,
+    constructor(@inject(RosSystemDiagramLanguageClient) diagramLanguageClient: RosSystemDiagramLanguageClient,
                 @inject(TheiaFileSaver) fileSaver: TheiaFileSaver,
                 @inject(WidgetManager) widgetManager: WidgetManager,
                 @inject(EditorManager) editorManager: EditorManager,
@@ -29,6 +29,6 @@ export class RosDiagramManager extends DiagramManager {
     }
 
     get label() {
-        return 'Ros diagram';
+        return 'RosSystem diagram';
     }
 } 
