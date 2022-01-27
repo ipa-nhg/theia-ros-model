@@ -13,6 +13,7 @@
     "browser-app",
     "electron-app",
     "ros-sprotty",
-    "rossystem-dsl"
+    "rossystem-dsl",
+    "ExtractorExtension"
   ]
 }

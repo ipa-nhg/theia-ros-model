@@ -15,19 +15,21 @@ RUN mvn clean package -f de.fraunhofer.ipa.ros.parent
 #ENV JAVA_HOME /opt/ibm/java/jre
 #ENV PATH /opt/ibm/java/jre/bin:/opt/ibm/java/bin/:$PATH
 
-
+RUN ls
 WORKDIR /home/theia
 COPY --chown=theia:theia theia theia-app
 COPY --chown=theia:theia ws ws
 
 RUN chown -R theia:theia /home/theia
 RUN apt-get update && apt-get install -y nodejs npm
-RUN npm install --global yarn
+RUN apt-get install libsecret-1-dev -y
+RUN npm install --global yarn styled-components
+
 #libx11-dev libxkbfile-dev -y
 USER theia
 WORKDIR /home/theia/theia-app
 RUN yarn cache clean
-RUN yarn install --verbose
+RUN yarn install #--verbose
 
 EXPOSE 3000
 
