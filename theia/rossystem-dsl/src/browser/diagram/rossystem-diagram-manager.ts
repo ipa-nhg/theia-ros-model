@@ -1,5 +1,6 @@
 import { QuickPickService, WidgetManager } from '@theia/core/lib/browser';
-import { Workspace } from '@theia/languages/lib/browser';
+//import { Workspace } from '@theia/languages/lib/browser';
+import { MonacoWorkspace } from '@theia/monaco/lib/browser/monaco-workspace';
 import { inject, injectable } from 'inversify';
 import { DiagramManager, TheiaFileSaver, LSTheiaSprottyConnector, TheiaSprottyConnector } from 'sprotty-theia';
 import { ROSSYSTEM_DIAGRAM_TYPE } from './rossystem-diagram-configuration';
@@ -18,7 +19,7 @@ export class RosSystemDiagramManager extends DiagramManager {
                 @inject(TheiaFileSaver) fileSaver: TheiaFileSaver,
                 @inject(WidgetManager) widgetManager: WidgetManager,
                 @inject(EditorManager) editorManager: EditorManager,
-                @inject(Workspace) workspace: Workspace,
+                @inject(MonacoWorkspace) workspace: MonacoWorkspace,
                 @inject(QuickPickService) quickPickService: QuickPickService) {
         super();
         this._diagramConnector = new LSTheiaSprottyConnector({diagramLanguageClient, fileSaver, editorManager, widgetManager, workspace, quickPickService, diagramManager: this});

@@ -1,11 +1,10 @@
 import { Container, injectable } from "inversify";
-import { WorkspaceEditCommand, CompletionLabelEditor, RenameLabelEditor,
-    DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
+import { WorkspaceEditCommand, DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
     TheiaDiagramServer, TheiaKeyTool, LSTheiaDiagramServer, LSTheiaDiagramServerProvider } from "sprotty-theia";
 import { KeyTool, TYPES, configureCommand } from 'sprotty';
 import { createRosSystemDiagramContainer } from 'rossystem-sprotty/lib/di.config';
 import { RosSystemDiagramServer } from './rossystem-diagram-server';
-
+import "sprotty-theia/css/theia-sprotty.css"
 export const ROSSYSTEM_DIAGRAM_TYPE = 'rossystem-diagram';
 
 @injectable()
@@ -37,8 +36,8 @@ export class RosSystemDiagramConfiguration implements DiagramConfiguration {
         configureCommand(container, DeleteWithWorkspaceEditCommand);
         configureCommand(container, WorkspaceEditCommand);
 
-        container.bind(CompletionLabelEditor).toSelf().inSingletonScope();
-        container.bind(RenameLabelEditor).toSelf().inSingletonScope();
+        //container.bind(CompletionLabelEditor).toSelf().inSingletonScope();
+        //container.bind(RenameLabelEditor).toSelf().inSingletonScope();
 
         return container;
     }

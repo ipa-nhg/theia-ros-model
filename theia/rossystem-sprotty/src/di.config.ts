@@ -8,12 +8,13 @@ import {
     openModule, overrideViewerOptions, PreRenderedElement, PreRenderedView,
     selectModule, SGraph, SGraphView, SLabel, SLabelView,
     TYPES, undoRedoModule, viewportModule, updateModule, 
-    decorationModule, edgeEditModule, edgeLayoutModule, labelEditModule, RectangularNodeView,
-    routingModule, SModelRoot, SRoutingHandle, SRoutingHandleView, RectangularNode, configureCommand, CreateElementCommand
+    decorationModule, edgeEditModule, edgeLayoutModule, labelEditModule, 
+    routingModule, SModelRoot, SRoutingHandle, SRoutingHandleView, RectangularNode
 } from 'sprotty';
+
 import "../css/diagram.css";
 import { RosSystemModelFactory } from "./model";
-//import { RosComponentView } from "./views";
+import { RosComponentView } from "./views";
 
 const rossystemDiagramModule = new ContainerModule((bind, unbind, isBound, rebind) => {
     rebind(TYPES.ILogger).to(ConsoleLogger).inSingletonScope();
@@ -22,7 +23,7 @@ const rossystemDiagramModule = new ContainerModule((bind, unbind, isBound, rebin
 
     const context = { bind, unbind, isBound, rebind };
     configureModelElement(context, 'graph', SGraph, SGraphView);
-    configureModelElement(context, 'component', RectangularNode, RectangularNodeView );
+    configureModelElement(context, 'component', RectangularNode, RosComponentView );
 
     configureModelElement(context, 'label', SLabel, SLabelView);
     configureModelElement(context, 'html', HtmlRoot, HtmlRootView);
@@ -30,7 +31,7 @@ const rossystemDiagramModule = new ContainerModule((bind, unbind, isBound, rebin
     configureModelElement(context, 'palette', SModelRoot, HtmlRootView);
     configureModelElement(context, 'routing-point', SRoutingHandle, SRoutingHandleView);
     configureModelElement(context, 'volatile-routing-point', SRoutingHandle, SRoutingHandleView);
-    configureCommand(context, CreateElementCommand);
+    //configureCommand(context, CreateElementCommand);
 
 });
 
