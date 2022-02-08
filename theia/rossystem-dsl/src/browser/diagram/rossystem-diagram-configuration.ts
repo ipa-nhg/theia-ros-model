@@ -1,23 +1,22 @@
 import { Container, injectable } from "inversify";
-import { WorkspaceEditCommand, CompletionLabelEditor, RenameLabelEditor,
-    DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
+import { WorkspaceEditCommand, DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
     TheiaDiagramServer, TheiaKeyTool, LSTheiaDiagramServer, LSTheiaDiagramServerProvider } from "sprotty-theia";
 import { KeyTool, TYPES, configureCommand } from 'sprotty';
-import { createRosDiagramContainer } from 'ros-sprotty/lib/di.config';
-import { RosDiagramServer } from './ros-diagram-server';
-
-export const ROS_DIAGRAM_TYPE = 'ros-diagram';
+import { createRosSystemDiagramContainer } from 'rossystem-sprotty/lib/di.config';
+import { RosSystemDiagramServer } from './rossystem-diagram-server';
+import "sprotty-theia/css/theia-sprotty.css"
+export const ROSSYSTEM_DIAGRAM_TYPE = 'rossystem-diagram';
 
 @injectable()
-export class RosDiagramConfiguration implements DiagramConfiguration {
-    diagramType = ROS_DIAGRAM_TYPE;
+export class RosSystemDiagramConfiguration implements DiagramConfiguration {
+    diagramType = ROSSYSTEM_DIAGRAM_TYPE;
 
     createContainer(widgetId: string): Container {
         console.log({widgetId})
-        const container = createRosDiagramContainer(widgetId); 
-        container.bind(RosDiagramServer).toSelf().inSingletonScope();
-        container.bind(TheiaDiagramServer).toService(RosDiagramServer);
-        container.bind(LSTheiaDiagramServer).toService(RosDiagramServer);
+        const container = createRosSystemDiagramContainer(widgetId); 
+        container.bind(RosSystemDiagramServer).toSelf().inSingletonScope();
+        container.bind(TheiaDiagramServer).toService(RosSystemDiagramServer);
+        container.bind(LSTheiaDiagramServer).toService(RosSystemDiagramServer);
         container.bind(TYPES.ModelSource).toService(TheiaDiagramServer);
         container.rebind(KeyTool).to(TheiaKeyTool).inSingletonScope();
 
@@ -37,8 +36,8 @@ export class RosDiagramConfiguration implements DiagramConfiguration {
         configureCommand(container, DeleteWithWorkspaceEditCommand);
         configureCommand(container, WorkspaceEditCommand);
 
-        container.bind(CompletionLabelEditor).toSelf().inSingletonScope();
-        container.bind(RenameLabelEditor).toSelf().inSingletonScope();
+        //container.bind(CompletionLabelEditor).toSelf().inSingletonScope();
+        //container.bind(RenameLabelEditor).toSelf().inSingletonScope();
 
         return container;
     }
