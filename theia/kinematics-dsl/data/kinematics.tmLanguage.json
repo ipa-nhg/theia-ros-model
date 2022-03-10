@@ -1,0 +1,52 @@
+{
+    "name": "KINEMATICSDSL",
+    "scopeName": "source.kin",
+    "fileTypes": [
+        "kin"
+    ],
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "name": "storage.type.kin",
+            "match": "\\b(Robot|body|Body|macro|Macro|macroCall|MacroCall|parameter|Parameter|LinkRef|String|ParameterCall|value|name|link|Link|visual|Visual|geometry|Geometry|mesh|Mesh|filename|joint|Joint|type|parent|child|origin|Pose|rpy|xyz)\\b"        },
+        {
+            "name": "string.quoted.double.kin",
+            "begin": "\"",
+            "end": "\""
+        }
+
+    ],    
+    "repository": 
+        {
+            "comments": {
+                "patterns": [
+                    {
+                        "name": "comment.block.states",
+                        "begin": "/\\*",
+                        "beginCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.comment.states"
+                            }
+                        },
+                        "end": "\\*/",
+                        "endCaptures": {
+                            "0": {
+                                "name": "punctuation.definition.comment.states"
+                            }
+                        }
+                    }, {
+                        "begin": "(^\\s+)?(?=//)",
+                        "beginCaptures": {
+                            "1": {
+                                "name": "punctuation.whitespace.comment.leading.cs"
+                            }
+                        },
+                        "end": "(?=$)",
+                        "name":"comment.line.states"
+                    }
+                ]
+            }
+        }
+} 

@@ -11,10 +11,14 @@ RUN git clone https://github.com/ipa320/ros-model -b LanguageServer
 WORKDIR ros-model/plugins
 RUN mvn clean package -f de.fraunhofer.ipa.ros.parent
 
+WORKDIR /home/theia
+RUN git clone https://github.com/ipa-hsd/kinematics-model -b lsp_support
+WORKDIR kinematics-model
+RUN mvn clean package -U -DskipTests -f de.fraunhofer.ipa.kinematics.xtext.parent
+
 #COPY --from=java-mvn-base /opt/ibm/java/ /opt/ibm/java/
 #ENV JAVA_HOME /opt/ibm/java/jre
 #ENV PATH /opt/ibm/java/jre/bin:/opt/ibm/java/bin/:$PATH
-
 
 WORKDIR /home/theia
 COPY --chown=theia:theia theia theia-app
