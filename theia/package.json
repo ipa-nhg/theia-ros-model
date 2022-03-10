@@ -14,6 +14,7 @@
     "electron-app",
     "ros-sprotty",
     "rossystem-dsl",
-    "rossystem-sprotty"
+    "rossystem-sprotty",
+    "kinematics-dsl"
   ]
 }

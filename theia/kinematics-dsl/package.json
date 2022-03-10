@@ -1,0 +1,37 @@
+{
+  "name": "kinematics-dsl",
+  "keywords": [
+    "theia-extension"
+  ],
+  "version": "0.0.0",
+  "files": [
+    "lib",
+    "src",
+    "build",
+    "data",
+    "css"
+  ],
+  "dependencies": {
+    "@theia/core": "next",
+    "glob": "^7.1.4",
+    "sprotty-theia": "next"
+  },
+  "devDependencies": {
+    "rimraf": "latest",
+    "typescript": "latest"
+  },
+  "scripts": {
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "delete:build": "rimraf -rf ./build && mkdir build",
+    "copy:kinematicslanguageserver": "cp ../../kinematics-model/de.fraunhofer.ipa.kinematics.xtext.parent/de.fraunhofer.ipa.kinematics.xtext.ide/target/*-ls.jar ./build/",
+    "prepare": "yarn run clean && yarn run delete:build && yarn run copy:kinematicslanguageserver && yarn run build "
+  },
+  "theiaExtensions": [
+    {
+      "frontend": "lib/browser/kinematics-dsl-frontend-module",
+      "backend": "lib/node/kinematics-dsl-backend-module"
+    }
+  ]
+}
