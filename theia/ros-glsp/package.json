@@ -1,0 +1,48 @@
+{
+  "private": "true",
+  "name": "ros-glsp",
+  "version": "0.0.0",
+  "description": "GLSP sprotty diagrams for the ROS DSL",
+  "license": "(EPL-2.0 OR GPL-2.0 WITH Classpath-exception-2.0)",
+  "keywords": [
+    "glsp",
+    "ros",
+    "diagram"
+  ],
+  "author": {
+    "name": "Nadia Hammoudeh Garcia"
+  },
+  "homepage": "https://github.com/ipa320/ros-model",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ipa-nhg/theia-ros-model.git"
+  },
+  "bugs": "https://github.com/ipa-nhg/theia-ros-model/issues",
+  "contributors": [
+    {
+      "name": "Nadia Hammoudeh Garcia",
+      "email": "nhg@eipa-fhg.de"
+    }
+  ],
+  "files": [
+    "lib",
+    "src",
+    "css"
+  ],
+  "dependencies": {
+    "@eclipse-glsp/client": "0.9.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.1",
+    "typescript": "3.9.2",
+    "inversify": "5.1.1"
+  },
+  "scripts": {
+    "prepare": "yarn clean && yarn build",
+    "clean": "rimraf lib",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "main": "lib/index",
+  "types": "lib/index"
+}

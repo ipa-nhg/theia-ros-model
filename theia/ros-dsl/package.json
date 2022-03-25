@@ -12,16 +12,16 @@
     "css"
   ],
   "dependencies": {
-    "@theia/core": "next",
-    "glob": "^7.1.4",
-    "ros-sprotty": "0.0.0",
-    "sprotty-theia": "next"
+    "@eclipse-glsp/theia-integration": "0.9.0",
+    "@eclipse-glsp/client": "0.9.0",
+    "ros-glsp": "0.0.0"
   },
   "devDependencies": {
-    "rimraf": "latest",
-    "typescript": "^2.7.2"
+    "rimraf": "^2.6.1",
+    "typescript": "3.9.2"
   },
   "scripts": {
+    "prepare": "yarn clean && yarn build",
     "clean": "rimraf lib",
     "build": "tsc",
     "watch": "tsc -w",

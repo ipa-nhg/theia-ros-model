@@ -1,4 +1,4 @@
-import { injectable } from "inversify";
+/**import { injectable } from "inversify";
 import { Action, ActionHandlerRegistry, ReconnectCommand, ComputedBoundsAction  } from "sprotty";
 import { LSTheiaDiagramServer } from "sprotty-theia";
 
@@ -24,4 +24,4 @@ export class RosDiagramServer extends LSTheiaDiagramServer {
         
         return super.handleLocally(action);
     }
-}
+}*/

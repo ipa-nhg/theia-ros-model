@@ -1,4 +1,4 @@
-import { QuickPickService, WidgetManager } from '@theia/core/lib/browser';
+/**import { QuickPickService, WidgetManager } from '@theia/core/lib/browser';
 import { Workspace } from '@theia/languages/lib/browser';
 import { inject, injectable } from 'inversify';
 import { DiagramManager, TheiaFileSaver, LSTheiaSprottyConnector, TheiaSprottyConnector } from 'sprotty-theia';
@@ -31,4 +31,4 @@ export class RosDiagramManager extends DiagramManager {
     get label() {
         return 'Ros diagram';
     }
-} 
+} */

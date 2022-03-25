@@ -1,45 +1,24 @@
-import { Container, injectable } from "inversify";
-import { WorkspaceEditCommand, CompletionLabelEditor, RenameLabelEditor,
-    DiagramConfiguration, CodeActionProvider, IRootPopupModelProvider, CodeActionPalettePopupProvider, PaletteMouseListener, DeleteWithWorkspaceEditCommand,
-    TheiaDiagramServer, TheiaKeyTool, LSTheiaDiagramServer, LSTheiaDiagramServerProvider } from "sprotty-theia";
-import { KeyTool, TYPES, configureCommand } from 'sprotty';
-import { createRosDiagramContainer } from 'ros-sprotty/lib/di.config';
-import { RosDiagramServer } from './ros-diagram-server';
+// @ts-ignore
+import { createRosDiagramContainer } from 'ros-glsp';
 
-export const ROS_DIAGRAM_TYPE = 'ros-diagram';
+import {
+    configureDiagramServer,
+    GLSPDiagramConfiguration,
+    GLSPTheiaDiagramServer,
+    TheiaDiagramServer
+} from '@eclipse-glsp/theia-integration/lib/browser';
+import { Container, injectable } from 'inversify';
+//import 'sprotty-theia/css/theia-sprotty.css';
+import { RosDsl} from '../../common/index';
 
 @injectable()
-export class RosDiagramConfiguration implements DiagramConfiguration {
-    diagramType = ROS_DIAGRAM_TYPE;
+export class RosDiagramConfiguration extends GLSPDiagramConfiguration {
+    diagramType: string = RosDsl.diagramType;
 
-    createContainer(widgetId: string): Container {
-        console.log({widgetId})
-        const container = createRosDiagramContainer(widgetId); 
-        container.bind(RosDiagramServer).toSelf().inSingletonScope();
-        container.bind(TheiaDiagramServer).toService(RosDiagramServer);
-        container.bind(LSTheiaDiagramServer).toService(RosDiagramServer);
-        container.bind(TYPES.ModelSource).toService(TheiaDiagramServer);
-        container.rebind(KeyTool).to(TheiaKeyTool).inSingletonScope();
-
-        container.bind(LSTheiaDiagramServerProvider).toProvider<LSTheiaDiagramServer>((context: any) => {
-            return () => {
-                return new Promise<LSTheiaDiagramServer>((resolve) => {
-                    resolve(context.container.get(LSTheiaDiagramServer));
-                });
-            };
-        });
-
-        container.bind(CodeActionProvider).toSelf().inSingletonScope();
-        container.bind(IRootPopupModelProvider).to(CodeActionPalettePopupProvider).inSingletonScope();
-        container.bind(PaletteMouseListener).toSelf().inSingletonScope();
-        container.rebind(TYPES.PopupMouseListener).to(PaletteMouseListener);
-        
-        configureCommand(container, DeleteWithWorkspaceEditCommand);
-        configureCommand(container, WorkspaceEditCommand);
-
-        container.bind(CompletionLabelEditor).toSelf().inSingletonScope();
-        container.bind(RenameLabelEditor).toSelf().inSingletonScope();
-
+    doCreateContainer(widgetId: string): Container {
+        const container = createRosDiagramContainer(widgetId);
+        configureDiagramServer(container, GLSPTheiaDiagramServer);
+        container.bind(TheiaDiagramServer).toService(GLSPTheiaDiagramServer);
         return container;
     }
 }
