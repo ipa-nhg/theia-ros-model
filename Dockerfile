@@ -19,7 +19,11 @@ RUN ls
 WORKDIR /home/theia
 COPY --chown=theia:theia theia theia-app
 COPY --chown=theia:theia ws ws
+COPY --chown=theia:theia glsp-server glsp-server
+WORKDIR glsp-server
+RUN mvn clean package -f de.fraunhofer.ipa.ros.glsp
 
+WORKDIR /home/theia
 RUN chown -R theia:theia /home/theia
 RUN apt-get update && apt-get install -y curl
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -

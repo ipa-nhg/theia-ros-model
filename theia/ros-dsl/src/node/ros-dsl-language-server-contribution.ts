@@ -12,7 +12,7 @@ export const DEFAULT_PORT = 5007;
 export const PORT_ARG_KEY = 'WF_GLSP';
 export const LOG_DIR = join(__dirname, '..', '..', 'logs');
 const JAR_FILE = resolve(
-    join(__dirname, '..', '..', '..', '..', 'glsp-server', 'target', 'org.eclipse.glsp.example.workflow-0.9.0-glsp.jar')
+    join(__dirname, '..', '..', '..', '..', 'glsp-server', 'de.fraunhofer.ipa.ros.glsp','target', 'de.fraunhofer.ipa.ros.glsp-0.0.0.jar')
 );
 
 
