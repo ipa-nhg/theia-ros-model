@@ -15,7 +15,7 @@ RUN mvn clean package -f de.fraunhofer.ipa.ros.parent
 #ENV JAVA_HOME /opt/ibm/java/jre
 #ENV PATH /opt/ibm/java/jre/bin:/opt/ibm/java/bin/:$PATH
 
-
+RUN ls
 WORKDIR /home/theia
 COPY --chown=theia:theia theia theia-app
 COPY --chown=theia:theia ws ws
