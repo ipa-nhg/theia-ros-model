@@ -61,3 +61,32 @@
     width: 0px;
     height: 0px;
 }
+#ros-diagram_0_sprotty_scan.publisher .sprotty-node{
+	fill: black;
+	transform:translate(-7.5px, 42px);
+	
+}
+
+#ros-diagram_0_sprotty_control_command.subscriber rect{
+	fill:black;
+	transform: translate(140px,42px);
+}
+
+#ros-diagram_0_sprotty_null.label11{
+	transform:translate(155px,42px);
+}
+
+#ros-diagram_0_sprotty_null.label10{
+	transform:translate(-38px,42px);
+    
+}
+
+.sprotty-port{
+	transform: translate(5px);
+	height: 24px;
+	width: 79px;
+}
+
+#ros-diagram_0_sprotty_r2000_node.label5{
+	transform:translate(10px, 16px);
+}
