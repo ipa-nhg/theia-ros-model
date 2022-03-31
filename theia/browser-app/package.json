@@ -23,7 +23,9 @@
     "prepare": "theia build --mode development",
     "start": "theia start",
     "watch": "theia build --watch --mode development",
-    "start:debug": "node --inspect ./src-gen/backend/main.js --root-dir=../../workspace --ROS_LSP=5008 --port=3000 --loglevel=debug"
+    "start": "theia start --ROS_GLSP=5007 --root-dir=../workspace",
+    "start:external": "theia start --ROS_GLSP=5007 --root-dir=../workspace --debug",
+    "start:debug": "node --inspect ./src-gen/backend/main.js --root-dir=../../workspace --ROS_GLSP=5007 --port=3000 --loglevel=debug"
   },
   "theia": {
     "target": "browser"

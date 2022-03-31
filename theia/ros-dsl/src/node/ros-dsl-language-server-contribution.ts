@@ -9,7 +9,7 @@ import {
 import { getPort } from '@eclipse-glsp/protocol';
 
 export const DEFAULT_PORT = 5007;
-export const PORT_ARG_KEY = 'WF_GLSP';
+export const PORT_ARG_KEY = 'ROS_GLSP';
 export const LOG_DIR = join(__dirname, '..', '..', 'logs');
 const JAR_FILE = resolve(
     join(__dirname, '..', '..', '..', '..', 'glsp-server', 'de.fraunhofer.ipa.ros.glsp','target', 'de.fraunhofer.ipa.ros.glsp-0.0.0.jar')

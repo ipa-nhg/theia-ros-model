@@ -8,7 +8,7 @@ import {
     TheiaDiagramServer
 } from '@eclipse-glsp/theia-integration/lib/browser';
 import { Container, injectable } from 'inversify';
-//import 'sprotty-theia/css/theia-sprotty.css';
+import 'sprotty-theia/css/theia-sprotty.css';
 import { RosDsl} from '../../common/index';
 
 @injectable()
