@@ -1,8 +1,9 @@
 import { ContainerModule } from 'inversify';
-import { LanguageServerContribution } from '@theia/languages/lib/node';
 import { RosLanguageServerContribution } from './ros-dsl-language-server-contribution';
+import { GLSPServerContribution } from '@eclipse-glsp/theia-integration/lib/node';
 
 
 export default new ContainerModule(bind => {
-    bind(LanguageServerContribution).to(RosLanguageServerContribution);
+    bind(RosLanguageServerContribution).toSelf().inSingletonScope();
+    bind(GLSPServerContribution).toService(RosLanguageServerContribution);
 });
